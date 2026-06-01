@@ -70,19 +70,11 @@ def weighted_downtime_reason(record_date: date) -> str:
     )[0]
 
 
-def generate_valid_record(row_num: int) -> dict:
-    start_date = date(2026, 1, 1)
-    record_date = start_date + timedelta(days=random.randint(0, 89))
-
-    shift = random.choice(SHIFTS)
-    line = random.choice(LINES)
-
+def generate_valid_record(row_num: int, record_date: date, shift: str, line: str) -> dict:
     planned_output = random.randint(800, 1200)
     actual_output = int(planned_output * random.uniform(0.85, 1.05))
     actual_output = max(actual_output, 0)
-
     defect_qty = int(actual_output * random.uniform(0.0, 0.03))
-
     downtime_reason = weighted_downtime_reason(record_date)
 
     if downtime_reason == "No Downtime":
@@ -99,7 +91,6 @@ def generate_valid_record(row_num: int) -> dict:
         downtime_min = random.randint(10, 75)
 
     return {
-        "shift_log_id": f"SL{row_num:04d}",
         "date": record_date.isoformat(),
         "shift": shift,
         "line": line,
@@ -135,14 +126,26 @@ def main() -> None:
     random.seed(RANDOM_SEED)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    records = []
-
     normal_count = 940
     invalid_count = 40
     duplicate_count = 20
 
-    for i in range(1, normal_count + invalid_count + 1):
-        record = generate_valid_record(i)
+    start_date = date(2026, 1, 1)
+    date_range = [start_date + timedelta(days=i) for i in range(120)]
+
+    all_keys = [
+        (record_date, shift, line)
+        for record_date in date_range
+        for shift in SHIFTS
+        for line in LINES
+    ]
+
+    selected_keys = random.sample(all_keys, normal_count + invalid_count)
+
+    records = []
+
+    for i, (record_date, shift, line) in enumerate(selected_keys, start=1):
+        record = generate_valid_record(i, record_date, shift, line)
 
         if i > normal_count:
             record = inject_invalid_value(record)
@@ -151,17 +154,14 @@ def main() -> None:
 
     duplicate_candidates = random.sample(records[:normal_count], duplicate_count)
 
-    for i, source_record in enumerate(duplicate_candidates, start=normal_count + invalid_count + 1):
+    for source_record in duplicate_candidates:
         duplicate_record = source_record.copy()
-        duplicate_record["shift_log_id"] = f"SL{i:04d}"
-        duplicate_record["operator"] = f"Operator {random.choice(['A', 'B', 'C', 'D', 'E'])}"
         duplicate_record["source_system"] = "Duplicate CSV Upload"
         records.append(duplicate_record)
 
     random.shuffle(records)
 
     fieldnames = [
-        "shift_log_id",
         "date",
         "shift",
         "line",

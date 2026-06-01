@@ -1,1001 +1,1001 @@
-shift_log_id,date,shift,line,planned_output,actual_output,defect_qty,downtime_min,downtime_reason,operator,source_system
-SL0133,2026-01-28,B,Line4,916,854,21,118,Equipment Failure,Operator A,Manual CSV Upload
-SL0950,2026-01-03,C,Line1,890,808,828,34,Equipment Failure,Operator A,Legacy Excel Log
-SL0009,2026-03-23,C,Line2,1150,1052,24,29,Equipment Failure,Operator C,Manual CSV Upload
-SL0063,2026-02-05,B,Line3,841,793,17,69,Equipment Failure,Operator B,Legacy Excel Log
-SL0882,2026-03-21,B,Line2,800,689,19,52,Changeover,Operator D,Manual CSV Upload
-SL0114,2026-01-13,C,Line1,958,965,0,41,Equipment Failure,Operator A,Manual CSV Upload
-SL0867,2026-02-23,B,Line3,1089,1024,10,31,Material Shortage,Operator B,Legacy Excel Log
-SL0474,2026-03-01,C,Line1,1003,925,0,36,Material Shortage,Operator E,Google Form
-SL0296,2026-02-23,C,Line2,1094,1013,5,42,Changeover,Operator E,Google Form
-SL0107,2026-02-11,A,Line3,983,909,3,92,Changeover,Operator B,Google Form
-SL0877,2026-02-03,B,Line1,826,735,16,83,Changeover,Operator E,Legacy Excel Log
-SL0491,2026-03-11,B,Line3,896,762,16,91,Equipment Failure,Operator A,Legacy Excel Log
-SL0594,2026-02-18,C,Line3,1001,973,21,87,Changeover,Operator A,Legacy Excel Log
-SL0037,2026-02-03,A,Line4,1082,1072,18,113,Equipment Failure,Operator B,Legacy Excel Log
-SL0233,2026-03-31,C,Line4,1187,1136,22,46,Material Shortage,Operator E,Google Form
-SL0875,2026-03-11,A,Line3,873,773,17,67,Material Shortage,Operator B,Google Form
-SL0537,2026-01-02,A,Line1,877,748,4,78,Material Shortage,Operator C,Manual CSV Upload
-SL0518,2026-02-08,B,Line1,1003,872,4,57,Equipment Failure,Operator D,Legacy Excel Log
-SL0726,2026-03-19,C,Line1,1141,1052,4,0,No Downtime,Operator C,Manual CSV Upload
-SL0081,2026-02-21,B,Line1,1095,1068,1,97,Equipment Failure,Operator C,Google Form
-SL0179,2026-03-07,B,Line4,929,796,15,26,Changeover,Operator C,Manual CSV Upload
-SL0560,2026-02-17,B,Line4,1171,1071,7,68,Changeover,Operator E,Legacy Excel Log
-SL0803,2026-01-08,A,Line3,920,868,9,96,Changeover,Operator A,Google Form
-SL0210,2026-02-10,A,Line4,1115,1112,9,80,Material Shortage,Operator E,Manual CSV Upload
-SL0539,2026-03-02,A,Line2,928,940,23,46,Material Shortage,Operator D,Manual CSV Upload
-SL0715,2026-01-03,A,Line3,1010,975,19,41,Cleaning,Operator E,Legacy Excel Log
-SL0106,2026-01-12,B,Line1,1189,1161,30,53,Material Shortage,Operator A,Google Form
-SL0451,2026-03-06,A,Line4,1078,1032,2,42,Material Shortage,Operator C,Manual CSV Upload
-SL0613,2026-02-07,A,Line1,860,735,13,51,Equipment Failure,Operator E,Manual CSV Upload
-SL0259,2026-01-05,A,Line1,1191,1013,4,28,Changeover,Operator B,Google Form
-SL0542,2026-02-02,B,Line3,901,830,1,17,Cleaning,Operator B,Legacy Excel Log
-SL0769,2026-02-24,C,Line4,936,799,11,65,Equipment Failure,Operator D,Legacy Excel Log
-SL0444,2026-01-21,B,Line3,874,889,18,94,Equipment Failure,Operator A,Manual CSV Upload
-SL0051,2026-01-04,A,Line2,1043,1014,23,88,Material Shortage,Operator B,Legacy Excel Log
-SL0237,2026-03-28,B,Line1,1002,902,0,24,Material Shortage,Operator A,Manual CSV Upload
-SL0470,2026-02-12,B,Line4,1028,947,8,42,Changeover,Operator E,Google Form
-SL0579,2026-01-07,B,Line1,834,773,6,52,Cleaning,Operator C,Google Form
-SL0639,2026-02-21,A,Line1,1150,1164,26,78,Material Shortage,Operator A,Google Form
-SL0753,2026-03-18,C,Line3,1151,1203,16,28,Cleaning,Operator D,Google Form
-SL0840,2026-01-31,A,Line1,809,745,5,42,Changeover,Operator E,Google Form
-SL0971,2026-01-16,B,Line2,899,901,25,806,Cleaning,Operator C,Legacy Excel Log
-SL0355,2026-03-18,A,Line1,1198,1085,26,65,Changeover,Operator E,Google Form
-SL0964,2026-02-26,D,Line1,833,852,1,106,Equipment Failure,Operator B,Google Form
-SL0242,2026-03-28,C,Line4,1072,992,6,39,Changeover,Operator C,Google Form
-SL0427,2026-02-14,C,Line4,876,891,14,0,No Downtime,Operator A,Google Form
-SL0635,2026-01-17,C,Line1,1007,1020,24,108,Equipment Failure,Operator A,Manual CSV Upload
-SL0906,2026-03-07,B,Line3,1015,960,17,32,Material Shortage,Operator A,Google Form
-SL0949,2026-03-01,D,Line1,1080,1059,22,80,Changeover,Operator C,Google Form
-SL0313,2026-02-17,C,Line2,826,767,7,24,Cleaning,Operator D,Legacy Excel Log
-SL0582,2026-02-01,C,Line3,970,919,20,112,Equipment Failure,Operator C,Manual CSV Upload
-SL0967,2026-01-22,B,Line4,1016,966,21,699,Cleaning,Operator D,Google Form
-SL0627,2026-01-20,A,Line3,858,731,13,41,Material Shortage,Operator E,Manual CSV Upload
-SL0117,2026-01-19,A,Line4,1085,1001,23,93,Equipment Failure,Operator A,Manual CSV Upload
-SL0998,2026-01-28,B,Line2,846,839,24,31,Equipment Failure,Operator A,Duplicate CSV Upload
-SL0207,2026-02-27,C,Line3,1119,1103,3,0,No Downtime,Operator D,Manual CSV Upload
-SL0454,2026-01-15,B,Line3,1076,1070,0,62,Material Shortage,Operator E,Legacy Excel Log
-SL0219,2026-03-15,C,Line4,1002,1015,29,0,No Downtime,Operator C,Google Form
-SL0464,2026-02-20,C,Line1,956,852,18,23,Cleaning,Operator D,Legacy Excel Log
-SL0603,2026-01-07,B,Line3,958,954,27,48,Equipment Failure,Operator A,Google Form
-SL0780,2026-02-04,A,Line1,932,939,7,25,Changeover,Operator D,Google Form
-SL0293,2026-01-24,B,Line3,900,847,6,43,Cleaning,Operator C,Legacy Excel Log
-SL0508,2026-01-26,A,Line2,935,833,5,104,Equipment Failure,Operator C,Google Form
-SL0396,2026-02-20,C,Line1,803,764,15,57,Quality Issue,Operator E,Legacy Excel Log
-SL0265,2026-03-05,B,Line3,1089,1138,33,0,No Downtime,Operator A,Google Form
-SL0568,2026-03-31,A,Line2,825,812,24,0,No Downtime,Operator E,Legacy Excel Log
-SL0095,2026-03-12,A,Line3,1024,1050,15,105,Equipment Failure,Operator E,Google Form
-SL0626,2026-02-09,C,Line2,964,858,7,76,Changeover,Operator A,Manual CSV Upload
-SL0042,2026-01-30,A,Line1,1137,1010,9,59,Cleaning,Operator C,Manual CSV Upload
-SL0380,2026-03-28,C,Line2,861,895,12,0,No Downtime,Operator B,Google Form
-SL0830,2026-03-25,A,Line2,1023,1041,26,15,Cleaning,Operator C,Manual CSV Upload
-SL0907,2026-01-17,B,Line4,1062,1106,25,94,Equipment Failure,Operator B,Google Form
-SL0015,2026-02-03,C,Line2,1059,1093,28,79,Material Shortage,Operator E,Google Form
-SL0959,2026-02-12,A,Line4,-64,947,21,21,Changeover,Operator B,Google Form
-SL0480,2026-02-26,A,Line2,839,799,6,45,Equipment Failure,Operator C,Legacy Excel Log
-SL0032,2026-01-10,A,Line4,1118,1173,35,52,Equipment Failure,Operator E,Manual CSV Upload
-SL0777,2026-01-20,C,Line3,1022,952,24,36,Quality Issue,Operator D,Manual CSV Upload
-SL0104,2026-02-03,B,Line4,1132,980,9,44,Cleaning,Operator D,Manual CSV Upload
-SL0662,2026-03-20,C,Line3,971,877,21,94,Changeover,Operator D,Manual CSV Upload
-SL0621,2026-01-05,B,Line4,844,801,5,53,Material Shortage,Operator B,Legacy Excel Log
-SL0557,2026-01-25,C,Line2,1091,1063,5,73,Changeover,Operator A,Legacy Excel Log
-SL0189,2026-01-18,A,Line4,888,914,12,112,Equipment Failure,Operator C,Legacy Excel Log
-SL0791,2026-03-31,B,Line1,980,915,20,30,Cleaning,Operator D,Legacy Excel Log
-SL0148,2026-02-28,C,Line3,845,792,2,71,Changeover,Operator E,Google Form
-SL0905,2026-01-14,A,Line1,1104,1095,19,46,Cleaning,Operator B,Legacy Excel Log
-SL0852,2026-01-19,C,Line4,1028,1006,26,99,Changeover,Operator D,Legacy Excel Log
-SL0678,2026-01-25,A,Line2,1050,974,23,83,Changeover,Operator E,Manual CSV Upload
-SL0534,2026-03-22,A,Line3,945,925,14,44,Changeover,Operator A,Google Form
-SL0672,2026-03-23,A,Line1,1140,1058,4,70,Changeover,Operator E,Google Form
-SL0139,2026-02-09,B,Line3,803,711,3,14,Cleaning,Operator B,Legacy Excel Log
-SL0995,2026-03-20,C,Line3,1164,1213,2,0,No Downtime,Operator D,Duplicate CSV Upload
-SL0514,2026-01-24,C,Line3,921,832,23,48,Equipment Failure,Operator D,Manual CSV Upload
-SL0824,2026-02-15,B,Line1,1193,1134,3,21,Cleaning,Operator B,Manual CSV Upload
-SL0196,2026-02-02,A,Line3,864,842,15,107,Equipment Failure,Operator B,Legacy Excel Log
-SL0698,2026-01-22,B,Line2,951,923,21,98,Changeover,Operator B,Legacy Excel Log
-SL0134,2026-02-24,B,Line3,991,1031,21,31,Changeover,Operator A,Google Form
-SL0350,2026-01-06,B,Line1,886,916,11,83,Changeover,Operator A,Manual CSV Upload
-SL0336,2026-02-06,B,Line3,844,810,0,97,Equipment Failure,Operator C,Legacy Excel Log
-SL0091,2026-03-04,A,Line4,978,911,8,35,Material Shortage,Operator C,Manual CSV Upload
-SL0305,2026-03-15,B,Line1,869,905,21,0,No Downtime,Operator C,Legacy Excel Log
-SL0418,2026-01-01,A,Line1,856,870,17,36,Equipment Failure,Operator E,Google Form
-SL0849,2026-03-08,A,Line1,973,888,26,22,Material Shortage,Operator D,Google Form
-SL0746,2026-02-08,C,Line1,1186,1030,3,95,Changeover,Operator B,Google Form
-SL0984,2026-03-01,B,Line1,1053,903,9,0,No Downtime,Operator C,Duplicate CSV Upload
-SL0245,2026-01-30,C,Line2,1186,1212,2,52,Material Shortage,Operator B,Legacy Excel Log
-SL0076,2026-02-15,C,Line4,938,854,5,30,Cleaning,Operator A,Legacy Excel Log
-SL0546,2026-01-30,B,Line3,1024,1020,0,117,Equipment Failure,Operator B,Manual CSV Upload
-SL0435,2026-02-22,A,Line3,1112,988,3,37,Quality Issue,Operator D,Google Form
-SL0318,2026-03-20,C,Line4,911,790,2,0,No Downtime,Operator E,Legacy Excel Log
-SL0214,2026-02-01,A,Line1,897,765,7,113,Equipment Failure,Operator B,Manual CSV Upload
-SL0283,2026-02-24,B,Line1,1029,1078,15,79,Material Shortage,Operator D,Legacy Excel Log
-SL0899,2026-02-25,A,Line3,928,834,11,0,No Downtime,Operator A,Manual CSV Upload
-SL0701,2026-03-17,A,Line1,1013,1059,1,84,Changeover,Operator A,Manual CSV Upload
-SL0573,2026-02-16,B,Line2,964,885,17,20,Cleaning,Operator C,Legacy Excel Log
-SL0383,2026-01-02,C,Line4,857,799,3,32,Changeover,Operator A,Legacy Excel Log
-SL0260,2026-01-28,C,Line4,991,854,16,71,Quality Issue,Operator D,Google Form
-SL0748,2026-01-21,C,Line2,1058,1019,3,16,Material Shortage,Operator E,Google Form
-SL0789,2026-01-12,A,Line3,907,926,4,55,Material Shortage,Operator D,Google Form
-SL0787,2026-03-12,B,Line3,1127,1173,12,0,No Downtime,Operator A,Legacy Excel Log
-SL0178,2026-01-09,C,Line4,818,743,0,30,Equipment Failure,Operator C,Manual CSV Upload
-SL0333,2026-02-01,A,Line4,986,913,4,0,No Downtime,Operator A,Legacy Excel Log
-SL0367,2026-01-01,A,Line4,1024,1020,29,73,Quality Issue,Operator D,Manual CSV Upload
-SL0651,2026-03-01,C,Line1,1067,1096,2,29,Changeover,Operator E,Legacy Excel Log
-SL0513,2026-02-10,C,Line1,806,793,9,71,Equipment Failure,Operator E,Manual CSV Upload
-SL0303,2026-03-17,C,Line3,1163,1130,14,60,Cleaning,Operator B,Google Form
-SL0143,2026-02-25,A,Line3,1147,1130,16,12,Cleaning,Operator B,Manual CSV Upload
-SL0329,2026-01-18,C,Line1,883,838,8,48,Material Shortage,Operator B,Manual CSV Upload
-SL0812,2026-01-10,A,Line4,1146,995,9,112,Equipment Failure,Operator A,Manual CSV Upload
-SL0574,2026-02-26,C,Line2,1025,880,21,72,Equipment Failure,Operator B,Legacy Excel Log
-SL0481,2026-01-16,C,Line2,1012,1024,22,76,Material Shortage,Operator D,Google Form
-SL0403,2026-03-16,B,Line4,860,811,21,49,Cleaning,Operator A,Manual CSV Upload
-SL0540,2026-02-01,C,Line1,901,848,19,46,Changeover,Operator D,Manual CSV Upload
-SL0343,2026-02-27,B,Line2,838,870,3,16,Cleaning,Operator B,Google Form
-SL0075,2026-03-30,A,Line3,1139,1100,15,37,Cleaning,Operator E,Manual CSV Upload
-SL0741,2026-03-12,C,Line1,1013,954,2,0,No Downtime,Operator A,Manual CSV Upload
-SL0862,2026-03-30,B,Line4,883,776,2,0,No Downtime,Operator B,Legacy Excel Log
-SL0279,2026-02-08,B,Line2,1045,953,27,0,No Downtime,Operator C,Legacy Excel Log
-SL0449,2026-02-12,B,Line2,820,722,6,105,Equipment Failure,Operator E,Legacy Excel Log
-SL0646,2026-03-27,A,Line2,805,695,0,0,No Downtime,Operator D,Legacy Excel Log
-SL0340,2026-01-08,A,Line3,847,727,5,36,Cleaning,Operator C,Manual CSV Upload
-SL0428,2026-03-24,A,Line4,1053,1078,2,50,Changeover,Operator C,Manual CSV Upload
-SL0124,2026-02-05,A,Line1,1032,896,5,22,Changeover,Operator A,Manual CSV Upload
-SL0976,2026-01-14,C,Line3,873,789,4,481,Changeover,Operator A,Google Form
-SL0421,2026-03-26,C,Line2,968,892,11,21,Quality Issue,Operator C,Manual CSV Upload
-SL0171,2026-03-20,A,Line1,809,729,18,56,Cleaning,Operator E,Legacy Excel Log
-SL0861,2026-01-10,B,Line4,1101,1058,24,73,Quality Issue,Operator D,Manual CSV Upload
-SL0199,2026-03-11,B,Line3,1047,941,22,78,Changeover,Operator A,Legacy Excel Log
-SL0089,2026-02-11,C,Line3,813,705,20,12,Quality Issue,Operator C,Legacy Excel Log
-SL0272,2026-01-20,B,Line2,1178,1093,11,64,Equipment Failure,Operator D,Manual CSV Upload
-SL0729,2026-02-23,A,Line1,873,778,11,52,Quality Issue,Operator A,Legacy Excel Log
-SL0897,2026-02-20,A,Line3,841,862,20,0,No Downtime,Operator B,Legacy Excel Log
-SL0268,2026-01-31,C,Line4,1146,1179,11,18,Cleaning,Operator A,Legacy Excel Log
-SL0625,2026-02-09,A,Line1,970,915,1,59,Changeover,Operator A,Legacy Excel Log
-SL0933,2026-02-27,C,Line1,991,869,22,16,Material Shortage,Operator D,Legacy Excel Log
-SL0825,2026-01-06,A,Line4,1160,1055,18,72,Material Shortage,Operator E,Manual CSV Upload
-SL0991,2026-01-08,C,Line3,1089,1083,10,41,Material Shortage,Operator C,Duplicate CSV Upload
-SL0928,2026-01-16,A,Line3,819,785,7,52,Changeover,Operator C,Legacy Excel Log
-SL0699,2026-03-12,A,Line1,1010,1031,15,0,No Downtime,Operator E,Manual CSV Upload
-SL0526,2026-01-04,B,Line1,853,769,3,69,Changeover,Operator C,Google Form
-SL0197,2026-03-16,A,Line2,1137,1108,29,92,Changeover,Operator A,Google Form
-SL0994,2026-02-04,A,Line2,844,749,10,72,Changeover,Operator A,Duplicate CSV Upload
-SL0159,2026-02-12,A,Line2,979,892,17,18,Cleaning,Operator E,Legacy Excel Log
-SL1000,2026-03-19,C,Line3,1159,1112,10,0,No Downtime,Operator A,Duplicate CSV Upload
-SL0256,2026-02-03,C,Line4,951,837,8,46,Material Shortage,Operator D,Legacy Excel Log
-SL0204,2026-01-03,A,Line4,1058,996,7,26,Changeover,Operator A,Manual CSV Upload
-SL0856,2026-01-08,B,Line3,1121,1066,3,17,Cleaning,Operator D,Manual CSV Upload
-SL0923,2026-03-16,B,Line1,906,809,4,0,No Downtime,Operator D,Google Form
-SL0049,2026-01-27,B,Line3,1038,974,19,36,Material Shortage,Operator A,Manual CSV Upload
-SL0561,2026-02-02,B,Line4,1029,1072,0,61,Equipment Failure,Operator E,Google Form
-SL0618,2026-01-08,C,Line3,1089,1083,10,41,Material Shortage,Operator E,Legacy Excel Log
-SL0493,2026-02-03,C,Line4,1089,1005,8,58,Cleaning,Operator B,Manual CSV Upload
-SL0031,2026-02-10,B,Line2,1142,1134,8,53,Material Shortage,Operator D,Manual CSV Upload
-SL0323,2026-02-10,A,Line4,1091,1019,16,85,Equipment Failure,Operator A,Google Form
-SL0162,2026-01-18,A,Line1,951,968,2,57,Cleaning,Operator E,Google Form
-SL0774,2026-03-25,B,Line3,1021,1003,9,52,Changeover,Operator E,Legacy Excel Log
-SL0886,2026-01-03,C,Line2,1130,1168,21,26,Equipment Failure,Operator B,Manual CSV Upload
-SL0768,2026-01-11,C,Line1,956,834,4,19,Material Shortage,Operator D,Legacy Excel Log
-SL0716,2026-03-31,C,Line4,1034,941,3,0,No Downtime,Operator B,Manual CSV Upload
-SL0962,2026-03-24,D,Line4,1131,1145,25,57,Material Shortage,Operator C,Google Form
-SL0712,2026-02-28,A,Line1,1000,1029,8,0,No Downtime,Operator A,Google Form
-SL0442,2026-03-11,C,Line3,1163,1015,10,93,Changeover,Operator D,Legacy Excel Log
-SL0302,2026-02-27,B,Line3,844,791,23,25,Cleaning,Operator B,Legacy Excel Log
-SL0610,2026-02-22,C,Line2,1156,1030,1,100,Changeover,Operator E,Google Form
-SL0425,2026-03-04,A,Line4,1025,880,6,87,Changeover,Operator E,Legacy Excel Log
-SL0155,2026-03-15,C,Line2,964,936,14,0,No Downtime,Operator D,Google Form
-SL0721,2026-03-05,A,Line4,963,848,24,42,Cleaning,Operator C,Legacy Excel Log
-SL0600,2026-02-11,C,Line2,1167,1163,3,50,Cleaning,Operator C,Google Form
-SL0406,2026-01-23,B,Line1,802,754,4,46,Cleaning,Operator B,Manual CSV Upload
-SL0945,2026-02-20,C,,922,946,4,0,No Downtime,Operator E,Manual CSV Upload
-SL0459,2026-02-22,B,Line4,1122,1044,9,30,Material Shortage,Operator E,Google Form
-SL0034,2026-03-25,C,Line1,1141,1156,10,27,Quality Issue,Operator C,Google Form
-SL0483,2026-03-15,A,Line1,885,797,4,0,No Downtime,Operator E,Legacy Excel Log
-SL0673,2026-03-07,C,Line4,1044,978,24,0,No Downtime,Operator A,Legacy Excel Log
-SL0345,2026-03-01,B,Line1,846,745,15,0,No Downtime,Operator E,Google Form
-SL0172,2026-02-24,A,Line3,921,838,1,73,Material Shortage,Operator A,Google Form
-SL0025,2026-01-10,B,Line1,825,808,13,36,Equipment Failure,Operator B,Google Form
-SL0939,2026-01-30,B,Line1,1032,889,13,77,Equipment Failure,Operator D,Google Form
-SL0227,2026-03-01,B,Line2,857,785,17,33,Quality Issue,Operator A,Legacy Excel Log
-SL0572,2026-02-01,A,Line3,1197,1120,23,34,Changeover,Operator D,Manual CSV Upload
-SL0943,2026-03-15,D,Line1,947,927,25,58,Changeover,Operator D,Legacy Excel Log
-SL0422,2026-01-24,A,Line4,1004,1046,8,86,Equipment Failure,Operator D,Legacy Excel Log
-SL0294,2026-02-19,C,Line4,1100,960,10,42,Changeover,Operator C,Legacy Excel Log
-SL0460,2026-03-24,C,Line1,1187,1186,1,0,No Downtime,Operator C,Legacy Excel Log
-SL0111,2026-02-19,B,Line1,921,853,9,52,Material Shortage,Operator A,Legacy Excel Log
-SL0026,2026-02-22,B,Line4,909,929,25,25,Equipment Failure,Operator D,Manual CSV Upload
-SL0156,2026-02-13,C,Line1,1058,1036,1,38,Cleaning,Operator E,Legacy Excel Log
-SL0736,2026-01-21,A,Line3,984,918,25,62,Equipment Failure,Operator C,Legacy Excel Log
-SL0638,2026-03-15,B,Line1,1103,1069,10,81,Equipment Failure,Operator B,Manual CSV Upload
-SL0509,2026-01-14,A,Line1,1146,1193,17,94,Equipment Failure,Operator A,Manual CSV Upload
-SL0498,2026-03-20,C,Line3,1164,1213,2,0,No Downtime,Operator B,Legacy Excel Log
-SL0477,2026-02-19,B,Line4,823,706,13,91,Equipment Failure,Operator C,Legacy Excel Log
-SL0191,2026-01-29,A,Line2,871,781,11,98,Equipment Failure,Operator C,Manual CSV Upload
-SL0530,2026-03-03,C,Line2,845,792,8,58,Changeover,Operator A,Google Form
-SL0535,2026-01-18,B,Line1,1126,1059,14,82,Changeover,Operator B,Manual CSV Upload
-SL0612,2026-03-20,C,Line4,1066,1061,15,0,No Downtime,Operator E,Google Form
-SL0632,2026-01-12,C,Line4,849,799,16,79,Changeover,Operator D,Google Form
-SL0466,2026-03-12,B,Line1,948,933,7,89,Material Shortage,Operator D,Manual CSV Upload
-SL0013,2026-01-09,B,Line4,1105,1159,18,0,No Downtime,Operator A,Legacy Excel Log
-SL0082,2026-02-01,A,Line4,1110,1075,19,34,Cleaning,Operator D,Manual CSV Upload
-SL0957,2026-02-22,B,Line4,852,845,858,0,No Downtime,Operator E,Google Form
-SL0826,2026-02-13,A,Line2,894,773,22,28,Material Shortage,Operator D,Legacy Excel Log
-SL0370,2026-01-21,C,Line1,1080,1121,32,103,Equipment Failure,Operator D,Legacy Excel Log
-SL0408,2026-01-26,C,Line3,807,829,18,17,Material Shortage,Operator A,Legacy Excel Log
-SL0327,2026-03-23,C,Line1,958,948,20,0,No Downtime,Operator A,Google Form
-SL0655,2026-02-06,B,Line1,864,821,20,31,Material Shortage,Operator E,Manual CSV Upload
-SL0808,2026-03-26,C,Line4,827,734,1,75,Material Shortage,Operator C,Google Form
-SL0029,2026-03-06,C,Line2,829,863,2,23,Material Shortage,Operator B,Manual CSV Upload
-SL0078,2026-02-06,A,Line2,951,851,4,93,Equipment Failure,Operator B,Manual CSV Upload
-SL0244,2026-03-18,A,Line4,1106,1088,28,20,Material Shortage,Operator D,Manual CSV Upload
-SL0903,2026-03-21,B,Line2,1106,1114,20,79,Changeover,Operator D,Legacy Excel Log
-SL0234,2026-03-09,B,Line3,839,867,2,0,No Downtime,Operator E,Google Form
-SL0798,2026-03-09,B,Line4,1144,1085,7,49,Material Shortage,Operator C,Legacy Excel Log
-SL0016,2026-01-20,B,Line2,1076,1119,30,51,Quality Issue,Operator D,Google Form
-SL0461,2026-01-14,B,Line3,1110,962,22,65,Material Shortage,Operator A,Manual CSV Upload
-SL0412,2026-01-03,C,Line2,863,796,15,106,Equipment Failure,Operator C,Legacy Excel Log
-SL0934,2026-02-15,B,Line2,1014,948,21,54,Cleaning,Operator E,Manual CSV Upload
-SL0297,2026-03-04,B,Line2,895,817,11,70,Equipment Failure,Operator A,Manual CSV Upload
-SL0060,2026-03-11,C,Line2,1049,937,12,68,Equipment Failure,Operator D,Legacy Excel Log
-SL0163,2026-03-26,B,Line2,1105,1022,4,0,No Downtime,Operator E,Google Form
-SL0642,2026-02-14,A,Line1,1113,1165,14,62,Equipment Failure,Operator A,Manual CSV Upload
-SL0565,2026-01-23,B,Line1,1104,1080,1,34,Cleaning,Operator A,Google Form
-SL0270,2026-02-11,A,Line3,1030,976,10,0,No Downtime,Operator D,Google Form
-SL0794,2026-03-29,B,Line3,1031,974,21,95,Changeover,Operator C,Manual CSV Upload
-SL0320,2026-03-18,C,Line3,1198,1243,1,0,No Downtime,Operator C,Google Form
-SL0014,2026-01-15,C,Line3,1193,1166,3,73,Material Shortage,Operator A,Legacy Excel Log
-SL0585,2026-03-20,C,Line2,1013,909,4,0,No Downtime,Operator E,Manual CSV Upload
-SL0740,2026-01-20,C,Line2,896,904,15,87,Changeover,Operator E,Legacy Excel Log
-SL0356,2026-01-21,A,Line2,1136,1020,16,57,Cleaning,Operator A,Google Form
-SL0559,2026-03-06,B,Line2,1073,1126,14,60,Changeover,Operator E,Manual CSV Upload
-SL0583,2026-03-22,B,Line2,1056,955,1,69,Changeover,Operator A,Legacy Excel Log
-SL0692,2026-01-21,C,Line1,827,809,6,57,Material Shortage,Operator E,Manual CSV Upload
-SL0738,2026-02-10,C,Line3,938,925,19,99,Equipment Failure,Operator C,Google Form
-SL0462,2026-01-21,C,Line2,869,868,20,28,Cleaning,Operator B,Manual CSV Upload
-SL0597,2026-02-24,B,Line1,1153,1099,4,67,Quality Issue,Operator A,Legacy Excel Log
-SL0960,2026-02-09,D,Line4,1187,1066,2,88,Equipment Failure,Operator C,Google Form
-SL0071,2026-02-25,C,Line3,965,984,24,82,Equipment Failure,Operator B,Manual CSV Upload
-SL0020,2026-01-16,A,Line2,832,763,13,53,Equipment Failure,Operator A,Google Form
-SL0359,2026-01-23,B,Line1,846,728,13,86,Equipment Failure,Operator A,Manual CSV Upload
-SL0858,2026-03-22,C,Line2,979,890,17,0,No Downtime,Operator E,Legacy Excel Log
-SL0062,2026-02-24,A,Line4,893,768,8,66,Equipment Failure,Operator C,Manual CSV Upload
-SL0476,2026-01-06,A,Line4,918,791,8,51,Equipment Failure,Operator E,Manual CSV Upload
-SL0580,2026-01-03,B,Line4,918,960,14,60,Changeover,Operator D,Legacy Excel Log
-SL0665,2026-02-06,B,Line2,817,698,1,0,No Downtime,Operator B,Legacy Excel Log
-SL0885,2026-02-03,C,Line4,939,844,24,73,Material Shortage,Operator E,Manual CSV Upload
-SL0762,2026-01-05,B,Line1,996,936,23,19,Material Shortage,Operator A,Google Form
-SL0053,2026-01-23,C,Line4,825,793,21,42,Equipment Failure,Operator D,Legacy Excel Log
-SL0593,2026-02-26,C,Line4,1152,1054,14,76,Equipment Failure,Operator A,Legacy Excel Log
-SL0415,2026-03-26,A,Line3,1118,1085,4,0,No Downtime,Operator A,Legacy Excel Log
-SL0525,2026-03-31,C,Line1,907,801,2,85,Equipment Failure,Operator E,Google Form
-SL0411,2026-02-15,A,Line2,1006,858,5,0,No Downtime,Operator B,Legacy Excel Log
-SL0747,2026-03-27,B,Line1,846,743,16,94,Changeover,Operator C,Manual CSV Upload
-SL0059,2026-01-03,C,Line4,1044,888,9,36,Cleaning,Operator E,Legacy Excel Log
-SL0604,2026-01-26,A,Line3,806,759,19,15,Material Shortage,Operator E,Manual CSV Upload
-SL0901,2026-01-11,A,Line1,993,906,23,41,Equipment Failure,Operator A,Manual CSV Upload
-SL0431,2026-02-22,A,Line1,846,853,24,85,Changeover,Operator E,Google Form
-SL0578,2026-03-26,C,Line1,930,822,7,0,No Downtime,Operator E,Manual CSV Upload
-SL0854,2026-01-17,C,Line3,909,789,13,35,Material Shortage,Operator A,Google Form
-SL0664,2026-03-12,A,Line1,834,710,2,72,Material Shortage,Operator C,Google Form
-SL0286,2026-03-07,C,Line2,1028,950,13,74,Quality Issue,Operator B,Manual CSV Upload
-SL0043,2026-03-24,C,Line4,1147,1200,19,0,No Downtime,Operator A,Manual CSV Upload
-SL0249,2026-02-08,C,Line2,1037,1071,18,0,No Downtime,Operator E,Legacy Excel Log
-SL0145,2026-01-16,A,Line4,1182,1106,4,44,Material Shortage,Operator E,Legacy Excel Log
-SL0844,2026-03-06,A,Line2,1122,980,6,57,Changeover,Operator D,Legacy Excel Log
-SL0719,2026-01-15,A,Line3,1094,957,7,96,Equipment Failure,Operator A,Legacy Excel Log
-SL0465,2026-03-07,A,Line2,894,799,20,38,Material Shortage,Operator E,Google Form
-SL0872,2026-03-02,C,Line1,861,845,13,0,No Downtime,Operator C,Google Form
-SL0902,2026-01-08,B,Line4,833,725,1,73,Equipment Failure,Operator D,Google Form
-SL0636,2026-03-10,B,Line4,1102,1027,19,40,Cleaning,Operator D,Google Form
-SL0766,2026-01-04,C,Line1,865,880,9,23,Changeover,Operator C,Manual CSV Upload
-SL0700,2026-03-01,B,Line1,1173,1097,28,70,Material Shortage,Operator E,Google Form
-SL0007,2026-01-13,B,Line3,1032,1008,11,51,Equipment Failure,Operator C,Legacy Excel Log
-SL0300,2026-03-14,C,Line4,1081,1029,17,89,Changeover,Operator C,Legacy Excel Log
-SL0423,2026-01-22,A,Line2,1156,1150,33,16,Cleaning,Operator D,Legacy Excel Log
-SL0344,2026-01-22,B,Line4,960,894,14,36,Quality Issue,Operator D,Manual CSV Upload
-SL0931,2026-03-25,C,Line2,1003,898,19,44,Material Shortage,Operator E,Legacy Excel Log
-SL0538,2026-03-31,A,Line3,841,856,24,75,Equipment Failure,Operator A,Legacy Excel Log
-SL0331,2026-01-09,B,Line1,1054,991,10,87,Material Shortage,Operator B,Manual CSV Upload
-SL0868,2026-03-23,B,Line4,1141,1072,27,99,Changeover,Operator E,Manual CSV Upload
-SL0606,2026-03-21,C,Line2,825,731,1,38,Changeover,Operator A,Legacy Excel Log
-SL0948,2026-02-21,A,Line4,819,697,2,729,No Downtime,Operator C,Legacy Excel Log
-SL0257,2026-03-25,C,Line3,931,933,13,0,No Downtime,Operator D,Manual CSV Upload
-SL0205,2026-03-05,C,Line4,946,905,23,53,Changeover,Operator C,Manual CSV Upload
-SL0167,2026-03-03,B,Line1,1164,1186,30,40,Changeover,Operator C,Manual CSV Upload
-SL0644,2026-02-25,C,Line4,1120,1023,11,84,Material Shortage,Operator B,Legacy Excel Log
-SL0400,2026-01-05,C,Line2,975,970,6,75,Material Shortage,Operator C,Legacy Excel Log
-SL0685,2026-02-12,A,Line1,940,825,10,45,Cleaning,Operator B,Manual CSV Upload
-SL0702,2026-03-09,B,Line4,1156,1172,15,86,Material Shortage,Operator A,Legacy Excel Log
-SL0315,2026-01-02,C,Line3,861,902,11,34,Equipment Failure,Operator B,Manual CSV Upload
-SL0623,2026-01-04,B,Line2,897,823,11,49,Quality Issue,Operator C,Google Form
-SL0505,2026-03-29,B,Line1,1046,913,1,38,Quality Issue,Operator B,Manual CSV Upload
-SL0443,2026-03-10,B,Line4,806,769,0,22,Material Shortage,Operator B,Manual CSV Upload
-SL0631,2026-02-09,B,Line2,1165,1166,28,84,Equipment Failure,Operator E,Google Form
-SL0645,2026-01-23,B,Line2,896,861,21,78,Equipment Failure,Operator B,Manual CSV Upload
-SL0017,2026-01-15,B,Line3,922,794,20,20,Quality Issue,Operator D,Google Form
-SL0170,2026-03-25,B,Line2,870,746,20,37,Changeover,Operator D,Manual CSV Upload
-SL0781,2026-01-08,A,Line3,1108,1007,1,56,Quality Issue,Operator A,Manual CSV Upload
-SL0420,2026-02-07,B,Line3,1018,1015,2,12,Cleaning,Operator A,Google Form
-SL0820,2026-02-24,B,Line2,1022,997,2,79,Changeover,Operator B,Legacy Excel Log
-SL0650,2026-03-14,B,Line3,857,827,23,118,Equipment Failure,Operator E,Manual CSV Upload
-SL0725,2026-01-03,A,Line4,1146,1128,2,39,Material Shortage,Operator D,Manual CSV Upload
-SL0432,2026-03-25,C,Line4,974,898,1,73,Material Shortage,Operator C,Legacy Excel Log
-SL0057,2026-01-11,A,Line2,918,850,3,78,Equipment Failure,Operator D,Manual CSV Upload
-SL0353,2026-02-19,A,Line4,902,882,21,94,Equipment Failure,Operator A,Manual CSV Upload
-SL0873,2026-02-01,C,Line4,843,852,15,20,Material Shortage,Operator D,Google Form
-SL0728,2026-02-26,C,Line4,1026,931,22,0,No Downtime,Operator D,Legacy Excel Log
-SL0223,2026-01-21,B,Line4,1044,1023,23,61,Equipment Failure,Operator A,Google Form
-SL0437,2026-03-17,C,Line2,1055,897,19,37,Cleaning,Operator E,Manual CSV Upload
-SL0072,2026-03-14,C,Line4,972,831,21,42,Material Shortage,Operator C,Manual CSV Upload
-SL0083,2026-02-08,C,Line4,956,921,1,0,No Downtime,Operator A,Google Form
-SL0506,2026-02-22,B,Line1,1158,1177,8,111,Equipment Failure,Operator C,Google Form
-SL0516,2026-01-30,A,Line3,920,884,22,119,Equipment Failure,Operator B,Manual CSV Upload
-SL0744,2026-01-17,A,Line4,1153,1156,3,86,Equipment Failure,Operator D,Google Form
-SL0668,2026-03-27,B,Line3,882,887,7,74,Equipment Failure,Operator C,Google Form
-SL0275,2026-01-11,C,Line2,1092,1042,21,59,Equipment Failure,Operator C,Manual CSV Upload
-SL0792,2026-01-04,A,Line2,1122,1053,20,50,Equipment Failure,Operator C,Manual CSV Upload
-SL0482,2026-03-17,A,Line4,811,728,2,18,Cleaning,Operator E,Google Form
-SL0187,2026-02-10,C,Line3,927,966,0,91,Equipment Failure,Operator D,Legacy Excel Log
-SL0556,2026-01-10,B,Line1,910,948,2,88,Changeover,Operator D,Google Form
-SL0397,2026-03-18,C,Line3,952,939,13,55,Changeover,Operator C,Manual CSV Upload
-SL0203,2026-02-11,C,Line3,897,899,13,83,Changeover,Operator C,Manual CSV Upload
-SL0241,2026-03-10,B,Line2,1172,1225,30,0,No Downtime,Operator C,Manual CSV Upload
-SL0986,2026-03-10,B,Line3,970,931,15,61,Changeover,Operator C,Duplicate CSV Upload
-SL0674,2026-01-29,A,Line4,1152,1167,16,60,Material Shortage,Operator C,Legacy Excel Log
-SL0511,2026-03-07,B,Line4,913,913,3,37,Cleaning,Operator D,Legacy Excel Log
-SL0553,2026-03-04,A,Line1,816,786,19,42,Quality Issue,Operator A,Manual CSV Upload
-SL0997,2026-03-01,B,Line4,1089,1083,1,74,Material Shortage,Operator B,Duplicate CSV Upload
-SL0529,2026-03-11,A,Line4,1123,1122,29,88,Changeover,Operator C,Manual CSV Upload
-SL0684,2026-03-15,C,Line2,964,980,23,0,No Downtime,Operator E,Google Form
-SL0211,2026-03-14,B,Line4,808,746,15,0,No Downtime,Operator E,Manual CSV Upload
-SL0079,2026-01-06,A,Line3,1157,1201,22,16,Cleaning,Operator A,Legacy Excel Log
-SL0376,2026-02-27,A,Line3,1025,966,6,22,Material Shortage,Operator B,Legacy Excel Log
-SL0419,2026-01-13,B,Line2,1033,1082,9,27,Material Shortage,Operator B,Google Form
-SL0823,2026-01-07,C,Line1,823,784,12,74,Material Shortage,Operator E,Manual CSV Upload
-SL0750,2026-03-02,B,Line2,1025,1009,3,0,No Downtime,Operator D,Manual CSV Upload
-SL0252,2026-03-27,C,Line2,1045,931,25,21,Changeover,Operator B,Google Form
-SL0793,2026-03-15,A,Line1,880,791,16,0,No Downtime,Operator B,Legacy Excel Log
-SL0052,2026-03-31,B,Line4,1004,902,17,38,Equipment Failure,Operator D,Google Form
-SL0005,2026-02-14,C,Line3,822,818,13,0,No Downtime,Operator D,Google Form
-SL0364,2026-01-01,C,Line4,1194,1245,1,98,Changeover,Operator B,Legacy Excel Log
-SL0206,2026-02-16,A,Line4,826,796,4,29,Changeover,Operator D,Legacy Excel Log
-SL0096,2026-01-21,B,Line1,1082,1007,6,17,Cleaning,Operator D,Google Form
-SL0531,2026-03-08,A,Line3,946,892,0,0,No Downtime,Operator D,Manual CSV Upload
-SL0003,2026-03-25,C,Line4,912,857,7,0,No Downtime,Operator B,Legacy Excel Log
-SL0055,2026-03-12,B,Line2,1180,1206,16,0,No Downtime,Operator C,Legacy Excel Log
-SL0894,2026-02-05,A,Line1,1154,1137,20,39,Cleaning,Operator A,Manual CSV Upload
-SL0705,2026-03-01,C,Line1,1121,968,25,24,Changeover,Operator C,Manual CSV Upload
-SL0169,2026-01-07,B,Line3,920,853,2,65,Equipment Failure,Operator A,Legacy Excel Log
-SL0236,2026-01-12,C,Line4,828,778,11,22,Material Shortage,Operator E,Manual CSV Upload
-SL0810,2026-03-05,A,Line2,863,793,4,41,Changeover,Operator E,Manual CSV Upload
-SL0429,2026-01-07,C,Line2,1081,1057,12,83,Equipment Failure,Operator D,Legacy Excel Log
-SL0183,2026-02-26,B,Line4,821,817,22,75,Changeover,Operator C,Legacy Excel Log
-SL0920,2026-02-01,A,Line3,864,881,25,0,No Downtime,Operator B,Legacy Excel Log
-SL0914,2026-01-15,A,Line3,1025,911,16,12,Cleaning,Operator A,Google Form
-SL0799,2026-03-05,B,Line2,1020,1041,18,0,No Downtime,Operator C,Legacy Excel Log
-SL0238,2026-02-14,C,Line1,1077,1129,31,85,Equipment Failure,Operator A,Manual CSV Upload
-SL0019,2026-03-11,C,Line2,1165,1062,31,66,Quality Issue,Operator E,Manual CSV Upload
-SL0888,2026-01-04,C,Line4,1144,1000,29,101,Equipment Failure,Operator C,Manual CSV Upload
-SL0977,2026-01-13,D,Line4,1068,996,8,37,Material Shortage,Operator C,Google Form
-SL0602,2026-02-18,A,Line2,971,935,18,43,Equipment Failure,Operator B,Legacy Excel Log
-SL0112,2026-02-20,B,Line1,1089,1114,26,0,No Downtime,Operator E,Legacy Excel Log
-SL0202,2026-02-27,A,Line2,849,730,20,63,Quality Issue,Operator B,Google Form
-SL0292,2026-01-01,C,Line2,905,819,17,46,Cleaning,Operator A,Legacy Excel Log
-SL0615,2026-01-09,B,Line3,1059,1016,23,67,Equipment Failure,Operator C,Manual CSV Upload
-SL0992,2026-02-20,A,Line2,1166,1162,13,48,Material Shortage,Operator C,Duplicate CSV Upload
-SL0841,2026-01-09,B,Line4,858,835,3,58,Equipment Failure,Operator C,Manual CSV Upload
-SL0821,2026-03-29,C,Line2,1053,1006,19,84,Equipment Failure,Operator D,Google Form
-SL0136,2026-02-15,C,Line4,1169,1005,8,28,Material Shortage,Operator E,Legacy Excel Log
-SL0809,2026-03-01,B,Line1,1053,903,9,0,No Downtime,Operator D,Manual CSV Upload
-SL0248,2026-02-10,C,Line4,1009,887,10,40,Cleaning,Operator B,Google Form
-SL0154,2026-03-24,A,Line4,1036,1000,28,0,No Downtime,Operator A,Manual CSV Upload
-SL0732,2026-03-13,C,Line4,914,781,0,80,Changeover,Operator A,Legacy Excel Log
-SL0879,2026-01-30,A,Line3,1083,1129,22,96,Equipment Failure,Operator B,Manual CSV Upload
-SL0598,2026-03-06,A,Line2,1198,1158,31,35,Cleaning,Operator D,Manual CSV Upload
-SL0661,2026-02-27,B,Line3,1071,1056,1,0,No Downtime,Operator C,Manual CSV Upload
-SL0782,2026-01-18,A,Line1,1092,1088,30,89,Material Shortage,Operator E,Manual CSV Upload
-SL0174,2026-02-15,A,Line4,895,879,2,0,No Downtime,Operator A,Legacy Excel Log
-SL0909,2026-01-31,C,Line1,1016,933,27,45,Changeover,Operator A,Manual CSV Upload
-SL0192,2026-03-12,A,Line1,833,759,22,0,No Downtime,Operator E,Manual CSV Upload
-SL0088,2026-02-08,C,Line4,939,892,13,30,Equipment Failure,Operator D,Legacy Excel Log
-SL0836,2026-01-15,B,Line3,1029,1018,0,49,Equipment Failure,Operator D,Manual CSV Upload
-SL0916,2026-01-26,A,Line2,934,964,0,68,Changeover,Operator A,Manual CSV Upload
-SL0913,2026-02-18,A,Line4,894,907,0,70,Equipment Failure,Operator A,Legacy Excel Log
-SL0555,2026-01-08,B,Line4,988,996,1,87,Changeover,Operator A,Legacy Excel Log
-SL0181,2026-03-05,B,Line3,842,838,1,21,Cleaning,Operator E,Manual CSV Upload
-SL0441,2026-01-28,A,Line2,1119,1111,22,26,Quality Issue,Operator B,Legacy Excel Log
-SL0069,2026-03-24,B,Line1,1015,1029,3,0,No Downtime,Operator D,Legacy Excel Log
-SL0188,2026-01-16,B,Line3,1160,1089,32,87,Equipment Failure,Operator B,Google Form
-SL0039,2026-03-29,A,Line1,981,986,26,99,Changeover,Operator B,Google Form
-SL0624,2026-01-13,C,Line2,905,900,12,86,Changeover,Operator A,Google Form
-SL0116,2026-02-04,A,Line3,1046,1091,9,24,Quality Issue,Operator D,Google Form
-SL0269,2026-02-14,A,Line1,1023,917,2,98,Changeover,Operator E,Manual CSV Upload
-SL0686,2026-02-01,C,Line1,868,755,19,40,Changeover,Operator A,Manual CSV Upload
-SL0805,2026-01-23,B,Line2,1057,1002,10,26,Material Shortage,Operator C,Legacy Excel Log
-SL0620,2026-03-15,C,Line4,895,867,22,0,No Downtime,Operator C,Legacy Excel Log
-SL0881,2026-03-11,A,Line2,1075,1118,32,12,Cleaning,Operator A,Manual CSV Upload
-SL0311,2026-01-13,C,Line4,808,706,18,15,Material Shortage,Operator D,Google Form
-SL0022,2026-03-04,A,Line2,1170,1213,20,80,Changeover,Operator D,Google Form
-SL0921,2026-01-11,B,Line1,885,842,18,85,Changeover,Operator C,Manual CSV Upload
-SL0478,2026-02-03,C,Line2,992,972,10,14,Cleaning,Operator E,Manual CSV Upload
-SL0271,2026-03-29,C,Line4,843,846,7,24,Material Shortage,Operator A,Manual CSV Upload
-SL0339,2026-01-01,C,Line4,1177,1171,3,45,Material Shortage,Operator D,Manual CSV Upload
-SL0379,2026-01-31,B,Line3,840,780,19,98,Equipment Failure,Operator E,Legacy Excel Log
-SL0630,2026-01-12,B,Line4,891,882,23,77,Changeover,Operator E,Manual CSV Upload
-SL0694,2026-02-26,C,Line3,1014,902,18,29,Material Shortage,Operator C,Google Form
-SL0384,2026-01-13,B,Line3,1010,911,17,75,Material Shortage,Operator A,Google Form
-SL0274,2026-01-12,B,Line1,1105,1071,10,62,Equipment Failure,Operator D,Manual CSV Upload
-SL0360,2026-03-20,A,Line2,974,967,26,0,No Downtime,Operator C,Google Form
-SL0450,2026-02-08,B,Line3,837,842,8,48,Equipment Failure,Operator E,Google Form
-SL0366,2026-01-12,C,Line3,1028,876,5,64,Changeover,Operator C,Google Form
-SL0981,2026-03-29,C,Line1,1111,1085,17,74,Material Shortage,Operator C,Duplicate CSV Upload
-SL0563,2026-02-05,C,Line2,848,727,7,71,Equipment Failure,Operator E,Google Form
-SL0426,2026-03-14,A,Line3,1065,1016,21,109,Equipment Failure,Operator B,Manual CSV Upload
-SL0710,2026-02-17,B,Line4,1048,995,24,88,Changeover,Operator E,Manual CSV Upload
-SL0316,2026-01-12,C,Line1,852,777,20,42,Equipment Failure,Operator B,Google Form
-SL0008,2026-03-29,C,Line1,1111,1085,17,74,Material Shortage,Operator D,Manual CSV Upload
-SL0208,2026-02-13,C,Line3,1186,1042,18,20,Material Shortage,Operator A,Google Form
-SL0839,2026-03-03,A,Line2,902,794,11,0,No Downtime,Operator D,Manual CSV Upload
-SL0527,2026-02-01,C,Line3,1026,1000,3,13,Quality Issue,Operator A,Legacy Excel Log
-SL0273,2026-02-04,A,Line2,844,749,10,72,Changeover,Operator A,Google Form
-SL0447,2026-03-24,B,Line2,1197,1190,6,29,Changeover,Operator B,Google Form
-SL0351,2026-03-29,B,Line2,981,875,4,39,Changeover,Operator A,Legacy Excel Log
-SL0924,2026-02-09,B,Line4,1092,962,24,25,Material Shortage,Operator B,Google Form
-SL0723,2026-03-30,A,Line4,820,719,11,71,Changeover,Operator E,Google Form
-SL0246,2026-03-15,B,Line3,921,838,3,38,Quality Issue,Operator D,Manual CSV Upload
-SL0070,2026-01-20,B,Line2,1175,1121,21,88,Changeover,Operator D,Manual CSV Upload
-SL0375,2026-03-02,B,Line3,846,827,9,68,Changeover,Operator C,Google Form
-SL0571,2026-03-13,A,Line4,1002,982,5,57,Cleaning,Operator E,Google Form
-SL0708,2026-01-09,C,Line2,870,910,6,86,Equipment Failure,Operator E,Legacy Excel Log
-SL0218,2026-02-06,C,Line2,1153,1142,10,50,Material Shortage,Operator C,Google Form
-SL0990,2026-02-05,B,Line2,1116,1084,22,67,Equipment Failure,Operator A,Duplicate CSV Upload
-SL0864,2026-01-16,C,Line4,856,748,12,44,Equipment Failure,Operator A,Manual CSV Upload
-SL0989,2026-03-14,C,Line2,1098,1152,0,0,No Downtime,Operator E,Duplicate CSV Upload
-SL0253,2026-01-16,C,Line4,924,913,19,55,Equipment Failure,Operator E,Manual CSV Upload
-SL0284,2026-01-05,B,Line1,855,858,16,107,Equipment Failure,Operator E,Google Form
-SL0484,2026-03-23,A,Line3,843,753,13,81,Changeover,Operator B,Google Form
-SL0381,2026-01-25,A,Line1,1016,879,18,105,Equipment Failure,Operator B,Legacy Excel Log
-SL0044,2026-01-23,C,Line3,819,713,9,60,Changeover,Operator D,Legacy Excel Log
-SL0904,2026-03-21,A,Line3,1133,1175,27,62,Changeover,Operator E,Google Form
-SL0295,2026-03-17,A,Line2,960,838,7,33,Material Shortage,Operator E,Manual CSV Upload
-SL0983,2026-02-24,B,Line1,1153,1099,4,67,Quality Issue,Operator C,Duplicate CSV Upload
-SL0609,2026-02-18,A,Line4,1081,932,13,60,Equipment Failure,Operator C,Legacy Excel Log
-SL0917,2026-01-27,B,Line4,922,851,9,92,Equipment Failure,Operator E,Manual CSV Upload
-SL0831,2026-01-19,B,Line4,811,708,19,76,Changeover,Operator D,Manual CSV Upload
-SL0040,2026-01-21,A,Line4,812,719,19,36,Cleaning,Operator B,Manual CSV Upload
-SL0629,2026-03-20,B,Line4,825,722,10,23,Quality Issue,Operator D,Google Form
-SL0325,2026-02-06,C,Line4,1016,1006,2,98,Changeover,Operator B,Manual CSV Upload
-SL0972,2026-03-30,B,,1133,1050,13,76,Material Shortage,Operator A,Manual CSV Upload
-SL0581,2026-03-10,A,Line2,901,856,11,0,No Downtime,Operator A,Google Form
-SL0161,2026-03-27,B,Line3,809,746,4,77,Material Shortage,Operator B,Google Form
-SL0947,2026-02-22,B,Line2,929,828,924,106,Equipment Failure,Operator D,Manual CSV Upload
-SL0567,2026-03-23,C,Line4,827,753,0,19,Cleaning,Operator C,Legacy Excel Log
-SL0688,2026-03-02,C,Line2,905,795,6,50,Changeover,Operator B,Legacy Excel Log
-SL0045,2026-03-07,A,Line4,1095,972,1,86,Changeover,Operator E,Legacy Excel Log
-SL0440,2026-03-19,C,Line3,1159,1112,10,0,No Downtime,Operator E,Legacy Excel Log
-SL0521,2026-02-15,B,Line4,1196,1192,31,51,Material Shortage,Operator D,Legacy Excel Log
-SL0783,2026-03-05,A,Line2,1107,968,23,94,Changeover,Operator D,Legacy Excel Log
-SL0118,2026-02-17,C,Line3,1099,1017,19,44,Material Shortage,Operator D,Google Form
-SL0889,2026-01-23,C,Line1,863,813,22,43,Material Shortage,Operator A,Manual CSV Upload
-SL0473,2026-03-25,A,Line3,1000,894,20,0,No Downtime,Operator C,Google Form
-SL0452,2026-02-16,B,Line2,1185,1153,16,21,Changeover,Operator A,Legacy Excel Log
-SL0584,2026-02-05,A,Line2,974,1002,19,73,Equipment Failure,Operator E,Legacy Excel Log
-SL0577,2026-03-11,C,Line3,1080,1022,22,17,Material Shortage,Operator D,Legacy Excel Log
-SL0220,2026-02-06,C,Line1,977,1011,19,23,Cleaning,Operator B,Legacy Excel Log
-SL0142,2026-03-26,B,Line4,1110,1041,8,0,No Downtime,Operator A,Manual CSV Upload
-SL0633,2026-01-29,A,Line3,986,915,19,61,Changeover,Operator D,Manual CSV Upload
-SL0258,2026-01-22,C,Line3,886,777,12,94,Equipment Failure,Operator A,Legacy Excel Log
-SL0966,2026-03-19,A,Line3,946,913,26,674,Material Shortage,Operator A,Manual CSV Upload
-SL0409,2026-02-01,A,Line3,959,839,9,41,Changeover,Operator A,Google Form
-SL0182,2026-02-11,A,Line1,967,949,8,74,Changeover,Operator B,Legacy Excel Log
-SL0813,2026-02-17,C,Line1,965,849,2,71,Quality Issue,Operator D,Legacy Excel Log
-SL0094,2026-02-22,A,Line2,1065,982,22,26,Changeover,Operator B,Manual CSV Upload
-SL0235,2026-03-15,C,Line2,884,809,12,41,Material Shortage,Operator E,Manual CSV Upload
-SL0362,2026-03-26,B,Line1,972,884,3,70,Material Shortage,Operator D,Legacy Excel Log
-SL0596,2026-03-08,C,Line1,897,814,9,56,Changeover,Operator D,Google Form
-SL0742,2026-02-14,B,Line3,871,882,23,63,Changeover,Operator B,Legacy Excel Log
-SL0348,2026-01-02,A,Line2,866,770,9,30,Changeover,Operator E,Legacy Excel Log
-SL0653,2026-02-12,B,Line3,950,862,0,0,No Downtime,Operator C,Legacy Excel Log
-SL0520,2026-02-22,A,Line3,1147,1195,7,88,Changeover,Operator B,Manual CSV Upload
-SL0363,2026-02-10,A,Line3,914,898,21,52,Material Shortage,Operator B,Google Form
-SL0652,2026-02-09,C,Line1,975,933,0,80,Changeover,Operator E,Legacy Excel Log
-SL0499,2026-03-05,B,Line1,903,921,25,22,Cleaning,Operator A,Legacy Excel Log
-SL0800,2026-03-28,A,Line4,892,831,3,53,Changeover,Operator B,Legacy Excel Log
-SL0999,2026-02-12,B,Line1,876,793,0,0,No Downtime,Operator E,Duplicate CSV Upload
-SL0471,2026-02-05,A,Line2,934,930,17,11,Cleaning,Operator E,Legacy Excel Log
-SL0028,2026-02-07,A,Line1,1096,1092,1,21,Material Shortage,Operator E,Manual CSV Upload
-SL0137,2026-01-28,A,Line4,914,931,9,29,Material Shortage,Operator C,Legacy Excel Log
-SL0681,2026-01-03,B,Line1,924,914,3,31,Equipment Failure,Operator C,Google Form
-SL0807,2026-02-06,B,Line3,1064,971,26,77,Material Shortage,Operator B,Legacy Excel Log
-SL0194,2026-03-12,C,Line2,1193,1244,16,0,No Downtime,Operator A,Google Form
-SL0758,2026-03-04,C,Line3,875,878,2,83,Changeover,Operator B,Legacy Excel Log
-SL0065,2026-01-17,B,Line1,1088,1131,15,72,Equipment Failure,Operator B,Legacy Excel Log
-SL0337,2026-03-21,A,Line4,988,956,14,0,No Downtime,Operator B,Legacy Excel Log
-SL0160,2026-01-11,B,Line4,1129,1138,27,87,Changeover,Operator A,Legacy Excel Log
-SL0870,2026-01-12,A,Line1,1092,1065,24,107,Equipment Failure,Operator A,Legacy Excel Log
-SL0860,2026-01-13,A,Line4,1010,875,1,70,Quality Issue,Operator B,Manual CSV Upload
-SL0846,2026-01-01,A,Line4,974,883,4,116,Equipment Failure,Operator D,Manual CSV Upload
-SL0489,2026-02-23,B,Line1,1157,1106,7,58,Quality Issue,Operator C,Legacy Excel Log
-SL0413,2026-03-21,A,Line1,1138,991,24,39,Equipment Failure,Operator D,Manual CSV Upload
-SL0354,2026-02-15,B,Line4,976,1007,15,38,Material Shortage,Operator A,Manual CSV Upload
-SL0637,2026-02-13,A,Line4,1022,984,10,21,Cleaning,Operator A,Legacy Excel Log
-SL0399,2026-03-26,B,Line2,1169,999,14,73,Changeover,Operator D,Manual CSV Upload
-SL0326,2026-01-11,B,Line1,1061,1097,32,66,Equipment Failure,Operator D,Legacy Excel Log
-SL0912,2026-01-29,A,Line2,1154,1034,19,119,Equipment Failure,Operator C,Legacy Excel Log
-SL0050,2026-03-07,C,Line3,847,858,19,38,Quality Issue,Operator B,Google Form
-SL0756,2026-02-16,A,Line3,902,874,25,79,Equipment Failure,Operator D,Manual CSV Upload
-SL0278,2026-03-21,B,Line3,1025,939,22,0,No Downtime,Operator E,Google Form
-SL0289,2026-01-09,B,Line1,1163,1015,25,41,Changeover,Operator B,Legacy Excel Log
-SL0358,2026-01-04,C,Line3,1090,1049,17,88,Equipment Failure,Operator E,Manual CSV Upload
-SL0098,2026-02-28,C,Line2,996,884,15,18,Cleaning,Operator A,Manual CSV Upload
-SL0502,2026-02-06,C,Line3,977,1018,8,44,Changeover,Operator D,Manual CSV Upload
-SL0314,2026-01-12,C,Line1,800,714,1,86,Changeover,Operator D,Google Form
-SL0180,2026-01-16,B,Line4,1004,1002,26,48,Equipment Failure,Operator D,Legacy Excel Log
-SL0796,2026-03-13,C,Line2,845,882,5,0,No Downtime,Operator B,Google Form
-SL0108,2026-01-23,A,Line4,1117,1102,16,49,Changeover,Operator D,Legacy Excel Log
-SL0388,2026-01-28,B,Line4,1188,1132,12,45,Equipment Failure,Operator A,Manual CSV Upload
-SL0822,2026-03-03,B,Line2,865,853,7,69,Material Shortage,Operator C,Legacy Excel Log
-SL0874,2026-02-13,B,Line2,1012,865,13,26,Material Shortage,Operator A,Google Form
-SL0101,2026-01-31,C,Line4,919,938,11,85,Equipment Failure,Operator D,Manual CSV Upload
-SL0011,2026-02-03,A,Line2,1181,1136,8,94,Changeover,Operator D,Manual CSV Upload
-SL0691,2026-01-29,B,Line2,941,809,2,85,Equipment Failure,Operator D,Google Form
-SL0232,2026-02-07,B,Line2,912,949,13,97,Changeover,Operator C,Manual CSV Upload
-SL0806,2026-03-09,B,Line2,933,814,1,50,Material Shortage,Operator C,Manual CSV Upload
-SL0280,2026-03-30,C,Line4,1094,1100,10,70,Changeover,Operator C,Google Form
-SL0784,2026-01-31,B,Line2,873,760,4,77,Equipment Failure,Operator C,Legacy Excel Log
-SL0372,2026-03-31,C,Line3,1138,1031,7,98,Equipment Failure,Operator E,Manual CSV Upload
-SL0689,2026-03-30,A,Line2,1167,1108,31,48,Quality Issue,Operator C,Manual CSV Upload
-SL0338,2026-03-11,A,Line2,803,832,0,50,Cleaning,Operator A,Manual CSV Upload
-SL0068,2026-03-31,B,Line1,1089,1096,11,67,Changeover,Operator A,Legacy Excel Log
-SL0417,2026-01-26,B,Line4,951,838,13,71,Quality Issue,Operator C,Google Form
-SL0113,2026-03-05,B,Line2,1110,1121,7,47,Material Shortage,Operator B,Legacy Excel Log
-SL0545,2026-03-29,C,Line3,1188,1158,2,23,Quality Issue,Operator B,Manual CSV Upload
-SL0619,2026-02-12,B,Line1,876,793,0,0,No Downtime,Operator E,Google Form
-SL0277,2026-02-01,C,Line4,1104,1074,14,25,Equipment Failure,Operator D,Manual CSV Upload
-SL0080,2026-02-06,B,Line4,1025,941,27,76,Material Shortage,Operator A,Google Form
-SL0254,2026-02-06,B,Line4,1073,1051,9,78,Material Shortage,Operator D,Google Form
-SL0027,2026-02-28,B,Line4,1156,1203,35,82,Changeover,Operator B,Google Form
-SL0389,2026-03-06,B,Line2,1199,1223,32,49,Equipment Failure,Operator B,Google Form
-SL0876,2026-03-20,B,Line2,813,807,7,43,Equipment Failure,Operator D,Manual CSV Upload
-SL0863,2026-03-07,C,Line1,1155,1030,14,0,No Downtime,Operator E,Manual CSV Upload
-SL0158,2026-03-22,C,Line3,833,762,12,52,Changeover,Operator E,Google Form
-SL0430,2026-02-27,A,Line4,1028,938,27,11,Cleaning,Operator A,Manual CSV Upload
-SL0575,2026-01-11,A,Line1,924,960,26,28,Cleaning,Operator A,Manual CSV Upload
-SL0524,2026-02-16,C,Line4,1011,893,22,55,Equipment Failure,Operator C,Legacy Excel Log
-SL0382,2026-02-03,B,Line1,844,782,9,50,Material Shortage,Operator E,Manual CSV Upload
-SL0198,2026-01-11,A,Line3,1133,1010,17,23,Changeover,Operator D,Legacy Excel Log
-SL0276,2026-03-05,A,Line1,885,829,10,29,Changeover,Operator C,Manual CSV Upload
-SL0073,2026-02-13,B,Line3,1084,923,26,117,Equipment Failure,Operator D,Manual CSV Upload
-SL0209,2026-01-18,C,Line3,1042,993,4,27,Quality Issue,Operator C,Legacy Excel Log
-SL0837,2026-02-26,A,Line2,1100,1134,11,79,Changeover,Operator B,Manual CSV Upload
-SL0942,2026-01-01,A,Line4,832,844,15,717,Equipment Failure,Operator E,Manual CSV Upload
-SL0436,2026-02-13,A,Line4,823,852,21,77,Changeover,Operator D,Legacy Excel Log
-SL0261,2026-01-01,C,Line4,806,687,14,51,Material Shortage,Operator A,Legacy Excel Log
-SL0086,2026-01-30,B,Line2,1017,887,5,59,Equipment Failure,Operator B,Google Form
-SL0468,2026-03-20,C,Line3,1155,1116,18,60,Changeover,Operator D,Google Form
-SL0963,2026-03-11,D,Line2,1151,1138,7,0,No Downtime,Operator E,Manual CSV Upload
-SL0739,2026-01-02,A,Line3,990,995,12,30,Quality Issue,Operator A,Google Form
-SL0869,2026-02-19,A,Line4,973,932,26,0,No Downtime,Operator C,Legacy Excel Log
-SL0267,2026-01-03,A,Line2,1185,1201,29,48,Quality Issue,Operator B,Legacy Excel Log
-SL0262,2026-03-31,C,Line4,891,776,2,39,Material Shortage,Operator E,Legacy Excel Log
-SL0564,2026-01-30,B,Line3,847,816,13,34,Equipment Failure,Operator C,Manual CSV Upload
-SL0077,2026-03-10,C,Line2,898,802,11,0,No Downtime,Operator E,Legacy Excel Log
-SL0764,2026-03-14,C,Line4,1137,1092,17,91,Changeover,Operator B,Legacy Excel Log
-SL0961,2026-02-18,A,Line1,921,952,993,0,No Downtime,Operator C,Google Form
-SL0285,2026-03-14,C,Line4,1185,1085,25,27,Material Shortage,Operator C,Google Form
-SL0368,2026-03-11,B,Line1,1045,1053,18,0,No Downtime,Operator B,Google Form
-SL0222,2026-03-23,A,Line1,851,793,17,32,Material Shortage,Operator A,Legacy Excel Log
-SL0566,2026-02-12,B,Line4,1013,1049,3,57,Cleaning,Operator E,Google Form
-SL0138,2026-01-29,B,Line1,1111,1150,28,48,Equipment Failure,Operator C,Legacy Excel Log
-SL0832,2026-01-03,B,Line2,903,820,20,67,Equipment Failure,Operator A,Google Form
-SL0771,2026-03-20,B,Line3,1023,910,17,0,No Downtime,Operator A,Legacy Excel Log
-SL0146,2026-03-27,B,Line1,1003,1025,1,34,Equipment Failure,Operator C,Legacy Excel Log
-SL0851,2026-02-23,B,Line3,1169,1167,31,60,Equipment Failure,Operator E,Legacy Excel Log
-SL0038,2026-01-05,B,Line2,1020,892,8,15,Quality Issue,Operator C,Google Form
-SL0243,2026-01-15,A,Line4,1114,1117,29,51,Equipment Failure,Operator A,Google Form
-SL0046,2026-03-27,A,Line3,1020,881,17,60,Changeover,Operator A,Legacy Excel Log
-SL0656,2026-02-05,B,Line1,1179,1028,5,39,Changeover,Operator D,Manual CSV Upload
-SL0731,2026-01-26,A,Line4,948,910,1,47,Cleaning,Operator C,Manual CSV Upload
-SL0523,2026-02-13,A,Line3,962,943,20,70,Changeover,Operator C,Manual CSV Upload
-SL0641,2026-02-27,A,Line2,1148,1177,10,48,Quality Issue,Operator D,Legacy Excel Log
-SL0361,2026-01-03,A,Line2,1196,1043,16,34,Equipment Failure,Operator C,Legacy Excel Log
-SL0536,2026-01-03,A,Line1,1073,916,26,41,Equipment Failure,Operator D,Legacy Excel Log
-SL0845,2026-03-05,C,Line1,878,859,8,40,Material Shortage,Operator D,Manual CSV Upload
-SL0503,2026-03-15,A,Line3,889,828,2,62,Equipment Failure,Operator C,Google Form
-SL0843,2026-02-28,A,Line1,1200,1166,27,0,No Downtime,Operator E,Google Form
-SL0144,2026-03-18,A,Line1,904,822,5,47,Material Shortage,Operator C,Manual CSV Upload
-SL0866,2026-02-09,B,Line2,893,905,13,69,Equipment Failure,Operator A,Google Form
-SL0547,2026-01-06,B,Line4,1086,987,20,48,Equipment Failure,Operator E,Manual CSV Upload
-SL0946,2026-03-31,C,Line2,-167,980,22,62,Material Shortage,Operator A,Google Form
-SL0704,2026-02-28,C,Line1,1032,972,4,21,Cleaning,Operator C,Legacy Excel Log
-SL0048,2026-03-27,B,Line2,1115,1074,13,0,No Downtime,Operator C,Manual CSV Upload
-SL0308,2026-02-05,C,Line3,1032,1073,10,118,Equipment Failure,Operator A,Legacy Excel Log
-SL0993,2026-02-04,A,Line1,932,939,7,25,Changeover,Operator A,Duplicate CSV Upload
-SL0001,2026-03-23,A,Line1,1179,1067,7,0,No Downtime,Operator E,Google Form
-SL0834,2026-03-04,B,Line4,1062,1028,18,72,Quality Issue,Operator B,Legacy Excel Log
-SL0176,2026-01-03,B,Line1,976,876,17,99,Equipment Failure,Operator C,Google Form
-SL0558,2026-03-15,B,Line4,1159,1139,30,38,Material Shortage,Operator E,Manual CSV Upload
-SL0373,2026-01-20,A,Line3,801,749,6,96,Changeover,Operator D,Google Form
-SL0659,2026-02-14,A,Line3,1186,1202,1,80,Changeover,Operator C,Manual CSV Upload
-SL0519,2026-01-13,B,Line3,933,860,14,42,Quality Issue,Operator C,Google Form
-SL0640,2026-01-28,A,Line1,1187,1043,4,64,Material Shortage,Operator E,Legacy Excel Log
-SL0087,2026-01-08,A,Line3,1104,1103,18,40,Equipment Failure,Operator D,Legacy Excel Log
-SL0802,2026-02-20,C,Line2,1165,1079,13,29,Changeover,Operator A,Legacy Excel Log
-SL0263,2026-02-02,B,Line3,1003,868,24,51,Changeover,Operator B,Manual CSV Upload
-SL0865,2026-02-09,B,Line3,950,899,21,100,Equipment Failure,Operator D,Google Form
-SL0857,2026-03-15,C,Line1,1032,947,6,0,No Downtime,Operator E,Legacy Excel Log
-SL0166,2026-02-18,C,Line4,882,893,21,57,Equipment Failure,Operator A,Legacy Excel Log
-SL0212,2026-03-30,C,Line1,1105,1044,30,0,No Downtime,Operator E,Legacy Excel Log
-SL0589,2026-02-08,B,Line3,877,882,2,103,Equipment Failure,Operator E,Manual CSV Upload
-SL0132,2026-03-09,B,Line4,1058,1027,3,0,No Downtime,Operator E,Legacy Excel Log
-SL0041,2026-01-21,C,Line1,995,1019,26,83,Equipment Failure,Operator C,Manual CSV Upload
-SL0126,2026-03-18,A,Line3,874,915,14,0,No Downtime,Operator A,Legacy Excel Log
-SL0322,2026-02-19,A,Line2,1055,1031,2,0,No Downtime,Operator A,Manual CSV Upload
-SL0458,2026-02-12,A,Line1,837,720,17,93,Changeover,Operator B,Manual CSV Upload
-SL0569,2026-03-06,A,Line2,1021,927,10,25,Material Shortage,Operator D,Legacy Excel Log
-SL0006,2026-03-12,B,Line3,1095,972,2,47,Quality Issue,Operator A,Google Form
-SL0185,2026-03-28,B,Line1,864,746,17,69,Changeover,Operator E,Google Form
-SL0801,2026-02-27,A,Line3,1098,1083,14,42,Equipment Failure,Operator C,Legacy Excel Log
-SL0663,2026-03-28,C,Line2,1175,1156,26,53,Cleaning,Operator B,Manual CSV Upload
-SL0711,2026-02-27,C,Line3,1144,1188,28,0,No Downtime,Operator A,Google Form
-SL0213,2026-01-30,C,Line1,1098,1038,16,68,Changeover,Operator B,Legacy Excel Log
-SL0128,2026-01-17,C,Line4,1069,932,1,61,Material Shortage,Operator E,Legacy Excel Log
-SL0818,2026-02-08,B,Line4,1176,1189,11,18,Cleaning,Operator C,Legacy Excel Log
-SL0599,2026-02-27,A,Line2,1032,999,21,83,Equipment Failure,Operator A,Manual CSV Upload
-SL0532,2026-01-02,B,Line3,1105,990,0,77,Equipment Failure,Operator E,Manual CSV Upload
-SL0980,2026-02-18,A,Line3,832,764,861,32,Changeover,Operator A,Google Form
-SL0926,2026-02-25,B,Line3,1054,962,11,54,Equipment Failure,Operator C,Legacy Excel Log
-SL0543,2026-02-25,B,Line1,885,892,15,46,Material Shortage,Operator A,Google Form
-SL0550,2026-01-24,A,Line3,1197,1165,11,93,Equipment Failure,Operator D,Google Form
-SL0570,2026-01-07,C,Line4,934,809,12,18,Cleaning,Operator B,Manual CSV Upload
-SL0749,2026-01-25,B,Line2,1186,1135,33,52,Equipment Failure,Operator E,Legacy Excel Log
-SL0021,2026-03-22,A,Line2,834,859,22,55,Equipment Failure,Operator C,Legacy Excel Log
-SL0416,2026-03-21,A,Line3,858,863,12,59,Cleaning,Operator C,Legacy Excel Log
-SL0190,2026-02-14,C,Line1,1081,1036,27,32,Quality Issue,Operator C,Legacy Excel Log
-SL0551,2026-03-09,C,Line4,1192,1144,21,61,Changeover,Operator A,Google Form
-SL0066,2026-03-19,C,Line1,1198,1214,35,18,Material Shortage,Operator C,Legacy Excel Log
-SL0969,2026-01-10,B,Line2,1166,1100,1163,26,Equipment Failure,Operator E,Legacy Excel Log
-SL0102,2026-03-26,C,Line2,1053,1098,4,0,No Downtime,Operator C,Google Form
-SL0129,2026-01-14,B,Line2,1114,956,22,43,Cleaning,Operator C,Manual CSV Upload
-SL0938,2026-03-30,C,Line4,813,721,1,0,No Downtime,Operator C,Google Form
-SL0306,2026-01-17,C,Line2,927,815,7,111,Equipment Failure,Operator D,Manual CSV Upload
-SL0797,2026-02-21,C,Line4,1107,998,2,87,Material Shortage,Operator A,Google Form
-SL0496,2026-03-07,B,Line3,1081,1051,21,74,Equipment Failure,Operator A,Google Form
-SL0394,2026-01-02,B,Line2,1131,1000,24,102,Equipment Failure,Operator C,Legacy Excel Log
-SL0186,2026-03-19,A,Line4,989,914,20,43,Cleaning,Operator C,Manual CSV Upload
-SL0707,2026-02-16,A,Line1,996,919,17,37,Material Shortage,Operator E,Legacy Excel Log
-SL0097,2026-03-24,A,Line4,1166,1059,22,81,Changeover,Operator D,Google Form
-SL0795,2026-01-26,A,Line4,988,875,23,38,Quality Issue,Operator A,Google Form
-SL0492,2026-01-01,B,Line2,1152,1164,14,79,Equipment Failure,Operator E,Manual CSV Upload
-SL0683,2026-01-09,A,Line4,972,983,28,61,Changeover,Operator A,Legacy Excel Log
-SL0848,2026-02-22,B,Line4,1064,1073,11,43,Equipment Failure,Operator A,Legacy Excel Log
-SL0601,2026-03-09,C,Line4,1172,1181,18,0,No Downtime,Operator D,Legacy Excel Log
-SL0024,2026-02-13,A,Line2,898,797,10,50,Material Shortage,Operator D,Google Form
-SL0779,2026-02-01,B,Line4,1048,1008,13,24,Changeover,Operator B,Google Form
-SL0522,2026-01-19,A,Line3,1015,990,16,14,Cleaning,Operator A,Google Form
-SL0657,2026-01-23,B,Line2,1048,928,14,35,Equipment Failure,Operator B,Legacy Excel Log
-SL0811,2026-03-14,C,Line2,1098,1152,0,0,No Downtime,Operator B,Manual CSV Upload
-SL0125,2026-02-01,A,Line2,835,848,14,49,Changeover,Operator C,Google Form
-SL0085,2026-02-27,C,Line4,949,812,7,73,Material Shortage,Operator A,Legacy Excel Log
-SL0120,2026-02-22,A,Line2,823,855,7,32,Changeover,Operator B,Legacy Excel Log
-SL0123,2026-02-26,B,Line2,985,856,17,65,Changeover,Operator A,Manual CSV Upload
-SL0012,2026-01-29,A,Line4,846,846,21,45,Equipment Failure,Operator D,Legacy Excel Log
-SL0847,2026-03-22,C,Line2,877,877,13,0,No Downtime,Operator B,Manual CSV Upload
-SL0456,2026-03-10,A,Line1,907,892,20,0,No Downtime,Operator D,Google Form
-SL0693,2026-01-06,A,Line1,1075,951,22,29,Material Shortage,Operator A,Google Form
-SL0648,2026-01-24,B,Line4,1082,1097,12,79,Equipment Failure,Operator E,Google Form
-SL0282,2026-02-07,C,Line1,1009,993,4,47,Material Shortage,Operator B,Legacy Excel Log
-SL0392,2026-02-14,B,Line2,932,931,19,64,Material Shortage,Operator A,Google Form
-SL0883,2026-03-22,A,Line3,823,726,11,36,Equipment Failure,Operator D,Legacy Excel Log
-SL0475,2026-02-27,A,Line2,1089,1132,22,0,No Downtime,Operator D,Manual CSV Upload
-SL0855,2026-03-11,C,Line3,923,938,8,84,Changeover,Operator A,Legacy Excel Log
-SL0953,2026-01-26,A,,1015,868,0,53,Cleaning,Operator A,Google Form
-SL0893,2026-01-09,C,Line2,1181,1019,7,44,Material Shortage,Operator E,Legacy Excel Log
-SL0385,2026-02-05,B,Line2,1116,1084,22,67,Equipment Failure,Operator B,Google Form
-SL0669,2026-02-03,B,Line2,1025,885,26,75,Equipment Failure,Operator B,Legacy Excel Log
-SL0177,2026-01-06,B,Line3,1129,999,23,76,Material Shortage,Operator B,Google Form
-SL0611,2026-03-03,C,Line3,1018,989,9,49,Cleaning,Operator C,Google Form
-SL0310,2026-02-04,B,Line3,972,932,3,53,Quality Issue,Operator A,Google Form
-SL0501,2026-02-05,B,Line3,1142,1060,18,28,Changeover,Operator A,Legacy Excel Log
-SL0407,2026-01-12,A,Line4,1124,1051,13,15,Material Shortage,Operator A,Legacy Excel Log
-SL0915,2026-01-26,B,Line2,912,936,20,95,Equipment Failure,Operator B,Google Form
-SL0122,2026-01-20,B,Line1,1050,1021,28,113,Equipment Failure,Operator C,Google Form
-SL0035,2026-01-14,C,Line2,939,851,5,112,Equipment Failure,Operator C,Legacy Excel Log
-SL0251,2026-01-25,A,Line3,993,977,17,34,Quality Issue,Operator E,Legacy Excel Log
-SL0414,2026-02-18,A,Line3,1042,1031,6,10,Cleaning,Operator C,Manual CSV Upload
-SL0643,2026-03-12,A,Line1,1160,1115,32,51,Material Shortage,Operator A,Google Form
-SL0153,2026-03-17,A,Line3,1059,915,12,72,Equipment Failure,Operator C,Google Form
-SL0445,2026-02-27,A,Line2,1180,1155,13,56,Changeover,Operator A,Manual CSV Upload
-SL0608,2026-02-06,C,Line2,1033,1032,11,63,Equipment Failure,Operator C,Manual CSV Upload
-SL0347,2026-01-23,A,Line4,1031,990,16,38,Equipment Failure,Operator B,Google Form
-SL0666,2026-03-23,A,Line1,844,861,3,33,Quality Issue,Operator A,Legacy Excel Log
-SL0985,2026-03-24,C,Line4,1147,1200,19,0,No Downtime,Operator B,Duplicate CSV Upload
-SL0121,2026-01-18,B,Line4,989,973,21,63,Quality Issue,Operator E,Legacy Excel Log
-SL0776,2026-03-01,B,Line4,1089,1083,1,74,Material Shortage,Operator B,Google Form
-SL0775,2026-02-28,C,Line2,809,789,12,88,Equipment Failure,Operator B,Legacy Excel Log
-SL0486,2026-03-29,B,Line4,1105,1069,7,33,Changeover,Operator A,Google Form
-SL0365,2026-03-14,A,Line4,872,798,1,60,Changeover,Operator B,Legacy Excel Log
-SL0099,2026-02-23,B,Line3,801,726,6,82,Changeover,Operator B,Manual CSV Upload
-SL0058,2026-03-11,B,Line4,831,740,9,0,No Downtime,Operator E,Legacy Excel Log
-SL0922,2026-03-08,B,Line2,964,956,15,83,Changeover,Operator D,Manual CSV Upload
-SL0829,2026-01-18,A,Line2,857,868,18,28,Equipment Failure,Operator B,Manual CSV Upload
-SL0438,2026-03-07,A,Line2,1174,1189,3,51,Quality Issue,Operator E,Manual CSV Upload
-SL0786,2026-02-16,B,Line3,957,817,23,26,Changeover,Operator B,Manual CSV Upload
-SL0152,2026-03-16,B,Line3,1121,1023,13,100,Changeover,Operator C,Manual CSV Upload
-SL0850,2026-03-26,C,Line2,1094,942,17,0,No Downtime,Operator E,Manual CSV Upload
-SL0105,2026-03-22,C,Line4,1077,923,1,46,Quality Issue,Operator B,Legacy Excel Log
-SL0880,2026-03-14,B,Line4,842,858,12,0,No Downtime,Operator B,Manual CSV Upload
-SL0371,2026-01-04,B,Line2,1110,1141,5,51,Equipment Failure,Operator B,Manual CSV Upload
-SL0819,2026-01-13,B,Line2,1050,986,11,101,Equipment Failure,Operator D,Google Form
-SL0667,2026-01-24,B,Line3,1039,1020,2,50,Material Shortage,Operator D,Legacy Excel Log
-SL0201,2026-02-14,B,Line2,1189,1098,18,74,Material Shortage,Operator A,Manual CSV Upload
-SL0224,2026-03-25,C,Line2,1073,1070,27,47,Equipment Failure,Operator D,Google Form
-SL0215,2026-03-06,C,Line4,1176,1170,24,45,Cleaning,Operator C,Legacy Excel Log
-SL0884,2026-01-16,A,Line3,1021,910,13,53,Cleaning,Operator C,Legacy Excel Log
-SL0788,2026-01-31,B,Line4,804,829,9,0,No Downtime,Operator C,Manual CSV Upload
-SL0495,2026-02-20,C,Line2,1137,993,6,30,Quality Issue,Operator A,Google Form
-SL0713,2026-02-05,A,Line2,1054,927,5,0,No Downtime,Operator A,Manual CSV Upload
-SL0453,2026-02-14,B,Line2,1128,1097,20,0,No Downtime,Operator C,Manual CSV Upload
-SL0141,2026-02-11,C,Line1,826,727,16,35,Equipment Failure,Operator C,Manual CSV Upload
-SL0592,2026-02-22,A,Line3,1011,904,18,51,Equipment Failure,Operator A,Google Form
-SL0168,2026-03-07,A,Line4,846,879,5,64,Changeover,Operator A,Manual CSV Upload
-SL0671,2026-01-05,A,Line1,1092,1087,25,88,Equipment Failure,Operator B,Legacy Excel Log
-SL0469,2026-01-01,B,Line2,913,906,17,71,Equipment Failure,Operator B,Legacy Excel Log
-SL0312,2026-03-30,A,Line3,881,902,23,71,Equipment Failure,Operator C,Google Form
-SL0727,2026-02-17,A,Line3,976,898,26,21,Quality Issue,Operator B,Legacy Excel Log
-SL0056,2026-03-04,C,Line2,940,881,18,57,Material Shortage,Operator C,Legacy Excel Log
-SL0595,2026-01-14,B,Line4,821,841,6,20,Material Shortage,Operator E,Manual CSV Upload
-SL0332,2026-01-21,B,Line1,1093,1076,3,20,Changeover,Operator A,Google Form
-SL0135,2026-02-25,A,Line3,866,832,14,62,Changeover,Operator A,Manual CSV Upload
-SL0100,2026-03-10,B,Line3,970,931,15,61,Changeover,Operator B,Legacy Excel Log
-SL0404,2026-01-25,C,Line1,1148,1063,9,44,Equipment Failure,Operator B,Google Form
-SL0767,2026-01-13,B,Line3,982,915,1,55,Equipment Failure,Operator C,Legacy Excel Log
-SL0778,2026-02-06,C,Line2,931,919,6,44,Equipment Failure,Operator B,Google Form
-SL0944,2026-02-23,A,Line2,-49,1112,15,0,No Downtime,Operator B,Legacy Excel Log
-SL0714,2026-02-23,C,Line2,1042,957,12,57,Changeover,Operator B,Google Form
-SL0842,2026-01-06,C,Line3,877,895,23,33,Changeover,Operator A,Manual CSV Upload
-SL0290,2026-01-23,C,Line2,969,932,26,76,Equipment Failure,Operator B,Google Form
-SL0773,2026-03-16,A,Line3,939,810,19,46,Changeover,Operator C,Google Form
-SL0541,2026-03-29,B,Line3,881,859,1,0,No Downtime,Operator E,Google Form
-SL0074,2026-03-13,A,Line4,1130,1121,15,62,Equipment Failure,Operator B,Manual CSV Upload
-SL0760,2026-03-28,B,Line2,955,930,2,91,Equipment Failure,Operator D,Manual CSV Upload
-SL0401,2026-02-08,A,Line2,950,826,3,86,Material Shortage,Operator B,Legacy Excel Log
-SL0958,2026-03-18,B,Line4,1147,1187,27,515,Material Shortage,Operator C,Legacy Excel Log
-SL0485,2026-02-22,C,Line2,1098,1113,6,26,Cleaning,Operator B,Legacy Excel Log
-SL0968,2026-01-11,B,Line2,-247,1077,8,73,Material Shortage,Operator C,Manual CSV Upload
-SL0433,2026-03-21,C,Line4,1166,1144,24,43,Material Shortage,Operator A,Manual CSV Upload
-SL0346,2026-01-28,B,Line2,846,839,24,31,Equipment Failure,Operator C,Manual CSV Upload
-SL0911,2026-03-20,B,Line4,968,854,11,0,No Downtime,Operator A,Manual CSV Upload
-SL0925,2026-02-07,B,Line3,917,886,12,74,Changeover,Operator D,Manual CSV Upload
-SL0023,2026-01-13,A,Line4,981,916,12,32,Changeover,Operator A,Manual CSV Upload
-SL0164,2026-02-26,A,Line4,986,971,6,56,Changeover,Operator D,Google Form
-SL0910,2026-01-25,C,Line4,1155,1141,15,94,Changeover,Operator E,Manual CSV Upload
-SL0307,2026-01-19,C,Line3,1121,1045,14,31,Changeover,Operator D,Legacy Excel Log
-SL0402,2026-02-12,C,Line1,913,840,18,57,Material Shortage,Operator C,Manual CSV Upload
-SL0745,2026-01-26,A,Line1,1137,1083,1,57,Equipment Failure,Operator A,Google Form
-SL0500,2026-03-07,C,Line2,1114,984,1,15,Material Shortage,Operator B,Google Form
-SL0184,2026-01-08,A,Line4,986,939,21,28,Equipment Failure,Operator B,Legacy Excel Log
-SL0054,2026-03-09,C,Line3,1186,1219,22,0,No Downtime,Operator E,Manual CSV Upload
-SL0871,2026-03-13,A,Line2,1116,1069,24,0,No Downtime,Operator E,Google Form
-SL0718,2026-01-21,C,Line3,893,932,23,39,Changeover,Operator B,Google Form
-SL0231,2026-01-31,A,Line1,1038,945,11,54,Material Shortage,Operator A,Legacy Excel Log
-SL0751,2026-01-28,C,Line2,1008,879,25,39,Equipment Failure,Operator E,Google Form
-SL0216,2026-03-03,C,Line4,960,999,13,44,Cleaning,Operator C,Legacy Excel Log
-SL0935,2026-02-11,C,Line1,1090,1097,30,67,Equipment Failure,Operator E,Legacy Excel Log
-SL0157,2026-03-20,A,Line3,990,1023,11,0,No Downtime,Operator E,Google Form
-SL0342,2026-03-26,A,Line2,949,856,8,0,No Downtime,Operator C,Manual CSV Upload
-SL0061,2026-01-22,B,Line2,1118,1069,29,23,Changeover,Operator A,Legacy Excel Log
-SL0386,2026-03-02,B,Line3,810,743,17,82,Changeover,Operator A,Google Form
-SL0722,2026-02-07,B,Line3,1186,1240,21,97,Equipment Failure,Operator D,Manual CSV Upload
-SL0299,2026-01-22,A,Line1,1189,1063,1,61,Equipment Failure,Operator B,Manual CSV Upload
-SL0507,2026-03-12,A,Line4,960,883,23,44,Changeover,Operator D,Legacy Excel Log
-SL0221,2026-02-04,C,Line3,870,758,16,31,Equipment Failure,Operator E,Google Form
-SL0647,2026-02-25,A,Line1,870,851,10,97,Changeover,Operator D,Legacy Excel Log
-SL0490,2026-03-31,C,Line1,1017,891,12,25,Material Shortage,Operator C,Legacy Excel Log
-SL0588,2026-01-09,C,Line1,894,816,21,60,Changeover,Operator D,Manual CSV Upload
-SL0724,2026-02-27,B,Line1,967,832,16,48,Changeover,Operator C,Google Form
-SL0281,2026-03-14,A,Line2,1149,1153,0,0,No Downtime,Operator B,Manual CSV Upload
-SL0892,2026-02-05,C,Line4,887,851,16,97,Changeover,Operator E,Google Form
-SL0706,2026-02-04,C,Line2,1150,996,26,13,Cleaning,Operator E,Legacy Excel Log
-SL0515,2026-01-27,B,Line3,986,1006,8,41,Equipment Failure,Operator E,Legacy Excel Log
-SL0317,2026-03-09,C,Line1,1112,1089,14,0,No Downtime,Operator B,Manual CSV Upload
-SL0978,2026-01-26,D,Line2,1057,1098,14,21,Cleaning,Operator B,Google Form
-SL0614,2026-02-22,A,Line3,979,941,17,50,Equipment Failure,Operator C,Manual CSV Upload
-SL0036,2026-03-04,B,Line1,847,827,20,67,Equipment Failure,Operator B,Legacy Excel Log
-SL0720,2026-02-10,B,Line2,990,930,27,35,Changeover,Operator A,Manual CSV Upload
-SL0941,2026-02-09,D,Line4,881,855,24,84,Changeover,Operator D,Manual CSV Upload
-SL0765,2026-01-08,B,Line3,1053,1019,11,56,Changeover,Operator C,Google Form
-SL0150,2026-01-25,B,Line3,1172,1220,23,38,Equipment Failure,Operator B,Manual CSV Upload
-SL0291,2026-03-23,C,Line4,1002,857,15,90,Material Shortage,Operator D,Manual CSV Upload
-SL0936,2026-03-19,C,Line4,995,886,10,22,Cleaning,Operator D,Google Form
-SL0151,2026-01-26,A,Line2,1189,1191,2,73,Quality Issue,Operator D,Legacy Excel Log
-SL0467,2026-02-15,A,Line2,851,771,1,87,Equipment Failure,Operator D,Manual CSV Upload
-SL0697,2026-01-26,B,Line2,816,806,1,84,Equipment Failure,Operator D,Manual CSV Upload
-SL0512,2026-01-05,C,Line3,1001,1023,23,30,Material Shortage,Operator E,Manual CSV Upload
-SL0225,2026-01-05,B,Line4,895,928,26,14,Quality Issue,Operator A,Manual CSV Upload
-SL0304,2026-01-08,C,Line3,1072,971,15,115,Equipment Failure,Operator C,Manual CSV Upload
-SL0149,2026-02-20,B,Line3,913,836,4,34,Changeover,Operator E,Legacy Excel Log
-SL0324,2026-03-17,A,Line1,934,834,23,0,No Downtime,Operator D,Legacy Excel Log
-SL0472,2026-01-04,C,Line4,1193,1154,31,84,Material Shortage,Operator E,Manual CSV Upload
-SL0552,2026-03-08,C,Line1,822,836,3,0,No Downtime,Operator B,Google Form
-SL0010,2026-02-04,A,Line2,1090,1117,10,35,Cleaning,Operator D,Google Form
-SL0405,2026-02-13,B,Line4,873,797,17,41,Cleaning,Operator C,Legacy Excel Log
-SL0110,2026-01-10,B,Line3,1100,1000,28,78,Changeover,Operator C,Google Form
-SL0228,2026-02-13,B,Line2,889,864,16,69,Material Shortage,Operator E,Manual CSV Upload
-SL0838,2026-02-19,B,Line3,1041,1051,26,56,Changeover,Operator A,Legacy Excel Log
-SL0617,2026-01-05,C,Line2,1046,921,12,31,Cleaning,Operator D,Manual CSV Upload
-SL0680,2026-03-28,C,Line2,1179,1138,31,43,Equipment Failure,Operator D,Legacy Excel Log
-SL0940,2026-01-15,A,Line4,1044,1042,12,36,Quality Issue,Operator B,Google Form
-SL0130,2026-03-24,A,Line1,1045,1065,13,71,Material Shortage,Operator A,Google Form
-SL0930,2026-01-02,B,Line3,977,983,11,89,Material Shortage,Operator A,Manual CSV Upload
-SL0696,2026-01-19,A,Line4,891,826,3,100,Changeover,Operator C,Manual CSV Upload
-SL0817,2026-01-03,A,Line2,998,1003,8,51,Cleaning,Operator B,Google Form
-SL0374,2026-01-13,A,Line2,887,867,25,29,Material Shortage,Operator C,Manual CSV Upload
-SL0790,2026-02-05,A,Line4,1041,1038,28,69,Material Shortage,Operator A,Google Form
-SL0328,2026-01-12,B,Line1,1032,1003,1,42,Changeover,Operator A,Google Form
-SL0434,2026-02-15,C,Line3,1080,1030,21,46,Equipment Failure,Operator D,Google Form
-SL0398,2026-02-03,C,Line3,896,788,18,0,No Downtime,Operator E,Manual CSV Upload
-SL0195,2026-03-08,A,Line3,884,780,21,81,Material Shortage,Operator C,Google Form
-SL0549,2026-01-20,B,Line3,934,895,12,42,Cleaning,Operator D,Legacy Excel Log
-SL0605,2026-01-31,A,Line4,1032,961,2,51,Changeover,Operator E,Manual CSV Upload
-SL0064,2026-01-09,C,Line1,1186,1015,7,49,Cleaning,Operator B,Google Form
-SL0319,2026-02-19,B,Line4,961,968,7,51,Changeover,Operator E,Legacy Excel Log
-SL0002,2026-03-17,B,Line1,815,708,4,45,Cleaning,Operator B,Legacy Excel Log
-SL0755,2026-03-26,C,Line1,861,756,9,16,Cleaning,Operator B,Google Form
-SL0591,2026-03-19,B,Line3,894,912,13,39,Material Shortage,Operator B,Google Form
-SL0390,2026-02-01,A,Line4,825,852,18,74,Material Shortage,Operator E,Manual CSV Upload
-SL0321,2026-03-08,C,Line2,1182,1097,21,0,No Downtime,Operator B,Manual CSV Upload
-SL0932,2026-03-12,B,Line4,974,982,9,68,Material Shortage,Operator B,Manual CSV Upload
-SL0377,2026-03-27,A,Line1,1142,1049,17,0,No Downtime,Operator E,Google Form
-SL0587,2026-03-30,C,Line2,1020,1070,31,87,Material Shortage,Operator B,Manual CSV Upload
-SL0859,2026-01-18,C,Line4,1066,1063,3,39,Material Shortage,Operator C,Manual CSV Upload
-SL0763,2026-03-13,C,Line3,1161,1024,13,69,Changeover,Operator D,Google Form
-SL0982,2026-02-28,C,Line2,1102,950,23,101,Equipment Failure,Operator C,Duplicate CSV Upload
-SL0607,2026-03-15,C,Line3,969,1002,1,42,Changeover,Operator B,Legacy Excel Log
-SL0759,2026-01-18,A,Line1,1177,1012,2,42,Changeover,Operator D,Legacy Excel Log
-SL0349,2026-02-03,A,Line1,833,740,14,21,Quality Issue,Operator C,Google Form
-SL0908,2026-03-02,B,Line3,949,876,0,53,Cleaning,Operator B,Google Form
-SL0115,2026-02-11,C,Line4,889,791,18,56,Quality Issue,Operator E,Legacy Excel Log
-SL0929,2026-03-29,B,Line2,1161,1127,4,0,No Downtime,Operator E,Manual CSV Upload
-SL0298,2026-01-18,A,Line4,1087,1033,15,73,Changeover,Operator D,Manual CSV Upload
-SL0919,2026-02-24,C,Line2,823,825,14,47,Quality Issue,Operator B,Manual CSV Upload
-SL0266,2026-01-28,C,Line4,938,806,1,14,Quality Issue,Operator B,Manual CSV Upload
-SL0229,2026-01-12,B,Line1,894,935,13,10,Quality Issue,Operator C,Manual CSV Upload
-SL0239,2026-02-22,A,Line2,1192,1166,25,0,No Downtime,Operator C,Manual CSV Upload
-SL0828,2026-03-04,B,Line3,1153,1135,23,58,Changeover,Operator A,Google Form
-SL0448,2026-03-07,A,Line4,820,767,12,89,Material Shortage,Operator C,Google Form
-SL0576,2026-03-30,A,Line3,1030,972,9,0,No Downtime,Operator B,Google Form
-SL0937,2026-02-12,C,Line4,1127,1159,3,95,Equipment Failure,Operator B,Google Form
-SL0658,2026-01-20,B,Line4,1194,1106,21,41,Changeover,Operator B,Legacy Excel Log
-SL0670,2026-03-04,A,Line2,1076,1080,7,66,Quality Issue,Operator C,Google Form
-SL0391,2026-03-23,A,Line1,923,853,15,75,Material Shortage,Operator E,Legacy Excel Log
-SL0887,2026-03-13,C,Line4,1190,1104,2,0,No Downtime,Operator A,Legacy Excel Log
-SL0970,2026-02-21,B,,1180,1091,16,95,Changeover,Operator A,Manual CSV Upload
-SL0761,2026-01-26,B,Line4,1051,999,16,44,Cleaning,Operator E,Google Form
-SL0735,2026-01-16,B,Line1,932,822,1,113,Equipment Failure,Operator B,Manual CSV Upload
-SL0387,2026-01-18,B,Line4,1196,1214,9,26,Material Shortage,Operator B,Manual CSV Upload
-SL0352,2026-03-21,C,Line2,1131,1028,12,13,Cleaning,Operator A,Manual CSV Upload
-SL0660,2026-03-10,A,Line4,1149,1138,16,70,Material Shortage,Operator A,Manual CSV Upload
-SL0067,2026-03-28,B,Line4,1166,1037,18,0,No Downtime,Operator B,Google Form
-SL0616,2026-03-14,C,Line1,889,790,19,0,No Downtime,Operator D,Manual CSV Upload
-SL0900,2026-03-08,A,Line1,1197,1161,15,82,Equipment Failure,Operator E,Google Form
-SL0590,2026-03-19,C,Line2,1105,990,20,81,Changeover,Operator B,Legacy Excel Log
-SL0230,2026-01-31,B,Line3,968,881,19,108,Equipment Failure,Operator C,Legacy Excel Log
-SL0341,2026-01-11,C,Line1,1058,927,22,97,Equipment Failure,Operator A,Manual CSV Upload
-SL0709,2026-01-27,C,Line2,964,887,7,55,Changeover,Operator A,Google Form
-SL0815,2026-03-14,A,Line2,824,832,7,0,No Downtime,Operator A,Legacy Excel Log
-SL0093,2026-02-02,B,Line1,1195,1112,17,0,No Downtime,Operator E,Manual CSV Upload
-SL0504,2026-03-07,B,Line3,1155,1084,12,51,Changeover,Operator C,Manual CSV Upload
-SL0743,2026-02-08,A,Line1,913,799,16,29,Cleaning,Operator B,Google Form
-SL0975,2026-02-24,B,,1056,1101,21,54,Material Shortage,Operator D,Legacy Excel Log
-SL0548,2026-02-11,C,Line4,940,962,17,30,Quality Issue,Operator A,Legacy Excel Log
-SL0140,2026-03-23,A,Line1,1182,1130,12,40,Changeover,Operator C,Manual CSV Upload
-SL0973,2026-03-31,D,Line2,933,906,25,46,Material Shortage,Operator E,Legacy Excel Log
-SL0127,2026-01-04,A,Line1,983,990,7,47,Equipment Failure,Operator C,Google Form
-SL0687,2026-01-11,A,Line1,891,922,19,56,Changeover,Operator D,Legacy Excel Log
-SL0955,2026-03-11,B,Line4,861,771,773,21,Changeover,Operator D,Legacy Excel Log
-SL0682,2026-02-28,C,Line2,1102,950,23,101,Equipment Failure,Operator E,Google Form
-SL0264,2026-03-29,A,Line1,847,788,8,21,Changeover,Operator B,Google Form
-SL0737,2026-03-23,A,Line2,1192,1162,26,20,Cleaning,Operator E,Manual CSV Upload
-SL0226,2026-03-14,C,Line1,971,880,26,41,Cleaning,Operator B,Legacy Excel Log
-SL0288,2026-02-09,B,Line4,905,863,9,117,Equipment Failure,Operator D,Manual CSV Upload
-SL0785,2026-01-08,B,Line3,1158,1204,11,46,Material Shortage,Operator C,Google Form
-SL0393,2026-03-15,A,Line2,1131,1012,6,75,Quality Issue,Operator A,Legacy Excel Log
-SL0335,2026-01-16,C,Line1,891,797,12,76,Equipment Failure,Operator A,Manual CSV Upload
-SL0165,2026-03-10,A,Line3,1040,1072,6,66,Quality Issue,Operator D,Manual CSV Upload
-SL0030,2026-01-16,C,Line2,1096,1061,19,89,Material Shortage,Operator E,Legacy Excel Log
-SL0733,2026-03-27,B,Line4,891,845,17,30,Material Shortage,Operator C,Manual CSV Upload
-SL0446,2026-02-19,B,Line3,1082,931,20,81,Equipment Failure,Operator B,Legacy Excel Log
-SL0109,2026-02-02,B,Line3,1141,971,23,0,No Downtime,Operator E,Google Form
-SL0092,2026-03-30,B,Line3,1139,1183,28,39,Cleaning,Operator A,Manual CSV Upload
-SL0951,2026-02-26,B,Line2,-53,903,24,76,Changeover,Operator A,Legacy Excel Log
-SL0676,2026-02-07,C,Line2,890,855,24,29,Cleaning,Operator D,Google Form
-SL0772,2026-01-28,B,Line3,824,749,12,49,Cleaning,Operator A,Legacy Excel Log
-SL0175,2026-03-11,C,Line1,999,1023,1,67,Changeover,Operator C,Legacy Excel Log
-SL0217,2026-03-29,C,Line3,1112,1052,30,58,Changeover,Operator B,Manual CSV Upload
-SL0250,2026-01-18,B,Line2,930,828,16,57,Quality Issue,Operator A,Legacy Excel Log
-SL0247,2026-02-05,A,Line2,1120,1104,18,69,Equipment Failure,Operator D,Legacy Excel Log
-SL0554,2026-01-29,C,Line1,806,835,5,25,Material Shortage,Operator D,Legacy Excel Log
-SL0679,2026-01-03,A,Line3,828,759,16,42,Material Shortage,Operator E,Manual CSV Upload
-SL0494,2026-03-12,C,Line4,891,823,13,59,Changeover,Operator E,Manual CSV Upload
-SL0119,2026-03-21,C,Line3,1112,994,1,0,No Downtime,Operator C,Legacy Excel Log
-SL0457,2026-01-27,C,Line4,1131,1146,2,23,Changeover,Operator D,Legacy Excel Log
-SL0918,2026-01-09,A,Line2,866,873,5,72,Equipment Failure,Operator C,Legacy Excel Log
-SL0173,2026-03-05,C,Line1,1123,1070,7,69,Material Shortage,Operator A,Legacy Excel Log
-SL0479,2026-02-18,A,Line4,980,993,10,10,Quality Issue,Operator E,Google Form
-SL0896,2026-02-16,C,Line1,1169,1046,8,72,Material Shortage,Operator C,Google Form
-SL0562,2026-03-08,A,Line3,803,730,4,0,No Downtime,Operator A,Legacy Excel Log
-SL0690,2026-01-01,C,Line2,898,784,12,71,Equipment Failure,Operator E,Legacy Excel Log
-SL0853,2026-02-14,C,Line4,1197,1064,9,67,Equipment Failure,Operator D,Legacy Excel Log
-SL0309,2026-02-28,C,Line3,832,839,10,0,No Downtime,Operator B,Manual CSV Upload
-SL0090,2026-01-06,A,Line4,1065,1044,28,99,Equipment Failure,Operator D,Legacy Excel Log
-SL0816,2026-03-19,B,Line1,1004,904,6,0,No Downtime,Operator D,Google Form
-SL0510,2026-02-17,C,Line3,1052,1083,28,55,Changeover,Operator D,Google Form
-SL0131,2026-02-11,C,Line2,833,729,13,61,Changeover,Operator D,Legacy Excel Log
-SL0033,2026-01-17,B,Line1,925,854,4,55,Cleaning,Operator C,Legacy Excel Log
-SL0517,2026-01-02,A,Line4,1055,925,24,88,Changeover,Operator C,Manual CSV Upload
-SL0734,2026-01-09,C,Line3,1097,1037,13,112,Equipment Failure,Operator D,Legacy Excel Log
-SL0952,2026-02-19,C,Line3,1027,883,914,59,Cleaning,Operator B,Google Form
-SL0804,2026-02-02,C,Line4,954,997,20,96,Equipment Failure,Operator A,Legacy Excel Log
-SL0586,2026-02-27,C,Line2,905,887,15,22,Cleaning,Operator B,Manual CSV Upload
-SL0898,2026-02-24,A,Line2,900,794,7,32,Changeover,Operator A,Manual CSV Upload
-SL0533,2026-02-20,A,Line2,1166,1162,13,48,Material Shortage,Operator A,Manual CSV Upload
-SL0987,2026-03-29,C,Line3,1112,1052,30,58,Changeover,Operator D,Duplicate CSV Upload
-SL0147,2026-02-24,C,Line4,1163,1137,9,56,Material Shortage,Operator B,Legacy Excel Log
-SL0730,2026-02-18,A,Line1,1009,986,8,84,Equipment Failure,Operator E,Google Form
-SL0200,2026-01-08,A,Line4,1012,958,5,60,Changeover,Operator C,Legacy Excel Log
-SL0979,2026-01-25,B,,1025,999,18,20,Cleaning,Operator A,Manual CSV Upload
-SL0301,2026-01-06,C,Line4,1079,964,12,51,Changeover,Operator C,Google Form
-SL0395,2026-03-24,B,Line4,992,1012,13,53,Material Shortage,Operator E,Legacy Excel Log
-SL0752,2026-03-05,B,Line3,1085,1078,2,69,Changeover,Operator C,Manual CSV Upload
-SL0103,2026-02-26,A,Line4,807,802,9,19,Cleaning,Operator A,Manual CSV Upload
-SL0927,2026-01-10,B,Line1,950,967,14,55,Changeover,Operator B,Google Form
-SL0996,2026-02-22,C,Line2,1098,1113,6,26,Cleaning,Operator D,Duplicate CSV Upload
-SL0878,2026-02-19,A,Line3,831,759,12,28,Equipment Failure,Operator D,Legacy Excel Log
-SL0988,2026-01-18,B,Line1,1126,1059,14,82,Changeover,Operator D,Duplicate CSV Upload
-SL0488,2026-03-10,C,Line1,847,801,3,10,Cleaning,Operator D,Legacy Excel Log
-SL0956,2026-02-19,D,Line4,912,787,19,67,Changeover,Operator A,Google Form
-SL0954,2026-03-27,D,Line2,822,767,2,91,Changeover,Operator B,Legacy Excel Log
-SL0439,2026-02-23,C,Line2,940,873,8,32,Material Shortage,Operator B,Manual CSV Upload
-SL0357,2026-03-15,B,Line3,888,786,13,0,No Downtime,Operator C,Legacy Excel Log
-SL0084,2026-03-22,A,Line3,1138,985,7,20,Cleaning,Operator A,Manual CSV Upload
-SL0814,2026-02-04,C,Line1,968,1010,19,0,No Downtime,Operator C,Legacy Excel Log
-SL0628,2026-03-12,B,Line3,872,905,21,20,Cleaning,Operator A,Manual CSV Upload
-SL0757,2026-03-16,C,Line3,1187,1196,23,80,Changeover,Operator E,Manual CSV Upload
-SL0410,2026-02-08,B,Line4,1172,1118,17,37,Changeover,Operator C,Manual CSV Upload
-SL0497,2026-01-19,B,Line4,845,729,4,29,Equipment Failure,Operator D,Manual CSV Upload
-SL0622,2026-02-08,A,Line1,991,997,23,0,No Downtime,Operator D,Legacy Excel Log
-SL0240,2026-02-27,B,Line4,841,829,16,64,Changeover,Operator A,Google Form
-SL0455,2026-02-27,B,Line1,951,979,5,32,Changeover,Operator B,Legacy Excel Log
-SL0695,2026-01-13,A,Line4,902,834,5,77,Material Shortage,Operator A,Manual CSV Upload
-SL0334,2026-03-25,B,Line2,964,867,23,29,Changeover,Operator E,Manual CSV Upload
-SL0754,2026-01-09,B,Line3,891,759,15,70,Changeover,Operator D,Legacy Excel Log
-SL0827,2026-01-03,A,Line4,859,732,14,66,Material Shortage,Operator E,Legacy Excel Log
-SL0047,2026-02-08,C,Line3,1141,1063,12,31,Material Shortage,Operator B,Manual CSV Upload
-SL0895,2026-03-24,C,Line1,965,903,26,86,Changeover,Operator D,Manual CSV Upload
-SL0369,2026-02-27,A,Line1,950,811,6,68,Equipment Failure,Operator B,Manual CSV Upload
-SL0649,2026-03-15,B,Line2,1164,1106,13,33,Cleaning,Operator A,Google Form
-SL0018,2026-03-10,A,Line2,1137,1074,17,97,Changeover,Operator D,Google Form
-SL0330,2026-01-17,C,Line3,1175,1207,27,79,Equipment Failure,Operator C,Legacy Excel Log
-SL0833,2026-03-22,C,Line4,1012,1031,22,45,Cleaning,Operator C,Google Form
-SL0965,2026-01-12,A,Line2,920,875,11,571,Material Shortage,Operator B,Google Form
-SL0654,2026-03-14,B,Line1,1122,1059,5,62,Equipment Failure,Operator E,Google Form
-SL0004,2026-02-24,B,Line3,879,785,17,73,Equipment Failure,Operator A,Manual CSV Upload
-SL0193,2026-02-22,C,Line1,864,902,17,86,Changeover,Operator C,Google Form
-SL0677,2026-03-22,C,Line3,1049,909,17,0,No Downtime,Operator B,Google Form
-SL0424,2026-03-03,C,Line4,892,867,20,53,Cleaning,Operator B,Manual CSV Upload
-SL0528,2026-02-15,B,Line4,1039,1085,17,71,Material Shortage,Operator B,Legacy Excel Log
-SL0487,2026-03-08,C,Line4,876,850,4,0,No Downtime,Operator E,Google Form
-SL0891,2026-02-16,A,Line3,1052,1084,22,50,Equipment Failure,Operator D,Google Form
-SL0675,2026-02-08,B,Line1,1123,1178,22,58,Material Shortage,Operator A,Manual CSV Upload
-SL0703,2026-02-22,A,Line2,983,893,17,86,Equipment Failure,Operator C,Google Form
-SL0634,2026-01-04,A,Line4,857,788,10,69,Equipment Failure,Operator E,Legacy Excel Log
-SL0463,2026-03-28,C,Line3,805,773,12,15,Material Shortage,Operator E,Legacy Excel Log
-SL0378,2026-03-12,A,Line4,1067,996,16,0,No Downtime,Operator D,Legacy Excel Log
-SL0255,2026-03-02,B,Line2,989,902,1,0,No Downtime,Operator B,Google Form
-SL0835,2026-01-08,C,Line1,1016,980,16,107,Equipment Failure,Operator D,Manual CSV Upload
-SL0770,2026-02-19,B,Line1,1050,913,18,79,Material Shortage,Operator C,Google Form
-SL0717,2026-01-30,B,Line3,947,950,1,83,Equipment Failure,Operator B,Legacy Excel Log
-SL0974,2026-01-02,A,Line1,1129,1120,12,565,Changeover,Operator E,Google Form
-SL0287,2026-01-04,B,Line1,951,887,25,118,Equipment Failure,Operator B,Manual CSV Upload
-SL0544,2026-03-16,C,Line4,1152,1116,12,45,Equipment Failure,Operator D,Google Form
-SL0890,2026-03-29,C,Line3,898,779,14,48,Changeover,Operator B,Manual CSV Upload
+date,shift,line,planned_output,actual_output,defect_qty,downtime_min,downtime_reason,operator,source_system
+2026-01-12,C,Line1,1189,1181,19,0,No Downtime,Operator A,Legacy Excel Log
+2026-02-22,B,Line3,1098,1058,21,83,Material Shortage,Operator C,Manual CSV Upload
+2026-03-12,A,Line2,871,865,12,0,No Downtime,Operator E,Legacy Excel Log
+2026-01-26,B,Line2,940,851,22,104,Equipment Failure,Operator E,Google Form
+2026-01-16,C,Line1,907,907,20,59,Equipment Failure,Operator E,Legacy Excel Log
+2026-04-28,A,Line2,1019,1038,30,0,No Downtime,Operator E,Legacy Excel Log
+2026-03-23,A,Line3,1127,971,16,0,No Downtime,Operator D,Manual CSV Upload
+2026-03-10,C,Line1,940,899,7,54,Cleaning,Operator D,Google Form
+2026-03-12,C,Line1,921,914,7,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-01,B,Line1,964,916,10,0,No Downtime,Operator B,Manual CSV Upload
+2026-03-01,A,Line3,922,878,21,54,Cleaning,Operator C,Manual CSV Upload
+2026-02-05,C,Line4,967,838,11,52,Material Shortage,Operator E,Manual CSV Upload
+2026-01-23,C,Line3,944,965,6,70,Changeover,Operator C,Legacy Excel Log
+2026-03-12,C,Line3,1189,1028,1113,0,No Downtime,Operator D,Google Form
+2026-03-09,B,Line3,992,873,4,31,Quality Issue,Operator D,Google Form
+2026-04-17,A,Line4,817,698,1,0,No Downtime,Operator B,Legacy Excel Log
+2026-03-24,B,Line1,803,783,4,37,Quality Issue,Operator D,Google Form
+2026-02-21,B,Line4,1023,1018,25,36,Equipment Failure,Operator D,Google Form
+2026-03-26,A,Line3,808,744,1,28,Material Shortage,Operator E,Legacy Excel Log
+2026-01-07,C,Line3,957,883,6,25,Equipment Failure,Operator E,Google Form
+2026-04-20,B,Line2,881,892,24,0,No Downtime,Operator B,Google Form
+2026-02-15,A,Line4,1126,1163,3,110,Equipment Failure,Operator C,Google Form
+2026-02-03,A,Line4,1050,1002,21,61,Material Shortage,Operator B,Legacy Excel Log
+2026-03-14,B,Line4,996,917,5,46,Cleaning,Operator D,Legacy Excel Log
+2026-01-27,B,Line4,860,857,5,73,Changeover,Operator D,Google Form
+2026-01-20,C,Line4,-161,833,1,42,Cleaning,Operator C,Manual CSV Upload
+2026-03-24,C,Line3,1147,1072,15,0,No Downtime,Operator D,Legacy Excel Log
+2026-02-18,B,Line1,949,907,25,100,Changeover,Operator B,Google Form
+2026-04-24,B,Line4,1164,1154,24,61,Material Shortage,Operator E,Google Form
+2026-03-28,A,Line4,992,1011,22,82,Material Shortage,Operator B,Manual CSV Upload
+2026-01-30,A,Line2,825,718,1,37,Material Shortage,Operator E,Legacy Excel Log
+2026-02-07,A,Line2,1007,982,5,35,Cleaning,Operator A,Legacy Excel Log
+2026-04-10,C,Line3,951,858,1,0,No Downtime,Operator A,Manual CSV Upload
+2026-01-18,A,Line1,1146,1006,16,108,Equipment Failure,Operator B,Manual CSV Upload
+2026-02-26,B,Line3,812,815,4,71,Material Shortage,Operator E,Google Form
+2026-02-19,B,Line2,1196,1239,22,41,Cleaning,Operator E,Legacy Excel Log
+2026-03-17,B,Line1,901,914,10,20,Quality Issue,Operator E,Legacy Excel Log
+2026-03-18,A,Line1,994,853,4,39,Changeover,Operator B,Google Form
+2026-03-24,B,Line3,1101,1064,30,28,Material Shortage,Operator E,Google Form
+2026-03-26,B,Line2,888,841,22,0,No Downtime,Operator A,Legacy Excel Log
+2026-01-02,A,Line2,1127,1174,24,53,Material Shortage,Operator B,Manual CSV Upload
+2026-01-15,A,Line2,1182,1159,20,105,Equipment Failure,Operator D,Google Form
+2026-01-11,A,Line2,1029,985,4,28,Equipment Failure,Operator D,Manual CSV Upload
+2026-04-28,C,Line2,816,740,3,68,Material Shortage,Operator C,Manual CSV Upload
+2026-02-03,C,Line4,1145,1170,13,77,Material Shortage,Operator E,Google Form
+2026-01-20,B,Line3,869,886,12,66,Quality Issue,Operator A,Legacy Excel Log
+2026-03-11,C,Line3,1097,1039,10,45,Material Shortage,Operator A,Manual CSV Upload
+2026-04-20,A,Line2,820,842,18,11,Cleaning,Operator A,Google Form
+2026-04-30,B,Line2,826,808,21,16,Cleaning,Operator E,Google Form
+2026-04-28,A,Line3,862,902,21,78,Material Shortage,Operator A,Manual CSV Upload
+2026-02-14,B,Line4,1026,941,3,25,Changeover,Operator B,Legacy Excel Log
+2026-03-04,C,Line1,839,871,25,117,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-05,A,Line4,907,897,16,82,Material Shortage,Operator A,Manual CSV Upload
+2026-03-28,A,Line1,867,857,1,0,No Downtime,Operator B,Google Form
+2026-03-28,B,Line2,1161,1088,9,34,Quality Issue,Operator E,Google Form
+2026-02-04,A,Line3,811,736,21,36,Changeover,Operator D,Manual CSV Upload
+2026-04-18,A,Line2,1135,1040,3,71,Changeover,Operator D,Manual CSV Upload
+2026-01-24,B,Line1,967,905,6,29,Quality Issue,Operator E,Google Form
+2026-03-30,B,Line1,843,735,1,0,No Downtime,Operator B,Manual CSV Upload
+2026-03-10,A,Line2,922,861,20,34,Changeover,Operator D,Legacy Excel Log
+2026-01-28,A,Line4,973,1016,15,81,Material Shortage,Operator C,Google Form
+2026-02-28,C,Line3,1041,912,19,82,Material Shortage,Operator D,Legacy Excel Log
+2026-01-10,B,Line4,1191,1182,20,822,Equipment Failure,Operator D,Manual CSV Upload
+2026-04-09,B,Line4,1069,1010,10,18,Cleaning,Operator C,Legacy Excel Log
+2026-01-03,C,Line2,870,829,9,58,Material Shortage,Operator B,Google Form
+2026-02-23,C,Line1,985,840,7,0,No Downtime,Operator C,Manual CSV Upload
+2026-01-16,C,Line2,987,856,10,40,Equipment Failure,Operator D,Manual CSV Upload
+2026-03-03,B,Line2,1113,958,18,75,Material Shortage,Operator D,Google Form
+2026-01-07,C,Line4,1172,1003,9,0,No Downtime,Operator D,Manual CSV Upload
+2026-04-13,C,Line1,818,715,20,32,Changeover,Operator D,Google Form
+2026-04-05,C,Line1,1026,1025,25,45,Quality Issue,Operator B,Google Form
+2026-01-25,C,Line4,923,799,18,72,Changeover,Operator B,Google Form
+2026-02-15,C,Line2,927,794,1,40,Material Shortage,Operator C,Manual CSV Upload
+2026-03-05,A,Line3,1169,1069,30,13,Cleaning,Operator B,Google Form
+2026-01-25,B,Line2,1079,1076,6,44,Changeover,Operator C,Manual CSV Upload
+2026-04-12,A,Line4,996,873,5,0,No Downtime,Operator E,Google Form
+2026-01-17,A,Line2,1169,1103,27,57,Quality Issue,Operator C,Manual CSV Upload
+2026-02-11,C,Line3,1197,1032,12,0,No Downtime,Operator C,Manual CSV Upload
+2026-01-01,A,Line2,987,847,1,61,Material Shortage,Operator E,Manual CSV Upload
+2026-01-08,C,Line4,1130,1084,9,37,Equipment Failure,Operator B,Legacy Excel Log
+2026-01-11,C,Line3,1167,1091,22,30,Equipment Failure,Operator C,Legacy Excel Log
+2026-03-13,B,Line1,1110,1157,15,20,Changeover,Operator C,Google Form
+2026-02-19,A,Line3,1019,1062,12,50,Equipment Failure,Operator C,Google Form
+2026-01-22,A,Line3,894,796,16,64,Changeover,Operator B,Manual CSV Upload
+2026-04-15,A,Line3,1000,967,22,18,Quality Issue,Operator C,Legacy Excel Log
+2026-03-10,B,Line1,945,940,15,32,Cleaning,Operator C,Google Form
+2026-02-18,A,Line4,1047,1043,16,19,Cleaning,Operator A,Legacy Excel Log
+2026-04-03,C,Line2,1193,1154,31,44,Cleaning,Operator E,Manual CSV Upload
+2026-03-28,B,Line4,841,722,13,51,Cleaning,Operator B,Legacy Excel Log
+2026-04-29,B,Line3,1140,1183,15,0,No Downtime,Operator A,Manual CSV Upload
+2026-04-14,A,Line2,1005,910,4,88,Material Shortage,Operator B,Google Form
+2026-03-19,C,Line3,1053,1030,1,32,Material Shortage,Operator E,Legacy Excel Log
+2026-04-03,B,Line4,893,934,25,48,Changeover,Operator E,Google Form
+2026-02-26,C,Line4,1156,1122,7,28,Quality Issue,Operator A,Legacy Excel Log
+2026-03-29,B,Line4,1124,1076,18,31,Cleaning,Operator E,Google Form
+2026-01-03,B,Line2,803,730,4,11,Cleaning,Operator C,Legacy Excel Log
+2026-02-02,C,Line4,1092,1124,26,49,Cleaning,Operator B,Google Form
+2026-01-05,B,Line3,1069,1103,0,108,Equipment Failure,Operator B,Google Form
+2026-03-28,C,Line1,842,810,19,19,Material Shortage,Operator C,Google Form
+2026-02-09,A,Line2,852,862,21,0,No Downtime,Operator A,Legacy Excel Log
+2026-01-31,B,Line4,963,850,22,115,Equipment Failure,Operator C,Manual CSV Upload
+2026-03-05,C,Line1,1127,1160,28,15,Cleaning,Operator D,Legacy Excel Log
+2026-03-18,B,Line2,858,795,12,86,Changeover,Operator C,Legacy Excel Log
+2026-03-22,C,Line4,1014,862,6,82,Material Shortage,Operator A,Legacy Excel Log
+2026-03-31,C,Line3,897,816,9,60,Material Shortage,Operator D,Google Form
+2026-01-08,A,Line3,944,946,12,109,Equipment Failure,Operator A,Manual CSV Upload
+2026-03-07,B,Line1,976,833,3,0,No Downtime,Operator E,Google Form
+2026-02-28,A,Line1,1181,1121,30,44,Material Shortage,Operator E,Manual CSV Upload
+2026-03-20,B,Line4,913,804,16,0,No Downtime,Operator D,Legacy Excel Log
+2026-02-04,B,Line3,1128,1026,22,30,Changeover,Operator A,Manual CSV Upload
+2026-02-12,A,Line4,951,878,5,0,No Downtime,Operator D,Google Form
+2026-04-17,A,Line1,1113,1144,18,28,Equipment Failure,Operator D,Legacy Excel Log
+2026-02-12,B,Line4,1193,1160,20,0,No Downtime,Operator C,Google Form
+2026-02-21,A,Line2,1200,1217,9,49,Material Shortage,Operator A,Google Form
+2026-04-19,C,Line1,1083,1110,4,98,Equipment Failure,Operator E,Manual CSV Upload
+2026-03-10,A,Line1,1187,1115,31,42,Material Shortage,Operator B,Google Form
+2026-03-20,B,Line1,1151,1062,28,17,Quality Issue,Operator D,Manual CSV Upload
+2026-02-12,B,Line1,993,913,10,38,Quality Issue,Operator B,Manual CSV Upload
+2026-03-26,B,Line3,873,880,21,80,Material Shortage,Operator C,Google Form
+2026-03-18,B,Line4,840,816,9,73,Quality Issue,Operator E,Google Form
+2026-02-02,B,Line2,1073,1051,9,78,Material Shortage,Operator D,Google Form
+2026-03-28,B,Line3,985,1007,29,39,Cleaning,Operator B,Manual CSV Upload
+2026-03-30,A,Line4,996,893,20,0,No Downtime,Operator C,Legacy Excel Log
+2026-01-12,C,Line2,1047,930,6,43,Material Shortage,Operator C,Manual CSV Upload
+2026-03-25,C,Line1,828,789,3,84,Changeover,Operator D,Google Form
+2026-03-05,C,Line3,1177,1220,23,52,Material Shortage,Operator C,Duplicate CSV Upload
+2026-02-17,A,Line4,1200,1065,10,12,Cleaning,Operator E,Google Form
+2026-02-23,B,Line2,1113,1073,27,45,Equipment Failure,Operator C,Google Form
+2026-03-22,C,Line1,837,742,16,0,No Downtime,Operator E,Google Form
+2026-03-01,C,Line2,-269,802,17,0,No Downtime,Operator E,Legacy Excel Log
+2026-01-21,C,Line3,1150,1015,15,37,Material Shortage,Operator E,Legacy Excel Log
+2026-01-09,B,Line3,1144,1003,3,48,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-22,B,Line2,854,752,14,88,Changeover,Operator D,Legacy Excel Log
+2026-01-27,A,Line1,979,892,11,42,Material Shortage,Operator D,Legacy Excel Log
+2026-03-18,B,Line3,823,851,17,89,Changeover,Operator E,Legacy Excel Log
+2026-01-25,A,Line3,880,841,3,94,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-12,A,Line1,1105,1041,17,0,No Downtime,Operator B,Manual CSV Upload
+2026-02-19,B,Line1,1042,899,22,37,Equipment Failure,Operator C,Google Form
+2026-02-11,A,Line2,875,887,6,34,Changeover,Operator B,Google Form
+2026-03-04,C,Line3,801,682,1,88,Material Shortage,Operator D,Google Form
+2026-03-26,C,Line1,-91,1166,7,23,Changeover,Operator C,Manual CSV Upload
+2026-02-23,B,Line4,908,861,8,85,Material Shortage,Operator E,Google Form
+2026-03-27,C,Line3,1189,1126,2,25,Changeover,Operator B,Legacy Excel Log
+2026-03-28,B,Line1,843,758,13,0,No Downtime,Operator C,Legacy Excel Log
+2026-01-27,B,Line1,869,908,19,77,Material Shortage,Operator C,Google Form
+2026-02-25,C,Line3,1058,933,15,59,Material Shortage,Operator B,Google Form
+2026-02-28,B,Line3,1178,1148,15,83,Changeover,Operator B,Legacy Excel Log
+2026-04-06,A,Line3,844,730,19,29,Changeover,Operator A,Google Form
+2026-02-28,B,Line4,1118,1085,4,23,Quality Issue,Operator E,Legacy Excel Log
+2026-04-29,C,Line1,1066,942,10,53,Material Shortage,Operator C,Manual CSV Upload
+2026-01-20,A,Line1,1145,1164,20,44,Quality Issue,Operator E,Google Form
+2026-02-09,B,Line4,874,825,14,58,Equipment Failure,Operator B,Manual CSV Upload
+2026-02-15,B,Line3,945,931,16,59,Changeover,Operator A,Google Form
+2026-01-04,B,Line4,1080,1113,6,36,Material Shortage,Operator C,Legacy Excel Log
+2026-01-03,A,Line2,1134,1139,12,100,Equipment Failure,Operator C,Google Form
+2026-03-14,A,Line1,1041,935,15,96,Changeover,Operator E,Legacy Excel Log
+2026-01-19,B,Line2,973,942,17,18,Material Shortage,Operator D,Legacy Excel Log
+2026-02-07,B,Line2,988,1004,2,21,Quality Issue,Operator E,Legacy Excel Log
+2026-04-03,A,Line1,824,708,10,0,No Downtime,Operator D,Manual CSV Upload
+2026-03-07,C,Line2,1061,1019,28,19,Material Shortage,Operator D,Manual CSV Upload
+2026-01-13,C,Line1,947,950,1,83,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-06,C,Line3,1106,1053,22,53,Cleaning,Operator A,Manual CSV Upload
+2026-01-06,B,Line3,941,820,3,51,Equipment Failure,Operator E,Legacy Excel Log
+2026-04-29,C,Line4,1172,1095,14,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-26,C,Line4,1199,1225,16,106,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-17,B,Line1,952,917,2,0,No Downtime,Operator C,Manual CSV Upload
+2026-04-11,A,Line4,1068,979,26,0,No Downtime,Operator C,Manual CSV Upload
+2026-04-28,A,Line1,1179,1156,7,55,Material Shortage,Operator C,Google Form
+2026-03-30,B,Line4,850,762,9,43,Material Shortage,Operator A,Manual CSV Upload
+2026-02-05,C,Line3,958,847,0,102,Equipment Failure,Operator B,Google Form
+2026-04-20,C,Line3,939,955,19,73,Changeover,Operator B,Google Form
+2026-03-02,C,Line3,1080,929,21,15,Cleaning,Operator A,Manual CSV Upload
+2026-03-06,C,Line3,1144,1143,8,67,Changeover,Operator A,Legacy Excel Log
+2026-01-28,B,Line3,846,879,13,37,Quality Issue,Operator E,Manual CSV Upload
+2026-04-22,B,Line1,983,893,17,86,Equipment Failure,Operator C,Google Form
+2026-04-10,C,Line4,1111,1132,8,49,Cleaning,Operator C,Google Form
+2026-04-14,C,Line4,1072,1062,15,0,No Downtime,Operator C,Google Form
+2026-02-22,A,Line2,1028,882,11,49,Material Shortage,Operator E,Google Form
+2026-02-10,B,Line3,1137,1164,5,32,Cleaning,Operator A,Google Form
+2026-02-04,A,Line1,813,724,13,0,No Downtime,Operator D,Google Form
+2026-02-10,A,Line2,978,999,2,25,Quality Issue,Operator B,Google Form
+2026-01-15,A,Line4,945,918,19,91,Changeover,Operator B,Manual CSV Upload
+2026-04-05,B,Line2,895,850,9,26,Cleaning,Operator C,Legacy Excel Log
+2026-01-23,B,Line3,1087,1013,12,64,Material Shortage,Operator B,Manual CSV Upload
+2026-01-13,B,Line3,979,973,18,77,Equipment Failure,Operator E,Legacy Excel Log
+2026-02-19,C,Line3,982,961,20,26,Quality Issue,Operator D,Google Form
+2026-02-24,B,Line2,827,734,17,40,Cleaning,Operator D,Google Form
+2026-02-06,A,Line1,1104,1094,2,62,Changeover,Operator B,Legacy Excel Log
+2026-04-22,C,Line3,1127,1019,13,37,Material Shortage,Operator E,Legacy Excel Log
+2026-02-01,C,Line4,-167,870,1,58,Material Shortage,Operator B,Google Form
+2026-02-13,B,Line4,975,908,15,0,No Downtime,Operator D,Google Form
+2026-01-20,A,Line4,969,949,8,28,Quality Issue,Operator E,Legacy Excel Log
+2026-04-13,A,Line4,822,764,5,22,Material Shortage,Operator B,Legacy Excel Log
+2026-04-11,A,Line2,900,769,12,31,Changeover,Operator E,Manual CSV Upload
+2026-01-18,C,Line1,971,982,8,116,Equipment Failure,Operator E,Legacy Excel Log
+2026-02-17,A,Line3,903,792,18,38,Equipment Failure,Operator B,Manual CSV Upload
+2026-02-09,A,Line1,1144,1136,14,44,Material Shortage,Operator B,Manual CSV Upload
+2026-01-15,B,Line4,1087,994,19,55,Material Shortage,Operator B,Manual CSV Upload
+2026-03-01,A,Line2,1036,938,20,0,No Downtime,Operator B,Google Form
+2026-03-11,B,Line3,1116,1028,24,25,Material Shortage,Operator D,Legacy Excel Log
+2026-02-05,A,Line3,819,771,19,782,Changeover,Operator C,Google Form
+2026-04-29,A,Line2,872,758,6,98,Changeover,Operator D,Google Form
+2026-01-25,A,Line4,1157,1202,19,60,Cleaning,Operator A,Legacy Excel Log
+2026-04-10,B,Line1,1177,1152,28,25,Material Shortage,Operator D,Legacy Excel Log
+2026-01-18,B,Line4,920,898,8,60,Equipment Failure,Operator E,Google Form
+2026-04-07,A,Line4,1003,1045,30,37,Changeover,Operator B,Manual CSV Upload
+2026-03-25,A,Line1,872,801,8,0,No Downtime,Operator E,Manual CSV Upload
+2026-03-31,A,Line2,854,748,0,0,No Downtime,Operator E,Manual CSV Upload
+2026-02-27,B,Line2,1056,1090,27,76,Material Shortage,Operator C,Legacy Excel Log
+2026-02-20,C,Line4,1025,956,13,33,Material Shortage,Operator C,Legacy Excel Log
+2026-01-05,B,Line2,1152,1158,4,40,Cleaning,Operator C,Google Form
+2026-03-04,A,Line4,1089,1068,2,0,No Downtime,Operator A,Google Form
+2026-03-24,C,Line1,1103,975,1,73,Changeover,Operator B,Legacy Excel Log
+2026-04-08,C,Line1,991,981,19,31,Cleaning,Operator C,Manual CSV Upload
+2026-02-07,C,Line4,984,837,2,71,Quality Issue,Operator B,Google Form
+2026-03-27,C,Line1,977,907,18,30,Material Shortage,Operator E,Manual CSV Upload
+2026-04-28,B,Line1,975,861,9,0,No Downtime,Operator E,Google Form
+2026-01-31,C,Line3,1032,977,1,86,Equipment Failure,Operator D,Google Form
+2026-04-25,D,Line2,1182,1166,10,60,Changeover,Operator A,Legacy Excel Log
+2026-04-02,B,Line4,963,947,20,28,Cleaning,Operator C,Google Form
+2026-03-24,C,Line4,1072,984,10,0,No Downtime,Operator C,Legacy Excel Log
+2026-03-08,B,Line4,818,824,8,0,No Downtime,Operator E,Legacy Excel Log
+2026-04-03,B,Line2,931,954,23,54,Cleaning,Operator D,Manual CSV Upload
+2026-04-06,C,Line4,1158,1157,7,32,Changeover,Operator A,Manual CSV Upload
+2026-03-10,A,Line4,1175,1027,3,66,Changeover,Operator A,Legacy Excel Log
+2026-01-24,B,Line2,1027,1033,29,86,Changeover,Operator D,Manual CSV Upload
+2026-04-05,C,Line3,976,1024,14,30,Changeover,Operator A,Legacy Excel Log
+2026-03-02,B,Line2,925,878,17,42,Quality Issue,Operator D,Legacy Excel Log
+2026-02-27,A,Line1,847,816,13,34,Equipment Failure,Operator C,Manual CSV Upload
+2026-01-21,C,Line1,943,960,9,93,Equipment Failure,Operator B,Legacy Excel Log
+2026-02-26,C,Line1,805,726,5,57,Equipment Failure,Operator A,Legacy Excel Log
+2026-01-23,A,Line1,1070,1093,11,43,Equipment Failure,Operator E,Google Form
+2026-03-08,C,Line3,846,761,15,0,No Downtime,Operator B,Legacy Excel Log
+2026-03-11,B,Line2,904,840,6,56,Changeover,Operator D,Manual CSV Upload
+2026-04-30,B,Line1,973,983,13,53,Equipment Failure,Operator D,Legacy Excel Log
+2026-03-15,A,Line4,847,775,14,82,Material Shortage,Operator B,Manual CSV Upload
+2026-01-04,A,Line4,870,863,20,34,Material Shortage,Operator E,Legacy Excel Log
+2026-01-09,C,Line1,1182,1024,2,75,Equipment Failure,Operator A,Legacy Excel Log
+2026-02-23,A,Line3,939,834,2,83,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-07,C,Line2,1159,1177,26,21,Quality Issue,Operator D,Legacy Excel Log
+2026-02-06,B,Line1,996,916,11,41,Quality Issue,Operator C,Legacy Excel Log
+2026-04-29,A,Line3,846,879,5,64,Changeover,Operator A,Manual CSV Upload
+2026-04-29,A,Line4,1103,1084,17,39,Cleaning,Operator C,Legacy Excel Log
+2026-01-04,C,Line4,1037,985,2,26,Equipment Failure,Operator B,Legacy Excel Log
+2026-01-20,C,Line1,1179,1122,1,25,Cleaning,Operator A,Manual CSV Upload
+2026-03-23,B,Line1,872,830,10,64,Material Shortage,Operator D,Google Form
+2026-01-07,B,Line1,1106,1105,19,48,Material Shortage,Operator D,Legacy Excel Log
+2026-04-28,C,Line4,1027,1039,2,0,No Downtime,Operator C,Google Form
+2026-02-09,C,Line1,996,893,20,120,Equipment Failure,Operator D,Legacy Excel Log
+2026-04-20,A,Line4,1102,1068,20,65,Quality Issue,Operator E,Legacy Excel Log
+2026-04-07,A,Line1,929,797,7,37,Equipment Failure,Operator A,Legacy Excel Log
+2026-04-11,B,Line1,1026,895,5,15,Cleaning,Operator E,Manual CSV Upload
+2026-04-07,B,Line3,867,804,20,89,Changeover,Operator B,Manual CSV Upload
+2026-02-04,B,Line4,1153,1160,7,65,Changeover,Operator D,Google Form
+2026-03-16,C,Line2,848,752,3,51,Changeover,Operator A,Manual CSV Upload
+2026-04-16,B,Line4,922,883,17,0,No Downtime,Operator E,Duplicate CSV Upload
+2026-01-16,A,Line1,1085,1026,11,47,Material Shortage,Operator C,Legacy Excel Log
+2026-01-16,C,Line4,1050,1074,14,57,Material Shortage,Operator E,Legacy Excel Log
+2026-02-08,B,Line2,1109,1148,21,74,Changeover,Operator E,Manual CSV Upload
+2026-03-04,C,Line2,1008,935,17,22,Changeover,Operator D,Legacy Excel Log
+2026-04-11,B,Line2,837,719,7,32,Equipment Failure,Operator A,Manual CSV Upload
+2026-02-28,C,Line4,989,1018,29,96,Equipment Failure,Operator C,Google Form
+2026-03-29,C,Line1,948,850,23,46,Cleaning,Operator E,Legacy Excel Log
+2026-02-21,C,Line1,1148,1063,9,44,Equipment Failure,Operator B,Duplicate CSV Upload
+2026-03-06,A,Line2,1117,965,5,62,Changeover,Operator E,Legacy Excel Log
+2026-02-09,B,Line2,905,875,5,11,Cleaning,Operator A,Google Form
+2026-03-31,B,Line4,1008,958,16,31,Cleaning,Operator A,Legacy Excel Log
+2026-03-19,B,Line4,1131,1099,18,61,Quality Issue,Operator C,Manual CSV Upload
+2026-03-03,A,Line1,1158,1065,18,39,Material Shortage,Operator D,Legacy Excel Log
+2026-03-21,A,Line2,939,865,16,0,No Downtime,Operator A,Manual CSV Upload
+2026-02-21,B,Line2,1183,1137,25,46,Cleaning,Operator C,Legacy Excel Log
+2026-02-23,C,Line4,1193,1036,16,62,Material Shortage,Operator D,Manual CSV Upload
+2026-02-28,C,Line1,1009,881,1,88,Equipment Failure,Operator A,Google Form
+2026-04-17,B,Line3,1162,1001,18,56,Cleaning,Operator A,Manual CSV Upload
+2026-03-17,B,Line4,1021,905,15,99,Changeover,Operator C,Google Form
+2026-03-16,A,Line3,1193,1111,19,55,Material Shortage,Operator A,Manual CSV Upload
+2026-03-29,B,Line3,1134,967,11,95,Equipment Failure,Operator A,Google Form
+2026-01-23,A,Line2,1169,1056,7,63,Material Shortage,Operator B,Google Form
+2026-01-19,C,Line1,903,775,4,64,Equipment Failure,Operator E,Manual CSV Upload
+2026-01-28,B,,1108,1152,34,33,Material Shortage,Operator D,Google Form
+2026-04-04,B,Line1,954,852,7,19,Material Shortage,Operator B,Google Form
+2026-02-12,A,Line1,1072,971,15,52,Material Shortage,Operator C,Legacy Excel Log
+2026-03-16,C,Line3,915,901,7,22,Changeover,Operator A,Manual CSV Upload
+2026-02-08,C,Line3,1173,1019,13,33,Cleaning,Operator B,Legacy Excel Log
+2026-04-19,B,Line2,939,930,8,20,Changeover,Operator B,Google Form
+2026-03-03,C,Line4,972,924,14,92,Changeover,Operator C,Manual CSV Upload
+2026-01-26,C,Line2,1034,965,22,62,Equipment Failure,Operator E,Google Form
+2026-03-29,C,Line4,1154,1114,24,64,Material Shortage,Operator E,Legacy Excel Log
+2026-04-03,A,Line2,1126,984,28,102,Equipment Failure,Operator B,Manual CSV Upload
+2026-04-13,B,Line1,1126,1171,31,45,Cleaning,Operator B,Google Form
+2026-02-01,B,Line2,952,872,2,47,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-08,B,Line2,904,828,1,67,Changeover,Operator A,Legacy Excel Log
+2026-03-01,A,Line4,1011,907,6,76,Material Shortage,Operator D,Google Form
+2026-01-11,B,Line4,1172,1054,10,69,Changeover,Operator B,Legacy Excel Log
+2026-04-04,C,Line2,855,832,14,82,Material Shortage,Operator B,Legacy Excel Log
+2026-04-20,C,Line1,1010,932,20,0,No Downtime,Operator E,Manual CSV Upload
+2026-01-03,A,Line3,919,911,26,28,Equipment Failure,Operator D,Legacy Excel Log
+2026-04-07,B,Line4,839,856,7,50,Material Shortage,Operator C,Manual CSV Upload
+2026-01-04,C,Line3,1013,1059,1,79,Material Shortage,Operator A,Manual CSV Upload
+2026-04-26,A,Line3,1002,951,10,65,Changeover,Operator B,Google Form
+2026-02-13,A,Line1,961,911,26,0,No Downtime,Operator C,Manual CSV Upload
+2026-02-21,A,Line3,842,778,21,75,Equipment Failure,Operator C,Legacy Excel Log
+2026-02-04,A,Line2,1180,1107,27,68,Material Shortage,Operator E,Legacy Excel Log
+2026-03-24,B,Line2,1183,1142,31,63,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-24,B,Line1,824,766,15,57,Equipment Failure,Operator D,Legacy Excel Log
+2026-03-16,C,Line4,1129,983,13,24,Changeover,Operator A,Google Form
+2026-03-07,B,Line3,965,840,24,45,Quality Issue,Operator C,Legacy Excel Log
+2026-03-13,B,Line4,1155,1050,0,27,Changeover,Operator C,Manual CSV Upload
+2026-03-19,A,Line4,882,875,7,0,No Downtime,Operator B,Google Form
+2026-01-03,B,Line3,806,732,8,96,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-21,B,Line4,1002,1048,1,42,Material Shortage,Operator B,Manual CSV Upload
+2026-01-30,B,Line4,802,731,0,15,Cleaning,Operator C,Manual CSV Upload
+2026-03-29,B,Line2,905,866,18,0,No Downtime,Operator D,Legacy Excel Log
+2026-04-17,B,Line4,801,742,15,0,No Downtime,Operator A,Legacy Excel Log
+2026-04-01,C,Line3,1160,1034,21,64,Changeover,Operator E,Legacy Excel Log
+2026-04-07,B,Line2,826,729,8,88,Changeover,Operator B,Manual CSV Upload
+2026-02-11,B,Line1,946,891,25,53,Quality Issue,Operator D,Legacy Excel Log
+2026-01-22,C,Line1,1155,1184,11,89,Equipment Failure,Operator E,Manual CSV Upload
+2026-04-10,C,Line2,819,743,18,27,Quality Issue,Operator D,Manual CSV Upload
+2026-01-19,A,Line1,1150,1058,19,89,Equipment Failure,Operator C,Google Form
+2026-04-23,C,Line3,1031,1059,13,0,No Downtime,Operator D,Manual CSV Upload
+2026-01-15,B,Line2,860,822,15,94,Changeover,Operator A,Legacy Excel Log
+2026-04-04,C,Line3,1135,1117,31,26,Changeover,Operator B,Manual CSV Upload
+2026-02-02,C,Line2,964,936,1,89,Material Shortage,Operator E,Legacy Excel Log
+2026-04-15,B,Line4,955,987,27,0,No Downtime,Operator C,Google Form
+2026-04-10,A,Line4,835,798,10,0,No Downtime,Operator E,Manual CSV Upload
+2026-02-11,B,Line4,1058,970,4,0,No Downtime,Operator D,Manual CSV Upload
+2026-02-26,A,Line3,837,771,11,53,Material Shortage,Operator E,Google Form
+2026-01-13,C,Line3,1124,1016,30,60,Material Shortage,Operator E,Manual CSV Upload
+2026-04-06,A,Line1,1102,949,14,77,Changeover,Operator A,Google Form
+2026-01-07,A,Line3,1078,1039,11,100,Equipment Failure,Operator A,Legacy Excel Log
+2026-01-14,B,Line3,961,949,0,99,Equipment Failure,Operator A,Manual CSV Upload
+2026-04-26,A,Line4,949,960,17,30,Changeover,Operator B,Legacy Excel Log
+2026-04-13,A,Line1,1047,1020,30,12,Quality Issue,Operator D,Legacy Excel Log
+2026-04-19,A,Line2,837,845,0,58,Equipment Failure,Operator A,Google Form
+2026-04-30,A,Line3,846,792,2,22,Quality Issue,Operator D,Google Form
+2026-02-20,B,Line4,924,880,14,69,Material Shortage,Operator D,Google Form
+2026-03-03,B,Line1,1116,974,3,40,Material Shortage,Operator E,Google Form
+2026-04-26,B,Line1,856,793,11,71,Equipment Failure,Operator B,Legacy Excel Log
+2026-03-17,A,Line1,939,901,3,0,No Downtime,Operator E,Google Form
+2026-02-16,A,Line4,862,900,19,71,Material Shortage,Operator B,Legacy Excel Log
+2026-04-29,A,Line1,1135,1074,19,60,Equipment Failure,Operator D,Google Form
+2026-01-14,B,Line2,968,972,22,55,Changeover,Operator B,Google Form
+2026-01-24,C,Line4,816,722,18,51,Equipment Failure,Operator E,Google Form
+2026-03-31,A,Line3,872,841,6,77,Changeover,Operator A,Legacy Excel Log
+2026-01-18,C,Line4,890,931,2,75,Quality Issue,Operator A,Manual CSV Upload
+2026-01-26,B,Line1,899,852,15,22,Material Shortage,Operator C,Manual CSV Upload
+2026-04-20,A,Line3,1121,1023,13,100,Changeover,Operator C,Manual CSV Upload
+2026-01-18,A,Line3,1107,1010,3,34,Material Shortage,Operator D,Google Form
+2026-02-02,C,Line1,1007,932,15,26,Equipment Failure,Operator B,Google Form
+2026-01-02,B,Line1,1162,1019,0,59,Material Shortage,Operator E,Legacy Excel Log
+2026-04-13,B,Line2,1086,1076,18,0,No Downtime,Operator B,Manual CSV Upload
+2026-04-30,C,Line3,1083,1044,14,0,No Downtime,Operator B,Legacy Excel Log
+2026-03-20,A,Line4,1185,1184,15,29,Cleaning,Operator D,Google Form
+2026-03-02,B,Line1,1160,1198,27,0,No Downtime,Operator C,Google Form
+2026-02-22,B,Line4,1136,1020,16,17,Quality Issue,Operator B,Legacy Excel Log
+2026-01-04,C,Line2,885,763,1,68,Quality Issue,Operator E,Legacy Excel Log
+2026-03-01,B,Line1,1200,1187,5,66,Material Shortage,Operator C,Legacy Excel Log
+2026-01-07,A,Line4,1066,1043,12,107,Equipment Failure,Operator C,Manual CSV Upload
+2026-04-19,A,Line3,838,838,8,55,Changeover,Operator A,Legacy Excel Log
+2026-01-21,C,Line4,896,861,21,78,Equipment Failure,Operator B,Manual CSV Upload
+2026-03-19,A,Line1,1170,1128,8,50,Changeover,Operator A,Legacy Excel Log
+2026-04-20,B,Line3,987,959,28,46,Changeover,Operator D,Legacy Excel Log
+2026-04-25,A,Line1,839,732,2,69,Equipment Failure,Operator C,Legacy Excel Log
+2026-03-21,C,Line1,830,792,19,110,Equipment Failure,Operator A,Google Form
+2026-01-17,B,Line1,802,766,1,71,Quality Issue,Operator E,Google Form
+2026-02-14,C,Line1,815,847,21,90,Changeover,Operator B,Google Form
+2026-02-16,B,Line4,997,885,13,105,Equipment Failure,Operator B,Legacy Excel Log
+2026-02-25,B,Line4,1113,1155,19,24,Changeover,Operator E,Google Form
+2026-02-18,A,Line2,1064,1113,31,84,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-01,C,Line1,857,826,6,66,Changeover,Operator E,Google Form
+2026-04-02,C,Line4,827,768,8,30,Changeover,Operator C,Google Form
+2026-01-17,B,Line4,1145,1082,6,77,Equipment Failure,Operator A,Google Form
+2026-01-14,A,Line1,1132,1130,27,23,Material Shortage,Operator B,Google Form
+2026-04-17,C,Line2,923,941,8,0,No Downtime,Operator D,Google Form
+2026-04-22,B,Line4,1025,935,4,62,Quality Issue,Operator E,Legacy Excel Log
+2026-04-25,D,Line2,952,974,26,66,Changeover,Operator A,Manual CSV Upload
+2026-02-08,C,Line4,922,904,26,60,Equipment Failure,Operator D,Manual CSV Upload
+2026-01-11,A,Line4,1027,976,23,29,Quality Issue,Operator B,Manual CSV Upload
+2026-01-27,C,Line4,1038,1023,10,33,Quality Issue,Operator B,Manual CSV Upload
+2026-02-13,C,Line1,861,796,17,58,Equipment Failure,Operator B,Legacy Excel Log
+2026-02-19,B,Line3,803,764,15,57,Quality Issue,Operator E,Legacy Excel Log
+2026-04-24,A,Line1,847,857,23,78,Changeover,Operator C,Legacy Excel Log
+2026-02-13,A,Line3,872,905,21,41,Changeover,Operator A,Manual CSV Upload
+2026-02-12,A,Line3,1029,999,14,48,Changeover,Operator D,Legacy Excel Log
+2026-01-20,B,Line1,1099,1040,27,103,Equipment Failure,Operator D,Google Form
+2026-03-12,A,Line3,1098,935,27,36,Changeover,Operator C,Google Form
+2026-01-23,B,Line1,954,841,23,108,Equipment Failure,Operator C,Manual CSV Upload
+2026-03-16,B,Line1,881,866,1,46,Quality Issue,Operator B,Manual CSV Upload
+2026-04-11,C,Line3,800,796,23,43,Cleaning,Operator B,Manual CSV Upload
+2026-02-22,C,,806,846,12,81,Equipment Failure,Operator E,Legacy Excel Log
+2026-03-23,A,Line1,803,805,13,86,Equipment Failure,Operator C,Legacy Excel Log
+2026-03-30,C,Line4,804,806,19,60,Cleaning,Operator A,Legacy Excel Log
+2026-02-12,C,Line3,1071,988,9,29,Material Shortage,Operator A,Legacy Excel Log
+2026-03-14,A,Line2,1137,1056,0,0,No Downtime,Operator A,Legacy Excel Log
+2026-02-26,A,Line1,821,767,22,100,Changeover,Operator B,Legacy Excel Log
+2026-03-06,B,Line1,1010,1031,15,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-01,B,Line4,1050,953,5,0,No Downtime,Operator E,Google Form
+2026-01-27,C,Line2,990,893,7,40,Cleaning,Operator A,Legacy Excel Log
+2026-02-16,C,Line2,1115,1141,25,59,Quality Issue,Operator B,Legacy Excel Log
+2026-02-09,B,Line1,1139,1088,8,50,Equipment Failure,Operator E,Manual CSV Upload
+2026-01-28,A,Line3,1047,912,10,62,Equipment Failure,Operator C,Google Form
+2026-02-24,C,Line1,1181,1116,8,58,Material Shortage,Operator C,Manual CSV Upload
+2026-03-23,B,Line4,1192,1144,25,77,Changeover,Operator D,Manual CSV Upload
+2026-02-07,C,Line2,960,883,23,39,Material Shortage,Operator D,Legacy Excel Log
+2026-01-21,B,Line3,894,805,11,68,Quality Issue,Operator C,Manual CSV Upload
+2026-02-04,C,Line3,1140,1127,28,60,Quality Issue,Operator B,Manual CSV Upload
+2026-03-01,B,Line2,991,981,1,32,Material Shortage,Operator D,Google Form
+2026-01-17,C,Line4,838,861,21,94,Changeover,Operator E,Manual CSV Upload
+2026-02-03,C,Line3,970,890,19,23,Changeover,Operator B,Google Form
+2026-02-14,C,Line2,928,850,20,12,Cleaning,Operator A,Legacy Excel Log
+2026-03-27,A,Line4,1135,1083,23,59,Cleaning,Operator B,Legacy Excel Log
+2026-02-04,B,Line1,849,850,5,52,Material Shortage,Operator E,Legacy Excel Log
+2026-03-28,A,Line3,995,922,18,0,No Downtime,Operator B,Manual CSV Upload
+2026-01-06,C,Line4,1119,1082,25,44,Equipment Failure,Operator B,Duplicate CSV Upload
+2026-01-27,B,Line2,978,924,12,60,Changeover,Operator A,Manual CSV Upload
+2026-01-07,A,Line2,1131,1028,12,22,Material Shortage,Operator A,Manual CSV Upload
+2026-03-10,C,Line4,949,890,23,0,No Downtime,Operator C,Manual CSV Upload
+2026-01-27,C,Line3,983,1022,14,74,Equipment Failure,Operator E,Legacy Excel Log
+2026-01-10,A,Line2,1078,1004,5,20,Changeover,Operator E,Legacy Excel Log
+2026-02-01,A,Line4,1088,977,24,84,Material Shortage,Operator C,Manual CSV Upload
+2026-01-13,A,Line2,1134,1159,4,0,No Downtime,Operator D,Legacy Excel Log
+2026-02-17,B,Line3,1011,920,1,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-19,C,Line2,1034,1024,13,48,Equipment Failure,Operator E,Manual CSV Upload
+2026-01-13,B,Line1,1156,1062,3,54,Cleaning,Operator B,Manual CSV Upload
+2026-04-05,A,Line3,1076,968,5,13,Quality Issue,Operator B,Google Form
+2026-02-03,A,Line3,1105,973,22,88,Equipment Failure,Operator A,Legacy Excel Log
+2026-01-20,A,Line2,871,797,14,103,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-23,A,Line2,937,819,10,36,Equipment Failure,Operator B,Google Form
+2026-01-21,B,Line4,860,811,3,59,Changeover,Operator A,Legacy Excel Log
+2026-04-26,C,Line3,1053,987,5,46,Quality Issue,Operator B,Google Form
+2026-02-18,A,Line4,1047,1043,16,19,Cleaning,Operator A,Duplicate CSV Upload
+2026-01-03,A,Line4,1004,954,22,42,Equipment Failure,Operator D,Legacy Excel Log
+2026-02-14,C,Line4,928,825,23,53,Material Shortage,Operator E,Legacy Excel Log
+2026-03-27,A,Line3,1178,1209,1,99,Changeover,Operator B,Legacy Excel Log
+2026-03-02,A,Line4,948,826,11,99,Changeover,Operator D,Google Form
+2026-01-14,C,Line1,1075,975,22,78,Material Shortage,Operator E,Legacy Excel Log
+2026-04-11,C,Line4,1179,1029,30,51,Changeover,Operator E,Legacy Excel Log
+2026-04-16,C,Line1,1127,1159,11,50,Material Shortage,Operator E,Manual CSV Upload
+2026-02-06,C,Line4,932,962,11,52,Cleaning,Operator C,Manual CSV Upload
+2026-04-11,B,Line4,1055,1075,20,32,Changeover,Operator E,Google Form
+2026-04-09,B,Line1,1170,1188,1,97,Changeover,Operator E,Google Form
+2026-04-27,C,Line1,1090,940,18,52,Material Shortage,Operator C,Manual CSV Upload
+2026-01-02,A,Line1,1122,1141,23,59,Changeover,Operator C,Google Form
+2026-01-20,A,Line3,983,987,14,107,Equipment Failure,Operator E,Google Form
+2026-02-27,B,Line1,802,731,17,51,Cleaning,Operator D,Manual CSV Upload
+2026-03-29,C,Line1,948,850,23,46,Cleaning,Operator E,Duplicate CSV Upload
+2026-04-11,C,Line2,878,833,17,27,Cleaning,Operator D,Manual CSV Upload
+2026-01-09,B,Line2,1012,888,15,51,Equipment Failure,Operator C,Manual CSV Upload
+2026-03-26,B,,928,879,6,0,No Downtime,Operator A,Google Form
+2026-02-05,C,Line2,1026,957,6,64,Changeover,Operator D,Google Form
+2026-03-14,A,Line4,1128,1125,15,0,No Downtime,Operator C,Google Form
+2026-01-05,A,Line3,1089,948,14,34,Equipment Failure,Operator B,Manual CSV Upload
+2026-03-26,C,Line3,1023,1069,4,68,Material Shortage,Operator D,Legacy Excel Log
+2026-02-05,B,Line1,1046,1074,0,0,No Downtime,Operator D,Google Form
+2026-03-20,B,Line2,1002,1009,0,113,Equipment Failure,Operator D,Legacy Excel Log
+2026-01-19,C,Line3,1127,958,1,44,Equipment Failure,Operator C,Manual CSV Upload
+2026-04-05,C,,1011,913,7,45,Material Shortage,Operator D,Google Form
+2026-03-01,C,Line4,1118,1075,3,45,Cleaning,Operator C,Manual CSV Upload
+2026-04-12,B,Line1,907,905,5,58,Cleaning,Operator C,Legacy Excel Log
+2026-03-22,A,Line2,1050,1017,5,0,No Downtime,Operator E,Legacy Excel Log
+2026-02-06,B,Line3,963,952,11,38,Material Shortage,Operator E,Manual CSV Upload
+2026-02-20,C,Line2,814,770,5,43,Material Shortage,Operator B,Manual CSV Upload
+2026-04-25,B,Line3,1087,1103,32,110,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-02,A,Line1,834,760,11,15,Material Shortage,Operator A,Legacy Excel Log
+2026-03-21,B,Line3,994,1007,22,0,No Downtime,Operator A,Manual CSV Upload
+2026-02-12,B,Line2,924,968,6,15,Cleaning,Operator A,Google Form
+2026-01-25,B,Line1,988,973,16,51,Material Shortage,Operator D,Legacy Excel Log
+2026-01-06,B,Line2,869,888,7,36,Cleaning,Operator C,Legacy Excel Log
+2026-01-24,A,Line2,887,902,1,17,Cleaning,Operator D,Legacy Excel Log
+2026-04-27,B,Line2,822,719,12,80,Material Shortage,Operator A,Legacy Excel Log
+2026-04-16,C,Line4,1051,1095,31,50,Material Shortage,Operator A,Google Form
+2026-01-05,C,Line3,861,756,782,33,Changeover,Operator B,Google Form
+2026-03-15,C,Line2,1084,1007,9,78,Changeover,Operator A,Legacy Excel Log
+2026-04-09,B,Line3,1045,1065,13,71,Material Shortage,Operator A,Google Form
+2026-04-10,C,Line1,970,892,21,40,Material Shortage,Operator C,Manual CSV Upload
+2026-01-18,B,Line2,1011,870,13,83,Changeover,Operator D,Google Form
+2026-03-19,B,Line1,1129,1085,19,44,Quality Issue,Operator A,Google Form
+2026-01-14,B,Line4,1084,934,26,30,Material Shortage,Operator D,Manual CSV Upload
+2026-02-07,B,Line3,885,784,0,52,Cleaning,Operator C,Legacy Excel Log
+2026-04-01,C,Line2,1143,1066,11,59,Material Shortage,Operator E,Legacy Excel Log
+2026-02-08,A,Line1,1187,1148,19,63,Quality Issue,Operator E,Legacy Excel Log
+2026-04-25,C,Line3,875,753,5,66,Material Shortage,Operator E,Legacy Excel Log
+2026-04-27,A,Line3,880,792,2,56,Cleaning,Operator A,Google Form
+2026-02-06,B,Line3,963,952,11,38,Material Shortage,Operator E,Duplicate CSV Upload
+2026-01-23,C,Line4,839,796,12,97,Equipment Failure,Operator B,Manual CSV Upload
+2026-02-04,C,Line1,1079,1081,7,77,Equipment Failure,Operator A,Google Form
+2026-01-06,A,Line4,862,776,14,31,Equipment Failure,Operator B,Google Form
+2026-02-01,B,Line4,1195,1121,3,60,Equipment Failure,Operator A,Duplicate CSV Upload
+2026-04-09,A,Line1,-293,952,13,77,Material Shortage,Operator E,Legacy Excel Log
+2026-03-10,B,Line3,1019,936,1012,51,Changeover,Operator B,Google Form
+2026-04-17,C,Line1,925,935,19,29,Changeover,Operator A,Google Form
+2026-04-26,C,Line4,917,818,21,0,No Downtime,Operator D,Manual CSV Upload
+2026-01-08,A,Line1,-194,982,25,65,Material Shortage,Operator C,Manual CSV Upload
+2026-02-19,C,,1063,951,3,0,No Downtime,Operator A,Manual CSV Upload
+2026-03-04,A,Line3,998,919,23,0,No Downtime,Operator B,Google Form
+2026-01-26,A,Line3,930,904,5,60,Quality Issue,Operator B,Manual CSV Upload
+2026-01-26,A,Line2,1092,1087,25,88,Equipment Failure,Operator B,Legacy Excel Log
+2026-02-08,C,Line2,1120,1009,11,0,No Downtime,Operator A,Legacy Excel Log
+2026-04-05,B,Line3,828,778,11,27,Changeover,Operator E,Manual CSV Upload
+2026-02-15,A,Line1,1077,990,24,52,Quality Issue,Operator A,Legacy Excel Log
+2026-04-21,A,Line2,978,1003,13,0,No Downtime,Operator A,Google Form
+2026-02-27,C,Line3,854,882,13,104,Equipment Failure,Operator E,Manual CSV Upload
+2026-04-15,C,Line2,1150,1109,4,0,No Downtime,Operator B,Google Form
+2026-02-01,B,Line4,1195,1121,3,60,Equipment Failure,Operator A,Google Form
+2026-01-24,C,Line2,859,896,10,15,Material Shortage,Operator E,Manual CSV Upload
+2026-01-12,C,Line3,966,894,16,89,Equipment Failure,Operator E,Manual CSV Upload
+2026-02-08,B,Line1,1032,1031,18,85,Material Shortage,Operator D,Legacy Excel Log
+2026-01-05,A,Line4,1190,1191,16,55,Changeover,Operator B,Legacy Excel Log
+2026-04-04,A,Line1,1122,1090,7,85,Material Shortage,Operator A,Legacy Excel Log
+2026-01-29,A,Line2,907,850,7,72,Changeover,Operator D,Google Form
+2026-03-06,A,Line1,1193,1105,19,0,No Downtime,Operator E,Google Form
+2026-04-06,C,Line1,892,779,3,47,Material Shortage,Operator A,Manual CSV Upload
+2026-02-10,B,Line1,874,753,9,76,Material Shortage,Operator A,Manual CSV Upload
+2026-04-19,B,Line1,1003,1025,1,34,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-14,B,Line3,1093,979,21,0,No Downtime,Operator A,Google Form
+2026-02-14,B,Line2,1144,1089,25,30,Changeover,Operator D,Legacy Excel Log
+2026-02-06,A,Line2,895,928,26,0,No Downtime,Operator A,Google Form
+2026-01-21,C,Line2,1170,1154,31,28,Changeover,Operator B,Manual CSV Upload
+2026-04-22,C,Line4,992,898,21,92,Changeover,Operator B,Legacy Excel Log
+2026-03-27,A,Line1,983,983,4,0,No Downtime,Operator D,Google Form
+2026-02-15,C,Line4,1155,1140,0,27,Material Shortage,Operator E,Manual CSV Upload
+2026-01-05,B,Line4,1071,994,24,32,Changeover,Operator D,Manual CSV Upload
+2026-04-22,C,Line2,1182,1227,34,40,Changeover,Operator E,Legacy Excel Log
+2026-04-04,A,Line4,888,880,0,0,No Downtime,Operator B,Google Form
+2026-02-19,A,Line2,1108,1100,3,67,Equipment Failure,Operator A,Manual CSV Upload
+2026-04-07,B,Line1,984,862,18,0,No Downtime,Operator D,Manual CSV Upload
+2026-03-12,B,Line3,1123,1052,5,28,Equipment Failure,Operator E,Google Form
+2026-02-06,B,Line4,875,869,11,16,Material Shortage,Operator C,Manual CSV Upload
+2026-01-03,B,Line4,1002,1048,1,105,Equipment Failure,Operator A,Google Form
+2026-02-08,A,Line3,891,835,12,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-10,B,Line4,1111,1061,3,58,Changeover,Operator A,Google Form
+2026-02-07,A,Line4,993,934,9,114,Equipment Failure,Operator B,Legacy Excel Log
+2026-01-06,C,Line3,926,866,20,68,Changeover,Operator C,Manual CSV Upload
+2026-02-16,A,Line2,1127,1078,29,49,Changeover,Operator A,Manual CSV Upload
+2026-01-17,C,Line1,984,857,0,71,Equipment Failure,Operator C,Google Form
+2026-01-01,B,Line4,1037,936,3,112,Equipment Failure,Operator C,Legacy Excel Log
+2026-03-02,B,Line3,1106,1106,18,0,No Downtime,Operator C,Manual CSV Upload
+2026-03-27,A,Line2,1175,1020,24,66,Material Shortage,Operator D,Manual CSV Upload
+2026-02-04,C,Line2,1037,1025,0,43,Equipment Failure,Operator A,Manual CSV Upload
+2026-04-12,A,Line3,1090,1091,4,63,Material Shortage,Operator C,Legacy Excel Log
+2026-03-24,C,Line2,867,849,15,57,Equipment Failure,Operator E,Manual CSV Upload
+2026-02-07,C,Line1,923,951,17,25,Changeover,Operator C,Manual CSV Upload
+2026-02-12,A,Line2,945,819,3,85,Changeover,Operator B,Manual CSV Upload
+2026-02-20,B,Line3,924,798,18,88,Material Shortage,Operator A,Google Form
+2026-04-15,C,Line1,875,753,7,19,Material Shortage,Operator E,Legacy Excel Log
+2026-04-16,B,Line4,922,883,17,0,No Downtime,Operator E,Legacy Excel Log
+2026-04-02,B,Line3,897,936,26,0,No Downtime,Operator A,Legacy Excel Log
+2026-01-12,B,Line4,1134,1134,10,0,No Downtime,Operator D,Manual CSV Upload
+2026-01-16,A,Line3,929,830,7,65,Material Shortage,Operator E,Google Form
+2026-02-13,C,Line4,873,794,21,0,No Downtime,Operator C,Google Form
+2026-03-07,C,Line3,1165,1166,28,84,Equipment Failure,Operator E,Google Form
+2026-03-14,B,Line3,984,912,25,0,No Downtime,Operator A,Legacy Excel Log
+2026-03-21,A,Line1,943,844,8,37,Changeover,Operator A,Legacy Excel Log
+2026-02-09,C,Line3,956,912,8,61,Changeover,Operator E,Legacy Excel Log
+2026-01-07,C,Line2,936,973,15,22,Quality Issue,Operator B,Manual CSV Upload
+2026-04-15,A,Line4,819,793,17,15,Cleaning,Operator C,Manual CSV Upload
+2026-01-30,A,Line3,1019,983,20,29,Material Shortage,Operator D,Google Form
+2026-03-09,A,Line2,971,952,6,54,Material Shortage,Operator D,Manual CSV Upload
+2026-02-25,B,,1115,1098,25,22,Material Shortage,Operator A,Legacy Excel Log
+2026-02-24,A,Line3,944,947,17,38,Equipment Failure,Operator D,Legacy Excel Log
+2026-03-20,C,Line3,1061,942,21,38,Changeover,Operator B,Google Form
+2026-02-24,A,Line1,1075,1031,2,119,Equipment Failure,Operator C,Google Form
+2026-01-29,B,Line4,929,825,4,13,Cleaning,Operator E,Manual CSV Upload
+2026-01-26,C,Line1,936,936,4,57,Equipment Failure,Operator B,Google Form
+2026-04-24,B,Line1,1063,1022,9,54,Changeover,Operator D,Google Form
+2026-03-02,C,Line4,1064,921,24,85,Equipment Failure,Operator A,Legacy Excel Log
+2026-02-06,C,Line2,870,854,4,71,Material Shortage,Operator E,Manual CSV Upload
+2026-02-16,B,Line2,1092,1009,15,0,No Downtime,Operator B,Google Form
+2026-01-19,A,Line3,1063,921,2,0,No Downtime,Operator E,Legacy Excel Log
+2026-03-13,C,Line2,961,922,27,0,No Downtime,Operator D,Legacy Excel Log
+2026-03-30,C,Line3,1128,1031,2,15,Quality Issue,Operator B,Google Form
+2026-03-31,B,Line3,1164,1214,23,68,Changeover,Operator C,Manual CSV Upload
+2026-02-07,A,Line1,1171,1162,23,80,Changeover,Operator C,Legacy Excel Log
+2026-03-14,A,Line3,1013,1039,5,0,No Downtime,Operator D,Manual CSV Upload
+2026-03-15,B,Line1,1078,1084,11,30,Cleaning,Operator D,Manual CSV Upload
+2026-04-29,C,Line2,1012,1022,8,0,No Downtime,Operator D,Legacy Excel Log
+2026-03-12,D,Line1,1101,976,19,60,Material Shortage,Operator D,Manual CSV Upload
+2026-04-24,C,Line2,1051,902,22,0,No Downtime,Operator C,Manual CSV Upload
+2026-03-24,C,Line4,1072,984,10,0,No Downtime,Operator C,Duplicate CSV Upload
+2026-03-06,C,Line1,1124,1023,7,69,Material Shortage,Operator D,Google Form
+2026-02-13,A,Line4,1093,1027,26,35,Changeover,Operator D,Legacy Excel Log
+2026-04-26,B,Line4,962,1006,23,0,No Downtime,Operator D,Legacy Excel Log
+2026-01-17,A,Line3,964,965,15,25,Equipment Failure,Operator B,Google Form
+2026-02-27,C,Line2,1108,1096,24,85,Material Shortage,Operator C,Legacy Excel Log
+2026-04-27,A,Line1,1160,1092,18,39,Cleaning,Operator D,Google Form
+2026-02-27,B,Line4,1060,995,1,0,No Downtime,Operator B,Manual CSV Upload
+2026-01-24,B,Line3,1149,1138,16,80,Equipment Failure,Operator A,Manual CSV Upload
+2026-01-12,A,Line4,1098,1079,29,108,Equipment Failure,Operator D,Google Form
+2026-04-17,B,Line2,1036,901,21,22,Material Shortage,Operator B,Google Form
+2026-04-12,C,Line1,873,890,18,36,Changeover,Operator A,Google Form
+2026-04-22,A,Line4,800,838,10,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-10,A,Line4,1138,1040,4,88,Equipment Failure,Operator C,Manual CSV Upload
+2026-03-05,C,Line3,1177,1220,23,52,Material Shortage,Operator C,Legacy Excel Log
+2026-01-21,B,Line2,1115,978,6,32,Equipment Failure,Operator E,Manual CSV Upload
+2026-01-16,B,Line3,1187,1087,1,37,Material Shortage,Operator D,Legacy Excel Log
+2026-02-03,C,Line2,911,904,26,93,Equipment Failure,Operator A,Legacy Excel Log
+2026-04-02,A,Line1,964,823,1,21,Cleaning,Operator A,Manual CSV Upload
+2026-01-05,A,Line1,1043,1006,7,75,Equipment Failure,Operator A,Legacy Excel Log
+2026-03-17,C,Line4,973,866,21,623,Changeover,Operator D,Legacy Excel Log
+2026-04-13,A,Line3,837,776,10,49,Cleaning,Operator E,Google Form
+2026-01-11,A,Line1,865,861,5,27,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-19,B,Line4,1074,1113,11,35,Cleaning,Operator A,Legacy Excel Log
+2026-03-07,A,Line3,1082,944,0,24,Cleaning,Operator D,Manual CSV Upload
+2026-04-22,A,Line1,1116,983,19,0,No Downtime,Operator C,Google Form
+2026-04-13,B,Line4,-154,1135,11,58,Cleaning,Operator C,Google Form
+2026-01-22,B,Line2,940,853,14,65,Material Shortage,Operator C,Google Form
+2026-04-14,C,,1066,935,21,0,No Downtime,Operator E,Legacy Excel Log
+2026-03-01,C,Line1,1128,1081,5,0,No Downtime,Operator C,Google Form
+2026-04-29,C,Line3,1130,999,7,76,Changeover,Operator E,Legacy Excel Log
+2026-04-16,B,Line2,814,754,3,23,Cleaning,Operator B,Duplicate CSV Upload
+2026-01-13,C,Line4,867,892,8,24,Cleaning,Operator D,Manual CSV Upload
+2026-01-28,C,Line2,1182,1130,12,35,Material Shortage,Operator C,Manual CSV Upload
+2026-03-03,C,Line1,1172,1179,30,39,Cleaning,Operator A,Google Form
+2026-04-04,B,Line4,813,828,16,86,Changeover,Operator E,Legacy Excel Log
+2026-01-07,A,,1020,1046,3,63,Material Shortage,Operator D,Manual CSV Upload
+2026-01-22,A,Line4,908,888,15,67,Equipment Failure,Operator B,Google Form
+2026-01-06,B,Line1,1014,986,27,40,Quality Issue,Operator B,Google Form
+2026-03-07,C,Line1,1022,924,27,0,No Downtime,Operator A,Legacy Excel Log
+2026-02-14,A,Line3,1114,1102,23,106,Equipment Failure,Operator A,Google Form
+2026-03-01,B,Line3,857,769,14,26,Equipment Failure,Operator C,Manual CSV Upload
+2026-04-09,C,Line1,1119,962,28,12,Quality Issue,Operator A,Legacy Excel Log
+2026-04-14,A,Line1,920,945,3,89,Changeover,Operator D,Legacy Excel Log
+2026-04-18,C,Line1,840,799,4,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-10,A,Line2,925,949,7,36,Quality Issue,Operator A,Google Form
+2026-01-25,A,Line2,826,854,4,41,Cleaning,Operator E,Google Form
+2026-01-01,B,Line1,1029,1078,15,79,Material Shortage,Operator D,Legacy Excel Log
+2026-03-29,B,Line1,1088,981,18,46,Cleaning,Operator A,Legacy Excel Log
+2026-04-23,C,Line4,969,932,17,66,Changeover,Operator D,Google Form
+2026-02-27,A,Line3,846,850,1,26,Cleaning,Operator B,Manual CSV Upload
+2026-04-30,B,Line4,854,767,13,35,Cleaning,Operator C,Legacy Excel Log
+2026-02-09,A,Line3,854,781,15,69,Quality Issue,Operator D,Legacy Excel Log
+2026-04-18,A,Line3,963,959,24,0,No Downtime,Operator B,Manual CSV Upload
+2026-01-04,B,Line3,1146,1201,7,74,Equipment Failure,Operator E,Google Form
+2026-02-15,A,Line3,1070,999,4,102,Equipment Failure,Operator B,Manual CSV Upload
+2026-03-19,B,Line3,827,789,10,0,No Downtime,Operator A,Legacy Excel Log
+2026-04-05,B,Line1,1103,1007,22,95,Changeover,Operator A,Legacy Excel Log
+2026-01-07,B,Line4,1009,998,21,53,Changeover,Operator C,Manual CSV Upload
+2026-02-05,A,,1054,999,7,84,Material Shortage,Operator E,Google Form
+2026-01-10,C,Line2,1116,987,19,49,Cleaning,Operator E,Google Form
+2026-02-07,B,Line4,991,927,6,38,Material Shortage,Operator B,Google Form
+2026-02-18,B,Line4,1005,870,14,55,Changeover,Operator A,Manual CSV Upload
+2026-03-10,B,Line2,1106,951,17,62,Changeover,Operator A,Legacy Excel Log
+2026-03-13,A,Line2,1156,1049,20,0,No Downtime,Operator D,Manual CSV Upload
+2026-01-17,C,Line1,984,857,0,71,Equipment Failure,Operator C,Duplicate CSV Upload
+2026-01-13,A,Line3,948,868,0,42,Changeover,Operator B,Manual CSV Upload
+2026-02-27,C,Line4,845,750,4,72,Quality Issue,Operator E,Manual CSV Upload
+2026-04-04,C,Line1,1032,877,16,43,Changeover,Operator A,Legacy Excel Log
+2026-03-01,A,Line1,1189,1192,23,20,Material Shortage,Operator D,Legacy Excel Log
+2026-03-05,C,,824,749,12,0,No Downtime,Operator E,Legacy Excel Log
+2026-02-11,C,Line2,964,948,24,78,Material Shortage,Operator C,Legacy Excel Log
+2026-03-06,B,Line2,847,787,17,90,Changeover,Operator B,Manual CSV Upload
+2026-03-19,C,Line1,961,953,7,55,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-22,A,Line4,902,809,5,44,Material Shortage,Operator B,Google Form
+2026-03-08,B,Line2,860,820,9,55,Material Shortage,Operator D,Manual CSV Upload
+2026-02-18,C,Line1,854,727,5,86,Changeover,Operator E,Legacy Excel Log
+2026-01-28,B,Line2,1139,1043,11,104,Equipment Failure,Operator E,Manual CSV Upload
+2026-02-17,B,Line1,1136,1139,22,33,Quality Issue,Operator A,Legacy Excel Log
+2026-04-13,B,Line3,1182,1164,11,0,No Downtime,Operator C,Google Form
+2026-02-23,B,Line3,960,930,17,64,Changeover,Operator C,Manual CSV Upload
+2026-01-15,C,Line2,1051,1083,20,60,Equipment Failure,Operator D,Google Form
+2026-02-23,C,Line3,1112,980,10,67,Material Shortage,Operator C,Legacy Excel Log
+2026-04-19,B,Line3,918,945,14,0,No Downtime,Operator C,Manual CSV Upload
+2026-01-27,A,Line2,1078,1018,1,56,Changeover,Operator C,Google Form
+2026-03-27,B,Line2,847,805,4,0,No Downtime,Operator B,Google Form
+2026-03-03,A,Line1,1158,1065,18,39,Material Shortage,Operator D,Duplicate CSV Upload
+2026-02-25,B,Line2,890,921,27,72,Quality Issue,Operator C,Manual CSV Upload
+2026-03-22,A,Line3,1198,1081,16,67,Material Shortage,Operator C,Google Form
+2026-04-20,A,Line1,1195,1228,16,42,Cleaning,Operator B,Manual CSV Upload
+2026-04-19,C,Line4,1017,891,12,25,Material Shortage,Operator C,Legacy Excel Log
+2026-01-23,A,Line4,927,967,11,63,Equipment Failure,Operator C,Google Form
+2026-03-25,C,Line3,961,982,5,67,Equipment Failure,Operator B,Manual CSV Upload
+2026-01-17,B,Line3,919,867,16,51,Quality Issue,Operator E,Google Form
+2026-04-27,A,Line2,1143,1000,0,28,Quality Issue,Operator D,Legacy Excel Log
+2026-03-03,C,Line2,1074,916,14,33,Material Shortage,Operator C,Manual CSV Upload
+2026-02-24,C,Line3,807,741,17,75,Material Shortage,Operator A,Manual CSV Upload
+2026-04-15,B,Line2,1013,1045,15,38,Cleaning,Operator B,Legacy Excel Log
+2026-02-25,A,Line4,865,903,10,53,Quality Issue,Operator E,Manual CSV Upload
+2026-04-01,C,Line1,1152,1141,17,33,Material Shortage,Operator E,Google Form
+2026-02-26,B,Line4,1160,1187,18,56,Cleaning,Operator E,Google Form
+2026-02-06,C,Line1,951,870,10,94,Equipment Failure,Operator C,Legacy Excel Log
+2026-04-21,C,Line4,1081,1130,5,70,Quality Issue,Operator D,Legacy Excel Log
+2026-03-15,B,Line3,1096,1089,9,44,Material Shortage,Operator D,Legacy Excel Log
+2026-04-26,B,,902,841,6,52,Cleaning,Operator E,Google Form
+2026-01-01,C,Line3,1126,1036,26,54,Changeover,Operator C,Manual CSV Upload
+2026-01-24,A,Line1,1007,869,2,59,Cleaning,Operator D,Manual CSV Upload
+2026-04-18,A,Line4,864,862,13,0,No Downtime,Operator D,Manual CSV Upload
+2026-02-21,C,Line1,1148,1063,9,44,Equipment Failure,Operator B,Google Form
+2026-04-28,A,Line4,1116,1024,29,0,No Downtime,Operator A,Google Form
+2026-01-24,A,Line4,1020,1035,10,94,Equipment Failure,Operator B,Manual CSV Upload
+2026-01-13,B,Line4,997,873,0,79,Material Shortage,Operator D,Google Form
+2026-01-19,A,Line2,1013,986,0,47,Quality Issue,Operator C,Manual CSV Upload
+2026-04-29,B,Line1,1127,1145,16,46,Quality Issue,Operator D,Google Form
+2026-01-02,B,Line4,836,748,2,16,Cleaning,Operator C,Manual CSV Upload
+2026-03-25,B,Line1,1186,1042,18,25,Changeover,Operator A,Google Form
+2026-03-30,A,Line3,1041,911,7,0,No Downtime,Operator B,Legacy Excel Log
+2026-03-21,B,Line4,1093,962,28,0,No Downtime,Operator C,Manual CSV Upload
+2026-03-09,C,Line4,837,720,17,46,Cleaning,Operator B,Manual CSV Upload
+2026-02-06,B,Line2,963,874,18,93,Changeover,Operator B,Manual CSV Upload
+2026-01-24,A,Line3,817,802,20,85,Equipment Failure,Operator D,Legacy Excel Log
+2026-03-24,A,Line2,953,871,24,55,Material Shortage,Operator B,Manual CSV Upload
+2026-01-31,C,Line2,998,922,12,70,Equipment Failure,Operator C,Google Form
+2026-04-03,B,Line1,1127,1031,8,48,Quality Issue,Operator B,Google Form
+2026-03-14,C,Line4,932,963,2,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-10,C,Line4,1114,1143,15,15,Material Shortage,Operator B,Google Form
+2026-01-01,A,Line1,1150,1049,17,57,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-12,C,Line2,950,868,2,49,Quality Issue,Operator D,Legacy Excel Log
+2026-02-15,A,Line2,1180,1174,31,41,Cleaning,Operator E,Manual CSV Upload
+2026-03-20,A,Line1,1158,1159,14,37,Equipment Failure,Operator A,Google Form
+2026-04-23,B,Line2,800,778,5,30,Changeover,Operator E,Manual CSV Upload
+2026-01-04,B,Line2,1031,970,25,41,Quality Issue,Operator E,Legacy Excel Log
+2026-02-20,A,Line2,844,728,8,40,Cleaning,Operator E,Manual CSV Upload
+2026-02-20,C,Line3,1014,943,20,93,Changeover,Operator B,Manual CSV Upload
+2026-01-21,A,Line1,956,945,4,55,Material Shortage,Operator D,Google Form
+2026-03-26,C,Line2,985,864,11,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-25,A,Line4,1029,953,9,12,Cleaning,Operator A,Legacy Excel Log
+2026-02-23,A,Line1,1001,933,12,100,Equipment Failure,Operator B,Manual CSV Upload
+2026-04-14,C,Line2,994,999,18,0,No Downtime,Operator B,Manual CSV Upload
+2026-01-19,A,Line4,986,913,4,14,Quality Issue,Operator E,Legacy Excel Log
+2026-04-30,A,Line2,1155,1128,24,0,No Downtime,Operator E,Manual CSV Upload
+2026-04-27,C,Line4,820,767,12,89,Material Shortage,Operator C,Google Form
+2026-02-10,C,Line3,1171,1199,22,53,Changeover,Operator E,Legacy Excel Log
+2026-02-14,A,Line2,936,945,7,79,Changeover,Operator B,Legacy Excel Log
+2026-01-22,C,Line3,948,813,23,81,Equipment Failure,Operator C,Legacy Excel Log
+2026-02-17,C,Line1,1088,1030,7,73,Material Shortage,Operator D,Legacy Excel Log
+2026-03-03,A,Line4,1131,975,24,0,No Downtime,Operator C,Legacy Excel Log
+2026-01-01,B,Line2,1132,1059,13,64,Quality Issue,Operator B,Manual CSV Upload
+2026-03-21,C,Line3,1198,1172,12,0,No Downtime,Operator A,Legacy Excel Log
+2026-01-08,A,Line2,1071,986,17,45,Equipment Failure,Operator A,Google Form
+2026-01-13,A,Line4,986,1029,1063,29,Changeover,Operator E,Google Form
+2026-03-22,A,Line4,921,800,9,41,Cleaning,Operator B,Google Form
+2026-03-13,B,Line3,1164,1064,7,0,No Downtime,Operator D,Manual CSV Upload
+2026-04-08,C,Line3,1162,1212,25,0,No Downtime,Operator C,Google Form
+2026-04-24,A,Line2,991,879,23,51,Changeover,Operator B,Legacy Excel Log
+2026-03-09,A,Line1,969,914,25,66,Equipment Failure,Operator E,Google Form
+2026-02-26,A,Line4,-223,1110,28,47,Changeover,Operator D,Manual CSV Upload
+2026-02-08,A,Line2,1005,1017,16,60,Changeover,Operator C,Manual CSV Upload
+2026-01-08,B,Line1,943,807,8,45,Material Shortage,Operator C,Google Form
+2026-03-07,B,Line2,1130,1062,23,89,Material Shortage,Operator E,Google Form
+2026-01-22,A,Line2,1064,1018,9,47,Material Shortage,Operator E,Legacy Excel Log
+2026-02-23,A,Line2,1094,1040,6,65,Material Shortage,Operator B,Google Form
+2026-01-22,A,Line1,1129,1152,1230,17,Material Shortage,Operator A,Google Form
+2026-01-08,B,Line3,1038,947,3,51,Equipment Failure,Operator D,Manual CSV Upload
+2026-01-14,B,Line1,1086,1083,7,19,Cleaning,Operator C,Manual CSV Upload
+2026-01-10,A,Line3,1011,887,16,44,Equipment Failure,Operator A,Google Form
+2026-01-30,A,Line4,900,784,18,22,Material Shortage,Operator D,Google Form
+2026-01-01,A,Line3,829,728,10,65,Changeover,Operator B,Google Form
+2026-01-08,C,Line2,850,857,2,90,Changeover,Operator B,Manual CSV Upload
+2026-02-25,C,Line4,1110,964,13,24,Changeover,Operator E,Legacy Excel Log
+2026-02-15,C,Line1,1147,1063,8,29,Quality Issue,Operator C,Google Form
+2026-03-02,B,Line4,1186,1154,23,74,Changeover,Operator D,Legacy Excel Log
+2026-04-03,A,Line4,813,705,11,60,Cleaning,Operator C,Manual CSV Upload
+2026-04-03,C,Line1,1178,1036,25,78,Material Shortage,Operator B,Legacy Excel Log
+2026-01-07,B,Line2,869,822,15,52,Quality Issue,Operator D,Manual CSV Upload
+2026-04-09,B,Line3,1045,1065,13,71,Material Shortage,Operator A,Duplicate CSV Upload
+2026-04-03,C,Line3,885,827,15,91,Equipment Failure,Operator B,Manual CSV Upload
+2026-01-31,A,Line3,890,886,25,60,Quality Issue,Operator E,Google Form
+2026-02-22,A,Line1,1046,1090,2,43,Cleaning,Operator C,Manual CSV Upload
+2026-02-26,B,Line1,851,824,11,13,Cleaning,Operator B,Legacy Excel Log
+2026-03-17,A,Line4,989,950,12,0,No Downtime,Operator A,Google Form
+2026-03-20,B,Line3,957,963,13,0,No Downtime,Operator C,Google Form
+2026-01-24,C,Line1,1077,943,18,45,Changeover,Operator B,Manual CSV Upload
+2026-01-23,B,Line4,896,895,7,55,Equipment Failure,Operator D,Manual CSV Upload
+2026-01-11,A,Line3,1013,1001,23,31,Material Shortage,Operator B,Google Form
+2026-03-24,B,Line4,1049,915,11,58,Equipment Failure,Operator C,Google Form
+2026-01-15,C,Line3,1008,875,26,69,Quality Issue,Operator A,Legacy Excel Log
+2026-02-16,A,Line1,1052,991,16,92,Changeover,Operator E,Manual CSV Upload
+2026-03-05,A,Line4,820,786,21,71,Quality Issue,Operator C,Google Form
+2026-01-25,B,Line4,1069,1089,23,34,Changeover,Operator D,Manual CSV Upload
+2026-03-13,A,Line4,1137,1048,3,69,Changeover,Operator B,Manual CSV Upload
+2026-01-28,A,Line1,1011,1052,16,58,Equipment Failure,Operator B,Manual CSV Upload
+2026-01-22,C,Line2,892,762,13,60,Equipment Failure,Operator A,Manual CSV Upload
+2026-04-12,B,Line3,1186,1183,28,20,Quality Issue,Operator E,Legacy Excel Log
+2026-04-17,A,Line3,916,819,24,17,Material Shortage,Operator E,Legacy Excel Log
+2026-04-14,A,Line4,853,841,8,0,No Downtime,Operator C,Google Form
+2026-03-04,B,Line3,1113,999,17,99,Equipment Failure,Operator A,Legacy Excel Log
+2026-04-12,B,Line4,1154,1189,27,40,Changeover,Operator A,Manual CSV Upload
+2026-01-10,C,Line1,1134,1076,22,71,Material Shortage,Operator D,Google Form
+2026-02-17,B,Line2,1146,1099,2,0,No Downtime,Operator E,Manual CSV Upload
+2026-01-01,B,Line3,882,806,17,91,Equipment Failure,Operator C,Google Form
+2026-01-06,C,Line4,1119,1082,25,44,Equipment Failure,Operator B,Legacy Excel Log
+2026-03-23,A,Line2,1045,932,23,91,Changeover,Operator C,Google Form
+2026-03-13,C,Line4,1199,1223,32,49,Equipment Failure,Operator B,Google Form
+2026-02-04,A,Line4,1128,1081,16,0,No Downtime,Operator E,Manual CSV Upload
+2026-03-04,B,Line4,1025,880,21,62,Material Shortage,Operator B,Legacy Excel Log
+2026-04-01,C,Line4,1170,1155,32,0,No Downtime,Operator C,Manual CSV Upload
+2026-04-21,B,Line2,987,903,12,82,Changeover,Operator E,Legacy Excel Log
+2026-02-10,B,Line4,964,865,22,0,No Downtime,Operator E,Google Form
+2026-01-17,A,Line4,1144,1107,6,113,Equipment Failure,Operator B,Manual CSV Upload
+2026-01-02,A,Line3,1029,1053,28,112,Equipment Failure,Operator E,Google Form
+2026-04-16,C,Line3,1064,1067,28,0,No Downtime,Operator E,Manual CSV Upload
+2026-03-15,A,Line1,803,748,20,91,Changeover,Operator D,Legacy Excel Log
+2026-01-28,C,Line1,1140,1103,5,113,Equipment Failure,Operator C,Google Form
+2026-03-05,B,Line4,1040,978,26,31,Cleaning,Operator D,Manual CSV Upload
+2026-02-15,B,Line2,823,716,16,11,Cleaning,Operator E,Manual CSV Upload
+2026-03-27,C,Line2,1049,1024,21,32,Quality Issue,Operator E,Google Form
+2026-04-17,A,Line2,1079,955,21,118,Equipment Failure,Operator D,Legacy Excel Log
+2026-04-21,A,Line3,895,763,7,44,Changeover,Operator B,Legacy Excel Log
+2026-02-09,A,Line4,1144,1157,25,15,Material Shortage,Operator B,Legacy Excel Log
+2026-01-16,A,Line4,971,850,17,42,Equipment Failure,Operator A,Manual CSV Upload
+2026-02-28,B,Line2,1131,981,15,0,No Downtime,Operator A,Manual CSV Upload
+2026-03-28,C,Line4,999,1023,1,67,Changeover,Operator C,Legacy Excel Log
+2026-02-18,B,Line3,806,769,0,110,Equipment Failure,Operator A,Google Form
+2026-02-03,B,Line4,901,853,16,103,Equipment Failure,Operator E,Google Form
+2026-02-11,C,Line4,1015,952,18,23,Material Shortage,Operator A,Google Form
+2026-03-31,B,Line1,995,926,12,37,Material Shortage,Operator D,Google Form
+2026-01-30,B,Line2,953,971,24,33,Quality Issue,Operator C,Google Form
+2026-02-22,C,Line3,1011,1042,26,48,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-10,B,Line3,1101,1081,14,96,Changeover,Operator E,Google Form
+2026-01-06,A,Line2,936,949,8,100,Equipment Failure,Operator E,Legacy Excel Log
+2026-01-24,B,Line4,834,867,14,42,Cleaning,Operator E,Google Form
+2026-03-10,B,Line4,976,980,11,30,Material Shortage,Operator B,Manual CSV Upload
+2026-01-10,C,Line3,916,910,15,105,Equipment Failure,Operator E,Manual CSV Upload
+2026-03-13,C,Line3,808,692,1,0,No Downtime,Operator A,Manual CSV Upload
+2026-01-02,B,Line2,891,872,2,70,Material Shortage,Operator B,Legacy Excel Log
+2026-01-31,B,Line2,1137,1108,29,97,Equipment Failure,Operator A,Google Form
+2026-04-02,C,Line3,841,715,3,108,Equipment Failure,Operator E,Manual CSV Upload
+2026-04-20,C,Line4,849,798,8,91,Changeover,Operator E,Manual CSV Upload
+2026-04-08,B,Line3,1104,1072,9,23,Material Shortage,Operator C,Manual CSV Upload
+2026-04-15,C,Line4,976,885,14,72,Quality Issue,Operator D,Manual CSV Upload
+2026-01-09,C,Line2,1160,1080,25,84,Equipment Failure,Operator A,Legacy Excel Log
+2026-03-06,B,Line4,1089,970,24,47,Cleaning,Operator B,Google Form
+2026-02-22,B,Line2,808,746,15,0,No Downtime,Operator E,Manual CSV Upload
+2026-03-31,A,Line1,938,975,6,35,Quality Issue,Operator B,Google Form
+2026-04-12,B,Line2,1025,939,22,0,No Downtime,Operator E,Google Form
+2026-03-06,C,Line4,809,763,21,114,Equipment Failure,Operator B,Google Form
+2026-02-01,A,Line1,984,994,9,16,Cleaning,Operator A,Google Form
+2026-02-25,B,Line1,1059,981,17,0,No Downtime,Operator A,Manual CSV Upload
+2026-04-27,B,Line3,823,792,5,48,Material Shortage,Operator E,Legacy Excel Log
+2026-03-30,B,Line3,1052,939,11,0,No Downtime,Operator D,Manual CSV Upload
+2026-03-16,C,Line1,926,923,12,82,Material Shortage,Operator B,Google Form
+2026-03-06,A,Line4,816,726,10,98,Equipment Failure,Operator D,Legacy Excel Log
+2026-04-27,B,Line1,1185,1035,14,84,Material Shortage,Operator A,Legacy Excel Log
+2026-04-21,C,Line3,1116,963,18,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-26,B,Line3,928,880,2,893,Changeover,Operator C,Legacy Excel Log
+2026-02-11,B,Line2,1045,931,25,16,Material Shortage,Operator B,Google Form
+2026-04-30,C,Line2,840,816,17,0,No Downtime,Operator D,Legacy Excel Log
+2026-01-18,B,Line3,890,920,23,27,Equipment Failure,Operator B,Legacy Excel Log
+2026-02-21,C,Line4,1083,1008,1031,23,Material Shortage,Operator D,Legacy Excel Log
+2026-01-29,A,Line3,919,790,9,32,Changeover,Operator B,Google Form
+2026-01-17,C,Line2,1058,995,1,98,Changeover,Operator D,Duplicate CSV Upload
+2026-02-13,B,Line2,943,960,24,24,Cleaning,Operator B,Manual CSV Upload
+2026-03-06,C,Line2,874,787,4,24,Material Shortage,Operator B,Legacy Excel Log
+2026-01-11,C,Line4,1140,1157,26,96,Changeover,Operator A,Legacy Excel Log
+2026-04-03,B,Line3,942,942,22,38,Equipment Failure,Operator E,Google Form
+2026-01-05,B,Line2,1152,1158,4,40,Cleaning,Operator C,Duplicate CSV Upload
+2026-03-05,A,Line1,1003,954,17,36,Cleaning,Operator D,Legacy Excel Log
+2026-02-25,A,Line3,1115,996,24,66,Material Shortage,Operator C,Google Form
+2026-03-05,B,Line2,985,957,7,25,Cleaning,Operator C,Manual CSV Upload
+2026-01-28,C,Line4,926,957,8,35,Material Shortage,Operator A,Manual CSV Upload
+2026-04-26,C,Line1,1041,1066,23,42,Equipment Failure,Operator E,Google Form
+2026-01-29,B,Line1,928,964,20,40,Material Shortage,Operator D,Google Form
+2026-04-01,A,Line4,878,865,24,29,Changeover,Operator E,Google Form
+2026-03-16,A,Line4,969,985,27,80,Changeover,Operator A,Legacy Excel Log
+2026-02-26,C,Line3,1109,1156,22,0,No Downtime,Operator E,Google Form
+2026-02-14,B,Line1,886,774,16,58,Quality Issue,Operator C,Legacy Excel Log
+2026-04-02,C,Line2,1026,1048,2,30,Material Shortage,Operator E,Legacy Excel Log
+2026-01-24,C,Line3,1126,994,17,13,Cleaning,Operator C,Google Form
+2026-03-07,C,Line4,946,968,25,0,No Downtime,Operator C,Manual CSV Upload
+2026-04-22,A,Line2,895,796,23,55,Cleaning,Operator A,Google Form
+2026-03-15,C,Line3,1113,1022,5,73,Changeover,Operator C,Manual CSV Upload
+2026-03-07,A,Line2,1126,1048,16,0,No Downtime,Operator B,Google Form
+2026-03-13,C,Line1,1078,1065,5,72,Quality Issue,Operator A,Legacy Excel Log
+2026-04-24,C,Line1,1167,1008,28,77,Material Shortage,Operator A,Manual CSV Upload
+2026-01-17,B,Line2,851,857,16,45,Equipment Failure,Operator A,Manual CSV Upload
+2026-02-11,A,Line4,1095,1028,6,48,Quality Issue,Operator E,Legacy Excel Log
+2026-01-11,C,Line2,1162,1076,25,35,Material Shortage,Operator D,Legacy Excel Log
+2026-03-09,C,Line1,836,835,3,62,Changeover,Operator A,Google Form
+2026-03-20,C,Line4,977,840,11,0,No Downtime,Operator C,Legacy Excel Log
+2026-03-05,C,Line2,1055,1106,15,0,No Downtime,Operator D,Google Form
+2026-02-14,C,Line3,814,743,2,31,Cleaning,Operator B,Google Form
+2026-01-28,C,Line3,973,870,20,106,Equipment Failure,Operator A,Legacy Excel Log
+2026-01-12,B,Line1,1142,1060,18,23,Material Shortage,Operator A,Legacy Excel Log
+2026-04-05,A,Line1,1044,903,16,38,Cleaning,Operator A,Google Form
+2026-02-14,B,Line3,967,934,24,21,Quality Issue,Operator D,Legacy Excel Log
+2026-03-26,A,Line1,1197,1111,18,47,Material Shortage,Operator D,Google Form
+2026-02-27,C,Line1,1028,982,10,0,No Downtime,Operator A,Google Form
+2026-04-25,C,Line2,877,877,17,69,Equipment Failure,Operator E,Manual CSV Upload
+2026-02-16,C,Line4,1023,999,14,69,Equipment Failure,Operator D,Manual CSV Upload
+2026-01-02,C,Line4,1028,917,16,82,Changeover,Operator B,Google Form
+2026-01-05,B,Line1,1016,919,1,87,Equipment Failure,Operator E,Legacy Excel Log
+2026-01-30,A,Line1,1053,1053,13,109,Equipment Failure,Operator D,Legacy Excel Log
+2026-03-18,C,Line2,1050,1057,24,70,Material Shortage,Operator D,Manual CSV Upload
+2026-02-09,C,Line2,817,726,16,110,Equipment Failure,Operator B,Manual CSV Upload
+2026-04-01,A,Line1,902,903,7,27,Changeover,Operator A,Legacy Excel Log
+2026-03-02,C,Line1,862,813,12,0,No Downtime,Operator C,Manual CSV Upload
+2026-03-15,A,Line3,1078,991,21,96,Changeover,Operator E,Google Form
+2026-02-20,A,Line1,983,990,7,37,Material Shortage,Operator C,Google Form
+2026-04-07,A,Line2,974,868,18,75,Changeover,Operator E,Manual CSV Upload
+2026-04-11,B,Line3,918,864,6,21,Changeover,Operator D,Manual CSV Upload
+2026-01-22,B,Line3,962,830,13,43,Changeover,Operator C,Google Form
+2026-03-10,C,Line2,859,801,9,40,Cleaning,Operator B,Google Form
+2026-02-11,C,Line1,1194,1032,18,52,Equipment Failure,Operator A,Google Form
+2026-04-21,C,Line1,1074,916,15,65,Changeover,Operator A,Google Form
+2026-04-22,B,Line3,917,793,15,38,Material Shortage,Operator B,Manual CSV Upload
+2026-04-15,B,Line3,1006,1024,23,0,No Downtime,Operator E,Google Form
+2026-04-25,C,Line1,1114,1072,16,73,Quality Issue,Operator B,Legacy Excel Log
+2026-03-08,B,Line1,1095,1056,20,51,Material Shortage,Operator C,Manual CSV Upload
+2026-01-29,A,Line4,1037,986,18,28,Equipment Failure,Operator B,Manual CSV Upload
+2026-04-11,A,Line3,1001,991,21,54,Changeover,Operator B,Google Form
+2026-04-27,B,Line4,855,786,13,50,Material Shortage,Operator E,Google Form
+2026-02-21,C,Line2,983,849,18,43,Changeover,Operator E,Google Form
+2026-03-11,B,Line1,869,791,22,99,Changeover,Operator D,Manual CSV Upload
+2026-04-23,C,Line1,1110,1069,7,18,Material Shortage,Operator C,Google Form
+2026-01-04,A,Line1,1153,1156,3,86,Equipment Failure,Operator D,Google Form
+2026-02-08,C,Line1,888,867,23,22,Quality Issue,Operator D,Legacy Excel Log
+2026-02-06,A,Line4,898,803,3,37,Equipment Failure,Operator E,Legacy Excel Log
+2026-01-30,B,Line1,1050,974,23,83,Changeover,Operator E,Manual CSV Upload
+2026-02-28,A,Line3,921,804,23,76,Changeover,Operator C,Manual CSV Upload
+2026-01-03,B,Line1,979,899,22,113,Equipment Failure,Operator A,Manual CSV Upload
+2026-03-04,B,Line1,1054,1076,17,88,Equipment Failure,Operator B,Google Form
+2026-04-19,B,Line4,1032,1003,1,32,Quality Issue,Operator A,Google Form
+2026-01-22,B,Line1,876,778,5,697,Cleaning,Operator D,Legacy Excel Log
+2026-01-30,C,Line4,1116,1084,22,67,Equipment Failure,Operator B,Google Form
+2026-03-04,B,Line2,1180,1016,15,53,Cleaning,Operator C,Legacy Excel Log
+2026-03-14,B,Line1,1142,1170,18,22,Quality Issue,Operator D,Legacy Excel Log
+2026-04-14,B,Line1,867,907,17,0,No Downtime,Operator E,Legacy Excel Log
+2026-04-24,B,Line3,817,854,14,0,No Downtime,Operator A,Legacy Excel Log
+2026-03-04,C,Line4,842,770,2,596,Changeover,Operator C,Legacy Excel Log
+2026-04-02,A,Line2,966,854,24,66,Changeover,Operator A,Manual CSV Upload
+2026-03-03,A,Line3,-50,791,0,56,Material Shortage,Operator B,Manual CSV Upload
+2026-04-15,A,Line2,1152,1111,14,95,Changeover,Operator E,Google Form
+2026-04-28,B,Line3,912,891,16,27,Quality Issue,Operator A,Legacy Excel Log
+2026-01-31,A,Line4,1028,949,4,25,Cleaning,Operator D,Google Form
+2026-04-09,C,Line2,932,851,18,0,No Downtime,Operator A,Manual CSV Upload
+2026-04-18,B,Line3,986,991,7,0,No Downtime,Operator E,Manual CSV Upload
+2026-03-06,B,Line3,800,801,15,57,Changeover,Operator D,Legacy Excel Log
+2026-04-14,A,Line3,816,722,14,549,No Downtime,Operator B,Manual CSV Upload
+2026-04-05,C,Line3,976,1024,14,30,Changeover,Operator A,Duplicate CSV Upload
+2026-01-20,A,Line3,983,987,14,107,Equipment Failure,Operator E,Duplicate CSV Upload
+2026-02-05,B,Line2,999,985,9,20,Material Shortage,Operator E,Legacy Excel Log
+2026-02-07,A,Line3,1098,1060,19,44,Changeover,Operator E,Google Form
+2026-04-01,B,Line3,1074,914,2,48,Material Shortage,Operator C,Manual CSV Upload
+2026-04-02,B,Line1,1068,1118,2,0,No Downtime,Operator D,Google Form
+2026-02-10,A,Line1,971,968,1,0,No Downtime,Operator C,Google Form
+2026-01-12,B,Line3,977,860,4,24,Quality Issue,Operator A,Legacy Excel Log
+2026-03-10,C,Line3,1177,1138,11,0,No Downtime,Operator D,Google Form
+2026-01-17,C,Line2,1058,995,1,98,Changeover,Operator D,Legacy Excel Log
+2026-01-10,A,Line1,1129,1120,15,53,Equipment Failure,Operator B,Legacy Excel Log
+2026-04-28,C,Line3,1179,1138,31,43,Equipment Failure,Operator D,Legacy Excel Log
+2026-01-10,B,Line3,1092,1070,10,34,Material Shortage,Operator A,Manual CSV Upload
+2026-01-14,C,Line4,830,870,22,41,Equipment Failure,Operator B,Google Form
+2026-01-09,B,Line4,867,752,9,80,Material Shortage,Operator D,Google Form
+2026-03-08,A,Line1,1167,1188,3,699,Changeover,Operator E,Legacy Excel Log
+2026-03-07,A,Line4,884,858,11,67,Equipment Failure,Operator B,Google Form
+2026-02-17,C,Line4,1155,1014,6,41,Equipment Failure,Operator A,Manual CSV Upload
+2026-04-26,B,Line2,904,816,3,82,Changeover,Operator A,Google Form
+2026-03-12,A,Line4,800,687,9,41,Changeover,Operator D,Manual CSV Upload
+2026-02-02,C,Line3,1124,968,13,46,Equipment Failure,Operator E,Google Form
+2026-02-25,C,Line1,836,774,16,57,Changeover,Operator D,Manual CSV Upload
+2026-01-11,B,Line1,1049,894,14,17,Material Shortage,Operator E,Legacy Excel Log
+2026-02-10,C,Line2,1117,1031,20,14,Cleaning,Operator B,Manual CSV Upload
+2026-03-23,A,Line4,943,963,4,26,Cleaning,Operator A,Legacy Excel Log
+2026-01-09,A,Line1,1045,1020,24,83,Equipment Failure,Operator A,Manual CSV Upload
+2026-01-23,A,Line3,1060,1108,3,101,Equipment Failure,Operator E,Google Form
+2026-04-24,C,Line3,1094,930,19,0,No Downtime,Operator D,Manual CSV Upload
+2026-01-25,C,Line3,1150,1138,12,60,Material Shortage,Operator B,Google Form
+2026-01-27,C,Line4,1038,1023,10,33,Quality Issue,Operator B,Duplicate CSV Upload
+2026-01-30,C,Line3,998,946,3,29,Equipment Failure,Operator D,Google Form
+2026-01-02,C,Line1,898,767,8,52,Changeover,Operator A,Manual CSV Upload
+2026-04-07,C,Line3,850,828,20,45,Equipment Failure,Operator D,Manual CSV Upload
+2026-03-12,B,Line1,893,866,23,0,No Downtime,Operator B,Legacy Excel Log
+2026-04-26,A,Line2,1126,961,20,46,Quality Issue,Operator A,Google Form
+2026-04-04,C,Line4,1165,1007,8,39,Changeover,Operator D,Manual CSV Upload
+2026-01-19,B,Line4,981,886,10,76,Equipment Failure,Operator D,Legacy Excel Log
+2026-04-06,A,Line2,972,842,14,76,Equipment Failure,Operator C,Google Form
+2026-04-20,B,Line1,807,805,14,0,No Downtime,Operator B,Legacy Excel Log
+2026-01-27,C,Line1,850,879,24,40,Cleaning,Operator C,Legacy Excel Log
+2026-01-29,C,Line2,995,949,19,39,Quality Issue,Operator D,Google Form
+2026-04-16,B,Line3,1198,1105,19,48,Changeover,Operator E,Google Form
+2026-02-16,C,,811,849,9,88,Material Shortage,Operator A,Manual CSV Upload
+2026-01-08,A,Line4,1080,920,0,77,Equipment Failure,Operator A,Legacy Excel Log
+2026-01-29,C,Line1,879,771,8,49,Changeover,Operator C,Manual CSV Upload
+2026-04-01,A,Line2,1110,1029,18,0,No Downtime,Operator C,Legacy Excel Log
+2026-04-06,B,Line4,836,860,18,30,Cleaning,Operator D,Google Form
+2026-01-27,B,Line3,1130,969,22,71,Equipment Failure,Operator B,Google Form
+2026-01-21,B,Line1,960,876,7,107,Equipment Failure,Operator D,Manual CSV Upload
+2026-01-20,C,Line2,911,802,5,96,Equipment Failure,Operator E,Legacy Excel Log
+2026-01-31,A,Line1,897,856,12,51,Material Shortage,Operator C,Manual CSV Upload
+2026-04-06,C,Line2,1040,1046,8,60,Quality Issue,Operator A,Manual CSV Upload
+2026-02-10,C,Line1,1089,1111,26,0,No Downtime,Operator A,Google Form
+2026-04-30,C,Line1,860,767,15,53,Cleaning,Operator E,Google Form
+2026-01-26,A,Line4,1122,1176,19,73,Equipment Failure,Operator C,Manual CSV Upload
+2026-02-27,A,Line2,891,894,1,72,Material Shortage,Operator C,Legacy Excel Log
+2026-04-03,B,Line4,893,934,25,48,Changeover,Operator E,Duplicate CSV Upload
+2026-04-16,C,Line2,821,852,1,0,No Downtime,Operator D,Legacy Excel Log
+2026-03-19,B,Line2,1057,1090,1,34,Material Shortage,Operator C,Google Form
+2026-01-14,A,,865,880,9,23,Changeover,Operator C,Manual CSV Upload
+2026-03-14,C,Line2,950,862,0,0,No Downtime,Operator C,Legacy Excel Log
+2026-02-05,B,Line3,1193,1048,14,15,Material Shortage,Operator E,Legacy Excel Log
+2026-02-02,B,Line1,822,831,2,23,Quality Issue,Operator B,Legacy Excel Log
+2026-04-30,B,Line2,826,808,21,16,Cleaning,Operator E,Duplicate CSV Upload
+2026-04-23,B,Line4,1185,1201,29,0,No Downtime,Operator C,Google Form
+2026-04-22,A,Line3,827,779,22,109,Equipment Failure,Operator C,Legacy Excel Log
+2026-01-26,B,Line4,914,877,9,15,Cleaning,Operator D,Manual CSV Upload
+2026-04-16,B,Line2,814,754,3,23,Cleaning,Operator B,Legacy Excel Log
+2026-04-06,B,Line2,928,858,23,32,Cleaning,Operator C,Manual CSV Upload
+2026-03-20,A,Line3,953,836,19,0,No Downtime,Operator B,Legacy Excel Log
+2026-03-15,A,Line2,1115,948,2,39,Changeover,Operator E,Legacy Excel Log
+2026-03-02,D,Line3,1089,1083,1,74,Material Shortage,Operator B,Google Form
