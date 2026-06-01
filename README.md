@@ -2,8 +2,6 @@
 
 This project demonstrates operational data validation, manufacturing KPI monitoring, duplicate detection, and dashboard-based performance tracking using Python, BigQuery, dbt, and Looker Studio.
 
-The workflow simulates a digitalized manufacturing shift-log process and converts raw production records into validated, curated, and dashboard-ready operational data.
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -14,7 +12,7 @@ The workflow simulates a digitalized manufacturing shift-log process and convert
   - [Expected CSV schema](#expected-csv-schema)
 - [Data Model](#data-model)
 - [Data Quality & Validation](#data-quality--validation)
-  - [dbt migration](#in-progress-dbt-migration)
+  - [dbt migration](#dbt-migration)
 - [Dashboard (Looker Studio)](#dashboard-looker-studio)
 - [CI (GitHub Actions)](#ci-github-actions)
   - [Steps](#steps)
@@ -24,11 +22,10 @@ The workflow simulates a digitalized manufacturing shift-log process and convert
   - [Quick Start (Recommended)](#quick-start-recommended)
   - [Alternative Setup (CLI / Native Environment)](#alternative-setup-cli--native-environment)
   - [Requirements](#requirements)
-  - [Prerequisites (Ubuntu / WSL2)](#prerequisites-ubuntu--wsl2)
   - [Install Python dependencies](#install-python-dependencies)
   - [Environment Variables](#environment-variables)
   - [Run](#run)
-  - [How to create BigQuery Views](#how-to-create-bigquery-views)
+  - [How to create BigQuery View](#how-to-create-bigquery-view)
 - [NLP Extraction Logic (Rule-based)](#nlp-extraction-logic-rule-based)
 - [Categorization Logic](#categorization-logic)
 - [Manual Evaluation](#manual-evaluation-preliminary)
@@ -39,108 +36,66 @@ The workflow simulates a digitalized manufacturing shift-log process and convert
 
 ## Overview
 
-This project demonstrates a governed data pipeline for customer feedback records on GCP. The workflow focuses on data quality validation, duplicate detection, deterministic record identification, curated dataset generation, and audit-friendly monitoring using BigQuery, dbt, and Looker Studio.
-
-The architecture follows a layered data approach inspired by concepts commonly used in master data management (MDM), including raw ingestion, validated datasets, deduplicated canonical records, and quality monitoring workflows.
-
-The NLP component is included as a downstream enrichment example on top of the governed dataset.
-
-<br/>
-
-**Note:** Customer feedback records are currently in Japanese (MeCab + Japanese lexicons/rules).
-The pipeline architecture (ingest → validate → extract → load → BI) is not tied to a specific language, and the NLP extraction module is designed to be swappable per language (e.g., spaCy-based tokenization + lexicon for English/German).
-
-<br/>
-
-## Demo (Dashboard & Output)
-
-![Data Quality dashboard preview](docs/images/dashboard_page1_preview.png)
-
-The dashboard focuses on data quality monitoring, duplicate detection, validation outcomes, and governed-record health metrics.
-
-- [Output PDF](docs/Report_on_Negative_Review_Reasons.pdf)
-- [Looker Studio dashboard](https://lookerstudio.google.com/reporting/a6186eaf-dfec-409e-91ba-79826297d478)
-
+The workflow simulates a digitalized manufacturing shift-log process and converts raw production records into validated, curated, and dashboard-ready operational data.
 
 
 ## Pipeline Architecture
 
 CSV → Ingestion & Validation Pipeline → BigQuery Governed Layers → Monitoring & BI
 
-- Ingestion inputs: a local CSV file and lexicons used to detect negative terms and categorize extracted reasons.
+- Ingestion inputs: a local CSV file 
 - Processing: Python scripts
-- Storage: 3 tables + 1 view ([see Data Model section](#data-model))
-- BI: Looker Studio (top reasons, trends, data quality metrics)
+- Storage: 2 tables + 1 dedup-view ([see Data Model section](#data-model))
+- BI: Looker Studio (Data Quality KPI, Operational KPI, Continuous Improvement KPI)
 
 ```mermaid
 flowchart LR
+
   subgraph Local["Local (Python)"]
-    CSV["Input CSV (reviews.csv)"]
-    LEX["Lexicons (negative + entity + issue)"]
-    PIPE["Pipeline (ingest → validate → extract)"]
+    CSV["Input CSV (manufacturing_shift_logs.csv)"]
+    PIPE["Pipeline (ingest → validate)"]
   end
 
   subgraph BQ["BigQuery"]
-    RAW["Raw Source Records"]
-    VAL["Validated & Governed Records"]
-    FACT["Curated Analytical Attributes"]
-
+    RAW["shift_log_raw\n(Raw Source Records)"]
+    VAL["shift_log_validated\n(Validated Records, non-dedup)"]
+    DQV["DQ Views\n(dq metrics,\ninvalid reason breakdown)"]
+    DEDUP["shift_log_validated_dedup\n(Canonical Deduplicated View)"]
+    KPI["shift_log_kpi\n(Curated KPI View)"]
+    KPIV["KPI Views\n(summary, trend,\npareto, drilldown)"]
   end
 
   DASH["Looker Studio Dashboard"]
-
   CSV --> PIPE
-  LEX --> PIPE
-
   PIPE --> RAW
   PIPE --> VAL
-  PIPE --> FACT
-
-  VAL --> DASH
-  FACT --> DASH
+  VAL --> DQV
+  VAL --> DEDUP
+  DEDUP --> KPI
+  KPI --> KPIV
+  DQV --> DASH
+  KPIV --> DASH
 ```
-
-Note: Negative lexicon credit: Japanese Sentiment Dictionary (Volume of Nouns) ver. 1.0, developed by the Inui–Okazaki Laboratory, Tohoku University.
-
-
-## Data Governance & Master Data Relevance
-
-Although this project is not connected to an ERP or SAP environment, it implements several concepts commonly used in master data management (MDM) and data governance workflows.
-
-The pipeline demonstrates:
-
-- schema validation for incoming records
-- duplicate detection and deduplication workflows
-- deterministic ID generation for consistent record identification
-- separation of raw, validated, and curated datasets
-- invalid-record flagging for downstream monitoring
-- reproducible transformations and quality checks
-- audit-friendly data lineage using layered datasets
-- dashboard-based monitoring of data quality KPIs
-
-The architecture follows a simplified governed-data approach similar to workflows used in customer, vendor, or product master data management systems.
-
-This project was designed to strengthen practical skills related to:
-- data quality management
-- governed data pipelines
-- data stewardship concepts
-- validation and monitoring workflows
-- cloud-based data operations on GCP
 
 
 ## Data Source & Schema
-- Default source in this repo: Synthetic (dummy) customer feedback records for a hotel (data/input/sample_thotel_reviews.csv)
-  - The pipeline works with real-world feedbacks as well, as long as they follow the same CSV schema.
+- Default source in this repo: Synthetic manufacturing shift log records (`data/input/sample_manufacturing_shift_logs.csv`)
+- The pipeline works with real-world shift log data as long as it follows the same CSV schema.
+- The input data simulates manually collected or spreadsheet-based production shift logs.
 
-- Language: Japanese (current rules are optimized for Japanese text)
 ### Expected CSV schema
 Columns expected in the input CSV:
 
-- source_id (Review ID in the original source. Type: STRING or INT64)(REQUIRED)
-- source (Review source name. Type: STRING; e.g., booking.com, tripadvisor)(REQUIRED)
-- review_text (Review text to analyze. Type: STRING)(REQUIRED)
-- posted_at (When the review was posted. Type: DATE or TIMESTAMP)(REQUIRED)
-- user_name (Reviewer name. Type: STRING) (OPTIONAL)
+- `date` (Production date. Type: DATE or STRING in `YYYY-MM-DD` format) (REQUIRED)
+- `shift` (Production shift. Type: STRING; accepted values: `A`, `B`, `C`) (REQUIRED)
+- `line` (Production line identifier. Type: STRING; e.g., `Line1`, `Line2`) (REQUIRED)
+- `planned_output` (Planned production quantity for the shift. Type: INT64 or numeric STRING) (REQUIRED)
+- `actual_output` (Actual production quantity for the shift. Type: INT64 or numeric STRING) (REQUIRED)
+- `defect_qty` (Number of defective units produced during the shift. Type: INT64 or numeric STRING) (REQUIRED)
+- `downtime_min` (Total downtime during the shift in minutes. Type: INT64 or numeric STRING) (REQUIRED)
+- `downtime_reason` (Primary reason for downtime. Type: STRING; e.g., `Equipment Failure`, `Material Shortage`, `Changeover`, `Cleaning`, `Quality Issue`, `No Downtime`) (OPTIONAL)
+- `operator` (Operator or shift owner. Type: STRING) (OPTIONAL)
+- `source_system` (Source of the shift log record. Type: STRING; e.g., `Google Form`, `Manual CSV Upload`, `Legacy Excel Log`) (OPTIONAL)
 
 
 
@@ -148,25 +103,27 @@ Columns expected in the input CSV:
 
 This pipeline follows a layered data architecture:
 
-1. **review_raw**  
-   - Raw source records ingested from external sources
-   - No transformation applied
+1. **shift_log_raw**
+   - Raw source records ingested from the input CSV
+   - Stores source values with ingestion metadata
+   - No business validation or KPI calculation is applied
 
-2. **review_validated**  
-   - Schema-validated and transformed records
-   - Represents validated master-data candidate records
-   - May contain duplicate `review_id` records  
-   (`review_id` is a deterministic UUID v5 generated from the combination of
-   (`source`, `source_id`), ensuring consistent cross-run identification.)
+2. **shift_log_validated**
+   - Validated and type-normalized manufacturing shift log records
+   - Contains both valid and invalid records for data quality monitoring
+   - Adds validation fields such as `is_valid`, `invalid_reason`, and `is_duplicate`
+   - Adds `shift_log_id`, a deterministic UUID v5 generated from `date`, `shift`, and `line` when these fields are available
 
-3. **review_validated_dedup (View)**  
-   - Deduplicated curated view of `review_validated`
-   - Keeps only the latest record per `review_id`
-   - Uses `ingested_at` to select the most recent entry
-   - Acts as a simplified canonical ("golden record") layer
+3. **shift_log_validated_dedup (View)**
+   - Deduplicated view of `shift_log_validated`
+   - Keeps only the latest record per `shift_log_id`
+   - Uses `ingested_at` to select the most recent record
+   - Used as the governed record layer for downstream KPI generation
 
-4. **review_reasons**
-   - Derived analytical attributes extracted from governed records
+4. **shift_log_kpi (View)**
+   - Curated operational KPI table generated from valid, deduplicated records
+   - Includes production achievement, defect rate, and downtime rate
+   - Used for Looker Studio reporting and continuous improvement analysis
 
 <br/>
 
@@ -180,30 +137,20 @@ and can be modified via `config/settings.py`.
 
 
 ## Data Quality & Validation
-Implemented minimal checks for raw reveiws before loading to BigQuery:
-- required column presence(`source_id`, `source`, `review_text`, and `posted_at`).
-- duplicate `reviews` detection: check whether `source_id` and `source` are the same. if so, we consider them to be the duplicated reviews.
-- invalid timestamp format handling(`posted_at` and `posted_at_iso`. (`posted_at_iso` will be added as metadata for loading into BigQuery after ingestion.))
-- basic length filter to `review_text` (between 5 and 500 characters).
 
-<br/>
 
 Note: Records that do not pass the quality check are flagged as `is_valid = False` and excluded from downstream processing. They can be monitored in the review_validated table.
 <br/>
 
-###  (In progress) dbt migration
-I am currently migrating part of the pipeline to dbt to make the quality checks (and the data transformations) more reproducible.
+###  dbt migration
 
-So far, I have:
+By dbt run:
+- Create shift_log_validated_dedup view 
 
-- Added a data quality test to check that review_id is unique (no duplicates)
-
-Next steps:
-
-
-- Add more tests (e.g., not null, accepted values, timestamp format checks)
-- Move more validation/transformation logic into dbt models
-
+By dbt test:
+- Check that `shift_log_id` is unique (no duplicates)
+- Check that `date`, `line` is not NULL
+- Check that `shift` is in ['A', 'B', 'C']
 
 
 
@@ -313,34 +260,13 @@ If you prefer to run the project without Docker, or want to use BigQuery output,
 
 - A Google Cloud project with a BigQuery dataset configured
 
-### Prerequisites (Ubuntu / WSL2)
-This project uses MeCab via mecab-python3.
-Install the required system dependencies first:
-
-``` bash
-sudo apt-get update
-sudo apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
-```
-
-
-#### Sanity check
-
-Verify that MeCab is installed correctly:
-
-``` bash
-echo "こんにちは" | mecab
-``` 
-
-If installation is successful, the command should output the parsed result.
-
-
 
 ### Install Python dependencies
 Create a virtual environment and install the required packages:
 
 ``` bash
-python -m venv .venv
-source .venv/bin/activate
+python -m venv venv
+source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -387,85 +313,15 @@ python -m src.reason_extraction.main \
   --output local
 ```
 
-### How to create BigQuery Views
-After running main.py, run the command below:
+### How to create BigQuery View
+1. Create the 'shift_log_validated_dedup' view with dbt
+Before running dbt, load the environment variables and install the required packages:
 ```
-python -m src.reason_extraction.apply_sql
+export $(grep -v '^#' .env | xargs)
+dbt deps --project-dir ./review_insights
 ```
-
-
-
-<br/>
-
-## NLP Extraction Logic (Supporting Analytical Layer)
-Goal: extract word-pairs like **(subject, predicate)** from a negative review.
-
-Current rule examples: First, we detect negative terms in each review using the negative lexicon, then extract the paired subject and/or predicate from the same sentence using the rules below:
-- When the negative term is a noun: Extract the verb, adjective, or adjectival noun immediately following it within the same sentence as the predicate.
-- When the negative term is a verb/adjective/adjectival noun: Extract the noun closest to the negative word appearing earlier in the same sentence as the subject.
-
-[Other rules are here](docs/extraction_rules.md)
-
-<br/>
-
-Output fields:
-- `reason_subject` (e.g., “ベッド(Bed)”, “スタッフ(Staff)”, “風呂(Bathroom)”. The subject can be multiple terms)
-- `reason_predicate` (e.g., “汚い(dirty)”, “うるさい(noisy)”, “不愛想(unfriendly)”)
-
-
-Limitations:
-- Rule-based extraction; quality depends on lexicons and rules.
-- Currently supports Japanese only (MeCab + Japanese lexicons / rules).
-- Cannot extract (detect) reasons from 'contextually negative texts' that don’t contain any negative words. (e.g., "隣の部屋から音が聞こえました"("I heard people talking in the next room."))
-- The pipeline can extract multiple tuples from one review. However, some tuples may describe the same issue using different wording (e.g., Linen - Dirty vs. Towel - Unpleasant).
-- For the dashboard and evaluation, I keep only one “canonical” reason per review (the tuple with the highest confidence). Therefore, reviews with multiple distinct issues may be under-represented.
-
-
-## Categorization Logic
-Goal: categorize the extracted reasons into **Entity** and **Issue** using the customizable lexicons. 
-
-**Entity:** subject(s) are expected to be matched to one entity which defined in entity_lexicon.csv
-e.g., 'リネン'(linen) → Bedding. '自販機'(vending machine) → Facilities
-
-| term   | language | entity     | version |
-|--------|----------|------------|---------|
-| リネン | ja       | Bedding    | 1       |
-| 自販機 | ja       | Facilities | 1       |
-| ・・・ | 
-Excerpt: entity_lexicon.csv
-
-
-**Issue:** predicate is expected to be matched to one issue-category which defined in issue_lexicon.csv
-e.g., '聞こえる(hear)'→'Noise', '不安(worried)'→'Safety'
-| term   | language | issue_category | sentiment | version |
-|--------|----------|------------|-----|---------|
-| 聞こえる | ja       | Noise    | negative | 1       |
-| 不安 | ja       | Safety | negative | 1       |
-| ・・・ | 
-Excerpt: issue_lexicon.csv
-
-Note: The 'sentiment' column could be set to 'positive' when extracting positive reasons instead of negative ones (currently not implemented).
-
-
-<br/>
-
-## Manual Evaluation (preliminary)
-I evaluated the pipeline on 100 synthetic (AI-generated) customer feedback records for a hotel. After validation and deduplication, I manually checked correctness at three stages: (1) extraction, (2) entity mapping, and (3) issue-category mapping. Because label frequencies are imbalanced in this dataset, per-label recall is not available for some labels (support = 0; e.g., Entity: Price). <br/>
-I use these results to identify error patterns and to plan a targeted evaluation set for underrepresented labels.
-
-Evaluation results:
-| Metric                                     | Value | definition                                                            |
-|--------------------------------------------|-------|-----------------------------------------------------------------------|
-| Extraction coverage                        | 0.81  | #records with ≥1 extracted tuple / #valid test records                |
-| Extraction precision (review-level)        | 0.67  | #records with correct extraction / #records with ≥1 extracted tuple   |
-| Entity mapping accuracy (given extraction) | 0.6   | #records with correct entity label / #records with ≥1 extracted tuple |
-| Issue-category accuracy (given extraction) | 0.42  | #records with correct issue label / #records with ≥1 extracted tuple  |
-
-<br/>
-Note:
-
-- This evaluation uses synthetic data; performance on real-world customer feedback records may differ due to noise and distribution shift.
-- “Correct extraction” means that at least one extracted tuple matches the main negative reason in the review (review-level evaluation).
-- See [Per-label precision/recall with support counts](docs/images/per-label_precision_recall.png)
-
+Then run the following command to create the `shift_log_validated_dedup` view in BigQuery:
+```
+dbt run --project-dir ./review_insights --profiles-dir ./review_insights/
+```
 

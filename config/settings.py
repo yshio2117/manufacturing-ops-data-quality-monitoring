@@ -15,7 +15,7 @@ SENTIMENT_LABELS = ["negative", "positive"]
 # BigQuery settings
 PROJECT_ID = os.getenv("PROJECT_ID")
 DATASET_ID = os.getenv("DATASET_ID")
-TABLE_PREFIX = os.getenv("TABLE_PREFIX", "customer_feedback")
+TABLE_PREFIX = os.getenv("TABLE_PREFIX", "shift_log")
 
 DBT_TARGET = os.getenv("DBT_TARGET", "dev")
 DBT_DATASET_IDS = {
@@ -28,19 +28,19 @@ def bq_table_id(dataset: str, name: str) -> str:
     return f"{PROJECT_ID}.{dataset}.{name}"
 
 # Output tables
-REVIEW_RAW_TABLE_ID = bq_table_id(
+SHIFT_LOG_RAW_TABLE_ID = bq_table_id(
     DATASET_ID,
     f"{TABLE_PREFIX}_raw"
 )
-REVIEW_VALIDATED_TABLE_ID = bq_table_id(
+SHIFT_LOG_VALIDATED_TABLE_ID = bq_table_id(
     DATASET_ID,
     f"{TABLE_PREFIX}_validated"
 )
-REVIEW_REASONS_TABLE_ID = bq_table_id(
+SHIFT_LOG_KPI_VIEW_ID = bq_table_id(
     DATASET_ID,
-    f"{TABLE_PREFIX}_attributes"
+    f"{TABLE_PREFIX}_kpi"
 )
-REVIEW_VALIDATED_DEDUP_VIEW_ID = bq_table_id(
+SHIFT_LOG_VALIDATED_DEDUP_VIEW_ID = bq_table_id(
     DBT_DATASET_ID,
     f"{TABLE_PREFIX}_validated_dedup"
 )

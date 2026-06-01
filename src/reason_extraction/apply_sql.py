@@ -1,15 +1,15 @@
 import os
 from pathlib import Path
 from google.cloud import bigquery
-from config.settings import PROJECT_ID,DATASET_ID,REVIEW_VALIDATED_TABLE_ID,REVIEW_VALIDATED_DEDUP_VIEW_ID,REVIEW_REASONS_TABLE_ID
+from config.settings import PROJECT_ID,DATASET_ID,SHIFT_LOG_VALIDATED_TABLE_ID,SHIFT_LOG_VALIDATED_DEDUP_VIEW_ID,SHIFT_LOG_KPI_VIEW_ID
 
 
 def render_sql(template):
     return template.format(PROJECT_ID=PROJECT_ID, 
                            DATASET_ID=DATASET_ID,
-                           REVIEW_VALIDATED_TABLE_ID=REVIEW_VALIDATED_TABLE_ID,
-                           REVIEW_VALIDATED_DEDUP_VIEW_ID=REVIEW_VALIDATED_DEDUP_VIEW_ID,
-                           REVIEW_REASONS_TABLE_ID=REVIEW_REASONS_TABLE_ID
+                           SHIFT_LOG_VALIDATED_TABLE_ID=SHIFT_LOG_VALIDATED_TABLE_ID,
+                           SHIFT_LOG_VALIDATED_DEDUP_VIEW_ID=SHIFT_LOG_VALIDATED_DEDUP_VIEW_ID,
+                           SHIFT_LOG_KPI_VIEW_ID=SHIFT_LOG_KPI_VIEW_ID
                            )
 
 def run_sql_file(client, path):

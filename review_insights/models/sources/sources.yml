@@ -6,10 +6,10 @@ sources:
     schema: "{{ env_var('DATASET_ID') }}"
     tables:
       - name: raw
-        identifier: "{{ env_var('TABLE_PREFIX', 'review') ~ '_raw' }}"
+        identifier: "{{ env_var('TABLE_PREFIX', 'shift_log') ~ '_raw' }}"
 
       - name: validated
-        identifier: "{{ env_var('TABLE_PREFIX', 'review') ~ '_validated' }}"
+        identifier: "{{ env_var('TABLE_PREFIX', 'shift_log') ~ '_validated' }}"
 
-      - name: reasons
-        identifier: "{{ env_var('TABLE_PREFIX', 'review') ~ '_reasons' }}"
+      - name: kpi
+        identifier: "{{ env_var('TABLE_PREFIX', 'shift_log') ~ '_kpi' }}"

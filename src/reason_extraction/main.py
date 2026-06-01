@@ -1,8 +1,7 @@
 import csv
 from pathlib import Path
 import argparse
-from src.reason_extraction.pipeline.review_pipeline import run_pipeline
-from config.settings import SENTIMENT_LABELS
+from src.reason_extraction.pipeline.record_pipeline import run_pipeline
 
 
 def validate_input_file(path_str):
@@ -29,16 +28,6 @@ def validate_input_file(path_str):
 
     return path 
 
-
-def validate_sentiment(sentiment):
-
-    # check if the sentiment label is valid
-    if sentiment not in SENTIMENT_LABELS:
-        raise argparse.ArgumentTypeError(
-            f"Invalid sentiment. Choose from {SENTIMENT_LABELS}."
-        )
-    return sentiment
-
     
 def parse_args():
 
@@ -49,14 +38,6 @@ def parse_args():
         required=True,
         type=validate_input_file,
         help="Input CSV file (required)"
-    )
-    # which sentiment to extract reasons for
-    parser.add_argument(
-        "--sentiment", 
-        choices=SENTIMENT_LABELS,
-        default=SENTIMENT_LABELS[0],
-        type=validate_sentiment,
-        help=f"Sentiment label for extracting reasons (default: {SENTIMENT_LABELS[0]})"
     )
     # where to output (validated reviews & negative reasons)
     parser.add_argument(
