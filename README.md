@@ -1,6 +1,7 @@
 # Manufacturing Operations Data Quality & Performance Monitoring Platform
 
-This project demonstrates operational data validation, manufacturing KPI monitoring, duplicate detection, and dashboard-based performance tracking using Python, BigQuery, dbt, and Looker Studio.
+This project is designed as a practical Operational Excellence digitalization case study. It demonstrates how manually collected manufacturing shift-log data can be transformed into governed operational data, validated automatically, and visualized through KPI dashboards for production performance tracking and continuous improvement.
+
 
 ## Table of Contents
 
@@ -26,17 +27,27 @@ This project demonstrates operational data validation, manufacturing KPI monitor
   - [Environment Variables](#environment-variables)
   - [Run](#run)
   - [How to create BigQuery View](#how-to-create-bigquery-view)
-- [NLP Extraction Logic (Rule-based)](#nlp-extraction-logic-rule-based)
-- [Categorization Logic](#categorization-logic)
-- [Manual Evaluation](#manual-evaluation-preliminary)
-- [Japanese Tokenization (MeCab Dictionaries)](#japanese-tokenization-mecab-dictionaries)
-  - [Local development](#local-development)
-  - [CI and Docker environment](#ci-and-docker-environment)
+
 
 
 ## Overview
 
 The workflow simulates a digitalized manufacturing shift-log process and converts raw production records into validated, curated, and dashboard-ready operational data.
+
+Tech Stack:
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Google BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=flat-square&logo=google&logoColor=white)
+
+## Demo (Dashboard & Output)
+
+![Looker Studio dashboard preview](docs/images/Continuous_improvement_view.png)
+
+- [Output PDF](docs/Production_Performance_Tracking.pdf)
+- [Looker Studio dashboard](https://datastudio.google.com/reporting/566375cb-627a-4bd2-8376-72c78ed832a9)
+
 
 
 ## Pipeline Architecture
