@@ -25,7 +25,7 @@ def export_validated_records_to_csv(records, filename):
 def load_validated_records_to_bq(records):
     """    Load validated records data to BigQuery """ 
 
-    print("AAA", records[:1])
+    
     schema = [
         bigquery.SchemaField(
             "date",
@@ -148,13 +148,10 @@ def load_validated_records_to_bq(records):
     except NotFound: 
         # create shift_log_validated_table if not exists
         shift_log_validated_table = bigquery.Table(shift_log_validated_table, schema=schema)
-        # Set Partition by date_iso
-        #shift_log_validated_table.time_partitioning = bigquery.TimePartitioning(
-        #    type_=bigquery.TimePartitioningType.DAY,
-        #    field="date_iso",  
-        #)
-        # set clustering by shift_log_id to optimize query performance when joining with shift_log_kpi table
-        shift_log_validated_table.clustering_fields = ["shift_log_id"]
+
+        # set clustering by shift_log_id to optimize query performance when creating dedup-view
+        shift_log_validated_table.clustering_fields = ["shift_log_id", "ingested_at", "row_id"]
+        
         client.create_table(shift_log_validated_table)
         print(f"Created {SHIFT_LOG_VALIDATED_TABLE_ID}.")
 
