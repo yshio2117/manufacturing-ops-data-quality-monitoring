@@ -1,4 +1,4 @@
-## Table: `review_raw` (RAW)
+### Table: `shift_log_raw` (RAW)
 
 **Purpose:**  
 Raw ingestion layer that stores source records without transformation or validation.
@@ -10,43 +10,42 @@ This layer preserves the original incoming records for traceability and audit pu
 
 **Keys:**
 row_id: UUIDv4 (technical key per ingestion row)
-review_id: Deterministic UUIDv5 generated from (source_id, source), deterministic business key; stable across runs
 
-## Table: `review_validated` (VAL)
+
+### Table: `shift_log_validated` (VAL)
 
 **Purpose:**  
 Validated and standardized data layer used for downstream governed processing.
 
-This layer applies schema validation, normalization, and data quality checks while preserving ingestion-level traceability.
+This layer applies schema validation and data quality checks while preserving ingestion-level traceability.
 
 **Grain:** 
-1 row per ingested record per run (1:1 with review_raw via row_id)
+1 row per ingested record per run (1:1 with shift_log_raw via row_id)
 
 **Keys:**
 row_id: UUIDv4 (technical key per ingestion row)
-review_id: Deterministic UUIDv5 generated from (source_id, source), deterministic business key; stable across runs
+shift_log_id: Deterministic UUIDv5 generated from (date, line, shift), deterministic business key; stable across runs
 
-**Partitioning:**  
-- Partition: `posted_at_iso`
-- Cluster: `review_id`
+**Clustering:**  
+- Cluster: `shift_log_id`, `ingested_at`, `row_id`
 
+Note: set clustering by these 3 columns to optimize query performance when creating the dedup-view (described as below)
 
-
-## View: `review_validated_dedup`
+### View: `shift_log_validated_dedup`
 
 **Purpose:**  
-Curated deduplicated layer that provides one canonical record per `review_id`.
+Curated deduplicated layer that provides one canonical record per `shift_log_id`.
 
-Acts as a simplified “golden record” view for downstream BI, monitoring, and analytical workflows.
+Acts as a simplified “golden record” view for downstream BI.
 
 **Grain:**  
-1 row per `review_id`
+1 row per `shift_log_id`
 
 **Deduplication rule:**  
-Select the latest ingested record per `review_id`.
+Select the latest ingested record per `shift_log_id`.
 
-The view selects the most recent record per `review_id`
-using the `ingested_at` timestamp:
+The view selects the most recent record per `shift_log_id`
+using the `ingested_at` timestamp and `row_id` as below:
 
 ```sql
 SELECT *
@@ -54,23 +53,9 @@ FROM (
     SELECT *,
            ROW_NUMBER() OVER (
                PARTITION BY review_id
-               ORDER BY ingested_at DESC
+               ORDER BY ingested_at DESC, row_id DESC
            ) AS rn
-    FROM review_validated
+    FROM shift_log_validated
 )
 WHERE rn = 1
 ```
-
-## Table: `review_reasons` (DERIVED)
-**Purpose:** 
-Stores derived analytical attributes extracted from governed customer feedback records.
-This layer supports downstream analytical enrichment, issue categorization, and dashboard aggregation workflows.
-
-**Grain:** 
-1 row per extracted analytical attribute
-
-**Keys:** 
-reason_id: technical key per extracted record
-
-**FK / Join:** 
-review_id → review_validated.review_id
