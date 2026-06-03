@@ -1,66 +1,40 @@
 ### Entity Relationship Diagram
 ```mermaid
 erDiagram
-  REVIEW_RAW {
-    string   source
-    string   source_id
-    string   review_text
-    string   posted_at
-    string   user_name
-    string   source_file
-    int      row_number
-    string   row_id PK
-    timestamp ingested_at
-    string   run_id
-  }
 
-  REVIEW_VALIDATED {
-    string   source
-    string   source_id
-    string   review_text
-    string   posted_at
-    timestamp   posted_at_iso
-    string   user_name
-    string   source_file
-    int      row_number
-    string   row_id PK
-    string   review_id
-    timestamp ingested_at
-    boolean  is_valid
-    array[string]  invalid_reason
-    string   run_id
-  }
+    SHIFT_LOG_RAW ||--|| SHIFT_LOG_VALIDATED : "row_id"
 
-  REVIEW_VALIDATED_DEDUP {
-    string   source
-    string   source_id
-    string   review_text
-    string   posted_at
-    timestamp   posted_at_iso
-    string   user_name
-    string   source_file
-    int      row_number
-    string   row_id PK
-    string   review_id
-    timestamp ingested_at
-    boolean  is_valid
-    array[string]   invalid_reason
-    string   run_id
-  }
+    SHIFT_LOG_VALIDATED }o--|| SHIFT_LOG_VALIDATED_DEDUP : "shift_log_id"
 
-  REVIEW_REASONS {
-    string  sentiment_type
-    string  entity
-    string  issue_category
-    float64   confidence
-    array[string]  subject
-    string  predicate
-    string  review_id FK
-    string  reason_id PK
-    string  run_id
-  }
+    SHIFT_LOG_RAW {
+        STRING row_id PK
+        DATE date
+        STRING shift
+        STRING line
+        INT64 planned_output
+        INT64 actual_output
+        INT64 defect_qty
+        INT64 downtime_min
+        STRING downtime_reason
+        STRING operator
+        STRING source_system
+        STRING source_file
+        INT64 row_number
+        TIMESTAMP ingested_at
+        STRING run_id
+    }
 
-  REVIEW_RAW ||--|| REVIEW_VALIDATED : "row_id"
-  REVIEW_VALIDATED }o--|| REVIEW_VALIDATED_DEDUP : "dedup by review_id"
-  REVIEW_VALIDATED_DEDUP ||--o{ REVIEW_REASON : "review_id"
+    SHIFT_LOG_VALIDATED {
+        STRING row_id PK
+        STRING shift_log_id
+        BOOL is_valid
+        STRING[] invalid_reason
+        BOOL is_duplicate
+        TIMESTAMP date_iso
+    }
+
+    SHIFT_LOG_VALIDATED_DEDUP {
+        STRING shift_log_id PK
+        STRING latest_record
+    }
 ```
