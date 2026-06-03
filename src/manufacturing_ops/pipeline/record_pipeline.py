@@ -1,8 +1,7 @@
-from src.reason_extraction.ingestion.record_loader import read_records_csv_with_metadata, load_raw_records
-from src.reason_extraction.validation.record_validater import validate_records
-from src.reason_extraction.validation.validated_record_loader import load_validated_records
-from src.reason_extraction.transformation.record_transformer import add_shift_log_id, to_iso_utc, split_records_by_validity, filter_columns, build_shift_log_kpi_records
-from src.reason_extraction.output.exporter import load_kpi_records
+from src.manufacturing_ops.ingestion.record_loader import read_records_csv_with_metadata, load_raw_records
+from src.manufacturing_ops.validation.record_validater import validate_records
+from src.manufacturing_ops.validation.validated_record_loader import load_validated_records
+from src.manufacturing_ops.transformation.record_transformer import add_shift_log_id, to_iso_utc
 
 
 def run_pipeline(args):
@@ -24,14 +23,6 @@ def run_pipeline(args):
 
     # Load validated_records to BigQuery or local CSV
     load_validated_records(validated_records, args, suffix="_validated") 
-    
-    # Only valid_records for next steps
-    #valid_records, invalid_records = split_records_by_validity(validated_records)
 
-    # 4. Curate KPI
-    #kpi_records = build_shift_log_kpi_records(valid_records)
-
-    # 5. Load KPI records to BigQuery or local CSV
-    #load_kpi_records(kpi_records, args)
 
 

@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 import argparse
-from src.reason_extraction.pipeline.record_pipeline import run_pipeline
+from src.manufacturing_ops.pipeline.record_pipeline import run_pipeline
 
 
 def validate_input_file(path_str):
