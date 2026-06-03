@@ -9,9 +9,9 @@ __pycache__/
 *.log
 *.Zone.Identifier
 
-# ----- dbt (review_insights/)
-review_insights/.user.yml
-review_insights/target/
-review_insights/dbt_packages/
-review_insights/dbt_modules/
-review_insights/logs/
+# ----- dbt (dbt_manufacturing_ops/)
+dbt_manufacturing_ops/.user.yml
+dbt_manufacturing_ops/target/
+dbt_manufacturing_ops/dbt_packages/
+dbt_manufacturing_ops/dbt_modules/
+dbt_manufacturing_ops/logs/
