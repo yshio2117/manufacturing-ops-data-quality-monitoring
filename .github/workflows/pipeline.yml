@@ -1,11 +1,11 @@
-name: data-pipeline
+name: manufacturing-ops-pipeline
 
 
 on:
   workflow_dispatch: {} # for manual trigger
-  schedule:
+  #schedule:
     # every Monday at 04:00 UTC
-    - cron: "0 4 * * 1"
+    #- cron: "0 4 * * 1"
 
 permissions:
   contents: read
@@ -55,9 +55,27 @@ jobs:
           # cost-control: avoid endless appends
           WRITE_MODE: "truncate"
         run: |
-          python -m src.reason_extraction.main \
+          python -m src.manufacturing_ops.main \
             --input-file data/input/sample_manufacturing_shift_logs.csv \
             --output bigquery
+
+      # Build dbt model (dedup-view)
+      - name: Run dbt models
+        env:
+          PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          DATASET_ID: ${{ secrets.BQ_DATASET_ID }}
+          TABLE_PREFIX: ${{ secrets.BQ_TABLE_PREFIX }}
+        run: |
+          dbt run --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
+
+      # Run dbt data quality tests
+      # - name: Run dbt tests
+      #   env:
+      #     PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      #     DATASET_ID: ${{ secrets.BQ_DATASET_ID }}
+      #     TABLE_PREFIX: ${{ secrets.BQ_TABLE_PREFIX }}
+      #   run: |
+      #     dbt test --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
 
       # Create/replace views
       - name: Create or Replace BigQuery Views for Looker Studio
@@ -66,4 +84,4 @@ jobs:
           DATASET_ID: ${{ secrets.BQ_DATASET_ID }}
           TABLE_PREFIX: ${{ secrets.BQ_TABLE_PREFIX }}
         run: |
-          python -m src.reason_extraction.apply_sql
+          python -m src.manufacturing_ops.apply_sql
