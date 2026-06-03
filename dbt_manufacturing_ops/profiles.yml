@@ -1,5 +1,5 @@
 # profiles.yml
-review_insights:
+dbt_manufacturing_ops:
   target: "{{ env_var('DBT_TARGET', 'dev') }}"
   outputs:
     dev:
