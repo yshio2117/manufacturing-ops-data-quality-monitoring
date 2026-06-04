@@ -1,6 +1,5 @@
-IMAGE_NAME := review-pipeline
+IMAGE_NAME := manufacturing-ops-pipeline
 
-# used to generate a consistent reason_id for identical review texts across different pipeline runs.
 TEST_UUID := 7f1736ae-e013-402b-85e2-36b72055058d
 
 .PHONY: all build run clean
@@ -8,7 +7,7 @@ all: build run
 
 # build the docker image
 build:
-	@echo "=> Building the Docker image for the review analysis pipeline..."
+	@echo "=> Building the Docker image for the manufacturing ops pipeline..."
 	docker build -t $(IMAGE_NAME) .
 
 # run the pipeline in local mode
