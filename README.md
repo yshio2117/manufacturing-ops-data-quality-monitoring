@@ -1,6 +1,6 @@
 # Manufacturing Operations Data Quality & Performance Monitoring Platform
 
-This project is designed as a practical Operational Excellence digitalization case study. It demonstrates how manually collected manufacturing shift-log data can be transformed into governed operational data, validated automatically, and visualized through KPI dashboards for production performance tracking and continuous improvement.
+Operational Excellence case study demonstrating how raw operational records can be transformed into trusted datasets and decision-support dashboards through automated data-quality controls, KPI analytics, and monitoring workflows.
 
 
 ## Table of Contents
@@ -8,31 +8,39 @@ This project is designed as a practical Operational Excellence digitalization ca
 - [Overview](#overview)
 - [Demo (Dashboard & Output)](#demo-dashboard--output)
 - [Pipeline Architecture](#pipeline-architecture)
-- [Data Governance & Master Data Relevance](#data-governance--master-data-relevance)
 - [Data Source & Schema](#data-source--schema)
   - [Expected CSV schema](#expected-csv-schema)
 - [Data Model](#data-model)
 - [Data Quality & Validation](#data-quality--validation)
-  - [dbt migration](#dbt-migration)
+  - [dbt migration & Testing](#dbt-migration--testing)
 - [Dashboard (Looker Studio)](#dashboard-looker-studio)
 - [CI (GitHub Actions)](#ci-github-actions)
   - [Steps](#steps)
   - [Authentication](#authentication)
 - [Repo Structure](#repo-structure)
 - [Setup](#setup)
-  - [Quick Start (Recommended)](#quick-start-recommended)
+  - [Quick Start (No GCP Setup Required)](#quick-start-no-gcp-setup-required)
   - [Alternative Setup (CLI / Native Environment)](#alternative-setup-cli--native-environment)
   - [Requirements](#requirements)
   - [Install Python dependencies](#install-python-dependencies)
   - [Environment Variables](#environment-variables)
   - [Run](#run)
-  - [How to create BigQuery View](#how-to-create-bigquery-view)
-
+  - [How to create BigQuery Views](#how-to-create-bigquery-views)
 
 
 ## Overview
 
-The workflow simulates a digitalized manufacturing shift-log process and converts raw production records into validated, curated, and dashboard-ready operational data.
+This project simulates a digitalized manufacturing shift-log process and demonstrates an end-to-end data engineering workflow for operational analytics.
+
+The workflow ingests manually collected production records, applies automated validation and quality controls, transforms the data into analytics-ready datasets, and delivers KPI dashboards for performance monitoring, root-cause analysis, and continuous improvement.
+
+Key focus areas include:
+
+- Data quality validation and governance
+- Reproducible data pipelines
+- KPI generation and monitoring
+- Interactive dashboards and drill-down analytics
+- Decision-support reporting
 
 Tech Stack:
 
@@ -42,7 +50,7 @@ Tech Stack:
 ![Looker Studio](https://img.shields.io/badge/Looker%20Studio-4285F4?style=flat-square&logo=google&logoColor=white)
 
 ## Demo (Dashboard & Output)
-
+![Looker Studio dashboard preview](docs/images/Data_Quality_view.png)
 ![Looker Studio dashboard preview](docs/images/Continuous_improvement_view.png)
 
 - [Output PDF](docs/Production_Performance_Tracking.pdf)
@@ -52,12 +60,12 @@ Tech Stack:
 
 ## Pipeline Architecture
 
-CSV → Ingestion & Validation Pipeline → BigQuery Governed Layers → Monitoring & BI
+CSV → Python Validation Pipeline → BigQuery Governed Layers → Looker Studio Dashboard
 
 - Ingestion inputs: a local CSV file 
-- Processing: Python scripts
-- Storage: 2 tables + 1 dedup-view ([see Data Model section](#data-model))
-- BI: Looker Studio (Data Quality KPI, Operational KPI, Continuous Improvement KPI)
+- Processing: Python-based ingestion and validation pipeline
+- Storage: 2 BigQuery tables and 1 deduplicated view ([see Data Model section](#data-model))
+- Reporting: Looker Studio (Data Quality KPIs, Manufacturing KPIs, Continuous Improvement Analysis)
 
 ```mermaid
 flowchart LR
@@ -69,30 +77,29 @@ flowchart LR
 
   subgraph BQ["BigQuery"]
     RAW["shift_log_raw\n(Raw Source Records)"]
-    VAL["shift_log_validated\n(Validated Records, non-dedup)"]
-    DQV["DQ Views\n(dq metrics,\ninvalid reason breakdown)"]
+    VAL["shift_log_validated\n(Validated Records, Non-Deduplicated)"]
+    DQV["DQ Views\n(Data Quality Metrics,\nInvalid Reason Breakdown)"]
     DEDUP["shift_log_validated_dedup\n(Canonical Deduplicated View)"]
-    KPI["shift_log_kpi\n(Curated KPI View)"]
-    KPIV["KPI Views\n(summary, trend,\npareto, drilldown)"]
+    KPIV["KPI Views\n(Summary, Trend,\nPareto, Drill-Down)"]
   end
 
   DASH["Looker Studio Dashboard"]
+
   CSV --> PIPE
   PIPE --> RAW
   PIPE --> VAL
   VAL --> DQV
   VAL --> DEDUP
-  DEDUP --> KPI
-  KPI --> KPIV
+  DEDUP --> KPIV
   DQV --> DASH
   KPIV --> DASH
 ```
 
 
 ## Data Source & Schema
-- Default source in this repo: Synthetic manufacturing shift log records (`data/input/sample_manufacturing_shift_logs.csv`)
-- The pipeline works with real-world shift log data as long as it follows the same CSV schema.
-- The input data simulates manually collected or spreadsheet-based production shift logs.
+- Default source in this repository: synthetic manufacturing shift log records generated for demonstration purposes (`data/input/sample_manufacturing_shift_logs.csv`)
+- The pipeline can process real-world manufacturing shift log data as long as it follows the same CSV schema.
+- The sample dataset simulates production shift logs collected from common operational sources such as spreadsheets, manual CSV uploads, and online forms.
 
 ### Expected CSV schema
 Columns expected in the input CSV:
@@ -128,13 +135,9 @@ This pipeline follows a layered data architecture:
 3. **shift_log_validated_dedup (View)**
    - Deduplicated view of `shift_log_validated`
    - Keeps only the latest record per `shift_log_id`
-   - Uses `ingested_at` to select the most recent record
+   - Uses `ingested_at` and `row_id` to select the most recent record
    - Used as the governed record layer for downstream KPI generation
 
-4. **shift_log_kpi (View)**
-   - Curated operational KPI table generated from valid, deduplicated records
-   - Includes production achievement, defect rate, and downtime rate
-   - Used for Looker Studio reporting and continuous improvement analysis
 
 <br/>
 
@@ -149,38 +152,96 @@ and can be modified via `config/settings.py`.
 
 ## Data Quality & Validation
 
+The validation layer applies schema checks and business rules before records are promoted from the raw ingestion layer to downstream curated data.
 
-Note: Records that do not pass the quality check are flagged as `is_valid = False` and excluded from downstream processing. They can be monitored in the review_validated table.
+Each record is enriched with validation metadata:
+
+- `is_valid`: indicates whether the record passed all validation checks
+- `invalid_reason`: stores one or more validation failure reasons
+- `is_duplicate`: flags duplicate records based on the business key
+
+Validation rules include:
+
+| Category | Rule |
+|---|---|
+| Date validation | `date` must exist and be parseable into `date_iso` |
+| Timezone validation | `date_iso` must be timezone-aware and normalized to UTC |
+| Duplicate detection | Duplicate key is defined as `date + shift + line` |
+| Shift validation | `shift` must be one of `A`, `B`, or `C` |
+| Line validation | `line` must not be empty |
+| Numeric parsing | `planned_output`, `actual_output`, `defect_qty`, and `downtime_min` must be valid integers |
+| Planned output | `planned_output` must be greater than 0 |
+| Actual output | `actual_output` must be 0 or greater |
+| Defect quantity | `defect_qty` must be 0 or greater and cannot exceed `actual_output` |
+| Downtime | `downtime_min` must be between 0 and 480 minutes |
+
+If a record fails date validation, `shift_log_id` is set to `None`. This prevents inconsistent date formats from generating unstable business keys.
+
+Duplicate records are not dropped at the validation stage. Instead, they are retained with `is_valid = False`, `is_duplicate = True`, and an explanatory reason in `invalid_reason`. This preserves full ingestion traceability while allowing downstream views to select canonical records.
+
+Invalid reasons are deduplicated and sorted to keep validation output deterministic and easier to audit.
+
+
 <br/>
 
-###  dbt migration
+### dbt Migration & Testing
 
-By dbt run:
-- Create shift_log_validated_dedup view 
+This project uses dbt for both data transformation and data quality validation.
 
-By dbt test:
-- Check that `shift_log_id` is unique (no duplicates)
-- Check that `date`, `line` is not NULL
-- Check that `shift` is in ['A', 'B', 'C']
+**dbt run**
+- Create the `shift_log_validated_dedup` view
+- Materialize the latest canonical record per `shift_log_id`
+
+**dbt test**
+- Verify `shift_log_id` is unique
+- Verify `date` is not NULL
+- Verify `line` is not NULL
+- Verify `shift` contains only valid values (`A`, `B`, `C`)
 
 
 
 ## Dashboard (Looker Studio)
 
-- [Sample pdf Report (dummy customer feedback records for a hotel)](docs/Report_on_Negative_Review_Reasons.pdf)
-- [Dashboard link](https://lookerstudio.google.com/reporting/a6186eaf-dfec-409e-91ba-79826297d478)
 
+The final reporting layer is built in Looker Studio using the curated `shift_log_validated_dedup` view.
 
-### Page 1: Data Quality / Pipeline Health
-Shows ingestion volume, deduplication impact (total vs unique), valid/invalid rates, and breakdowns for duplicate groups and invalid reasons.
+The dashboard consists of three pages designed for different stakeholder needs, from data engineers monitoring pipeline health to manufacturing managers analyzing production performance and improvement opportunities.
 
+### Page 1: Data Quality & Pipeline Health
 
-### Page 2: Extracted Reasons Insights
-Shows top entities & issue categories, and the entity × issue_category heatmap based on the canonical (top-confidence) reason per review.
+Provides visibility into data quality and ingestion health across pipeline runs.
 
-### Page 3: Drilldown / Record Explorer
-Allows filtering by run and drilling down to validated records and extracted reasons for auditing/debugging.
+Visualizations:
+- Data quality KPI summary cards
+- Invalid reason breakdown
+- Filters by pipeline run and source file
 
+This page helps identify data quality issues before records are consumed by downstream analytics. 
+
+### Page 2: Manufacturing KPI
+
+Provides an operational overview of production performance.
+
+Visualizations:
+- Daily production trend analysis
+- KPI comparison by production line
+- KPI comparison by shift
+
+This page enables manufacturing managers to monitor production efficiency, quality performance, and operational availability. 
+
+### Page 3: Continuous Improvement View
+
+Supports root-cause analysis and continuous improvement initiatives.
+
+Visualizations:
+- Downtime reason Pareto chart
+- Production performance by line and shift
+- Detailed record drill-down table
+
+The Pareto analysis helps identify the small number of downtime causes responsible for the majority of production losses, while the drill-down view allows users to investigate individual shift records and operational events.
+
+- [Sample Report](docs/Production_Performance_Tracking.pdf)
+- [Dashboard link](https://datastudio.google.com/s/mQRpiccUuZI)
 
 <br/>
 
@@ -189,14 +250,13 @@ This repository includes a lightweight CI workflow using GitHub Actions.
 
 ### Triggers
 
-Manual run (workflow_dispatch), and
-Scheduled run (daily cron).
+Manual execution (via workflow_dispatch) is supported. Scheduled runs are currently disabled to save BigQuery costs.
 
 ### Steps
 - Runs unit tests (`pytest`)
 - Executes the pipeline only if tests pass
 - Loads processed records into BigQuery (demo mode uses `WRITE_MODE=TRUNCATE` to avoid accumulating data in the sandbox)
-- Rebuilds reporting views for monitoring dashboards
+- Rebuilds KPI views by executing sql files and dbt run for monitoring dashboards
 
 
 ### Authentication
@@ -215,36 +275,30 @@ Note: For production, prefer Workload Identity Federation (OIDC) instead of long
 │   └── settings.py    # Non-sensitive application settings and constants
 ├── credentials
 ├── data
-│   ├── input          # place the file here you'd like to analyze
-│   │   └── sample_hotel_reviews.csv
+│   ├── input          # place the input file here
+│   │   └── sample_manufacturing_shift_logs.csv
 │   └── output         # Used for debugging and local development.  
-|                      # Outputs a CSV file when the run parameter is set to "--output local".
-├── dics
-│   ├── entity_lexicon.csv    # for categorizing entity
-│   ├── issue_lexicon.csv     # for categorizing issue
-│   └── sentiment_lexicon.csv # for detecting a polarity term
+|                      # Outputs CSV files when the run parameter is set to "--output local".
 ├── docs
 │   ├── data_dictionary.md
 │   ├── er_diagram.md
-│   ├── extraction_rules.md
-|   └── Report_on_Negative_Review_Reasons.pdf # sample report for hotel customer feedback records (used only dummy data)
+|   └── Production_Performance_Tracking.pdf # sample dashboard pdf
 ├── requirements.txt
 ├── sql
-│   ├── 10_views_dq.sql      # sql for creating DQ views
-│   └── 11_views_kpi_reasons.sql  # sql for creating KPI Reason views
+│   ├── 10_views_dq_kpi.sql      # sql for creating DQ views
+│   └── 11_views_ops_kpi.sql  # sql for creating manufacturing KPI views
 ├── src
 │   ├── __init__.py
-│   └── reason_extraction    # Pipeline modules for ingestion, validation, transformation, and analytical enrichment
+│   └── manufacturing_ops    # Pipeline modules for ingestion, validation, transformation, and output
 │       ├── __init__.py
-│       ├── main.py          # Entry point for the extraction pipeline
-│       ├── apply_sql.py     # Creates BigQuery views for Looker Studio
-│       ├── extraction       # Review reason extraction logic
+│       ├── main.py          # Entry point for the pipeline
+│       ├── pipeline         # Pipeline orchestration
 │       ├── ingestion        # Data ingestion module
 │       ├── output           # BigQuery loading module
-│       ├── pipeline         # Pipeline orchestration
-│       ├── preprocessing    # Data preprocessing
 │       ├── transformation   # Data transformation
-│       └── validation       # Data quality validation
+│       ├── validation       # Data quality validation
+│       ├── apply_sql.py     # Creates BigQuery views for Looker Studio
+│       └── generate_sample_manufacturing_shift_logs.py     # Creates sample input file
 ├── tests
 ```
 
@@ -252,18 +306,16 @@ Note: For production, prefer Workload Identity Federation (OIDC) instead of long
 
 ## Setup
 
-### Quick Start (Recommended)
+### Quick Start (No GCP Setup Required)
 
-Run the pipeline locally in a Docker container with the command below. No GCP setup is required.
+Use the sample input file to run the pipeline locally in a Docker container. The generated raw and validated outputs will be saved to `data/output/`.
 
 ```bash
 make
 ```
 
-
-
 ### Alternative Setup (CLI / Native Environment)
-If you prefer to run the project without Docker, or want to use BigQuery output, follow the steps below to set up a local environment.
+If you want to use BigQuery output using your own input file, follow the steps below to set up a local environment.
 
 
 ### Requirements
@@ -286,7 +338,7 @@ pip install -r requirements.txt
 ### Environment Variables
 Copy .env.example to .env, then configure the following variables:
 
-`UUID_STRING` – Used to generate a consistent reason_id for identical review texts across different pipeline runs.
+`UUID_STRING` – Used to generate a consistent `shift_log_id` for identical shift log record across different pipeline runs.
 Generate one by running:
 
 ``` bash
@@ -308,31 +360,54 @@ uuidgen
 
 ### Run
 
-Place the file you want to analyze in `data/input/`, then run the command below.
+The pipeline supports two output destinations: BigQuery and local files.
 
-(For the required file schema, see [here](#expected-csv-schema)).
-```
-python -m src.reason_extraction.main \
-  --input-file data/input/(your filename).csv  \
+1. Place the input CSV file in `data/input/`.
+
+2. (BigQuery): To load raw and validated records into BigQuery, run:
+
+```bash
+python -m src.manufacturing_ops.main \
+  --input-file data/input/<filename>.csv \
   --output bigquery
 ```
 
-To output the analysis results to `data/output/` instead of BigQuery, run:
-```
-python -m src.reason_extraction.main \
-  --input-file data/input/(your filename).csv  \
+2. (Local): To write raw and validated records to local files in data/output/, run:
+
+```bash
+python -m src.manufacturing_ops.main \
+  --input-file data/input/<filename>.csv \
   --output local
 ```
 
-### How to create BigQuery View
-1. Create the 'shift_log_validated_dedup' view with dbt
+(For the required file schema, see [here](#expected-csv-schema)).
+
+### How to create BigQuery Views
+#### 1. Create the 'shift_log_validated_dedup' view with dbt
 Before running dbt, load the environment variables and install the required packages:
-```
+
+```bash
 export $(grep -v '^#' .env | xargs)
-dbt deps --project-dir ./review_insights
+dbt deps --project-dir dbt_manufacturing_ops
 ```
 Then run the following command to create the `shift_log_validated_dedup` view in BigQuery:
-```
-dbt run --project-dir ./review_insights --profiles-dir ./review_insights/
+
+```bash
+dbt run --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
 ```
 
+#### 2. Create the remaining views
+After creating the `shift_log_validated_dedup` view, run the command below to create the remaining views:
+
+```bash
+python -m src.dbt_manufacturing.apply_sql
+```
+
+
+#### 3. (Optional) Run dbt Tests
+
+The deduplicated view can also be validated with dbt tests:
+
+```bash
+dbt test --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
+```
