@@ -102,7 +102,7 @@ def validate_records(records):
         planned_output = record.get("planned_output_int")
         actual_output = record.get("actual_output_int")
         defect_qty = record.get("defect_qty_int")
-        downtime_min = record.get("downtime_int")
+        downtime_min = record.get("downtime_min_int")
         shift = record.get("shift_normalized")
         line = record.get("line_normalized")
 
