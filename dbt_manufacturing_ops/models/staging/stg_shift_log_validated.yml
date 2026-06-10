@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_shift_log_validated
+    description: Clean staging model for validated manufacturing shift logs.
+    columns:
+      - name: row_id
+        tests:
+          - not_null
+
+      - name: production_date
+        tests:
+          - not_null
+
+      - name: shift
+        tests:
+          - accepted_values:
+              values: ['A', 'B', 'C']
+
+      - name: line
+        tests:
+          - not_null
+
+      - name: planned_output
+        tests:
+          - not_null
+
+      - name: actual_output
+        tests:
+          - not_null
+
+      - name: defect_qty
+        tests:
+          - not_null
+
+      - name: downtime_min
+        tests:
+          - not_null
+
+      - name: is_valid
+        tests:
+          - not_null

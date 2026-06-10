@@ -2,7 +2,7 @@
 
 WITH source_data AS (
     SELECT *
-    FROM {{ source('pipeline', 'validated') }}
+    FROM {{ ref('stg_shift_log_validated') }}
 ),
 valid_dedup AS (
     SELECT *
