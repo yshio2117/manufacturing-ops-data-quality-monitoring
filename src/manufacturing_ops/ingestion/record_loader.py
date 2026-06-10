@@ -10,6 +10,61 @@ from pathlib import Path
 from config.settings import BASE_DIR,WRITE_DISPOSITION,PROJECT_ID,DATASET_ID,SHIFT_LOG_RAW_TABLE_ID
 
 
+REQUIRED_COLUMNS = {
+    "date",
+    "shift",
+    "line",
+    "planned_output",
+    "actual_output",
+    "defect_qty",
+    "downtime_min",
+}
+
+OPTIONAL_COLUMNS = {
+    "downtime_reason",
+    "operator",
+    "source_system",
+}
+
+EXPECTED_COLUMNS = REQUIRED_COLUMNS | OPTIONAL_COLUMNS
+
+
+def validate_csv_columns(fieldnames):
+    """
+    Validates the input file's headers against the defined schema.
+
+    Raises:
+        ValueError: If the header row is missing/empty, or if any required columns are missing.
+
+    Returns:
+        set: The missing optional columns.
+    """
+
+    if not fieldnames:
+        raise ValueError(
+            "CSV schema error: header row is missing or empty."
+        )
+
+    actual_columns = set(fieldnames)
+
+    missing_required = REQUIRED_COLUMNS - actual_columns
+    missing_optional = OPTIONAL_COLUMNS - actual_columns
+    unexpected_columns = actual_columns - EXPECTED_COLUMNS
+
+    if missing_required:
+        raise ValueError(
+            f"CSV schema error: missing required columns: "
+            f"{sorted(missing_required)}"
+        )
+
+    if unexpected_columns:
+        print(
+            f"Warning: unexpected columns found: "
+            f"{sorted(unexpected_columns)}"
+        )
+
+    return missing_optional
+
 
 def make_run_id(prefix="records"):
     """
@@ -42,8 +97,12 @@ def read_records_csv_with_metadata(args):
     with open(BASE_DIR / "{0}".format(file_path), "r", encoding="utf_8", newline="") as f:
         reader = csv.DictReader(f)
 
+        # schema validation (fail fast)
+        missing_optional = validate_csv_columns(reader.fieldnames)
+
         source_file = Path(file_path).name
         ingested_at = datetime.now(timezone.utc).isoformat(timespec='seconds')
+
         if args.run_id:
             run_id = args.run_id
         else:
@@ -52,6 +111,11 @@ def read_records_csv_with_metadata(args):
         rows = []
 
         for idx, row in enumerate(reader, start=1):
+
+            # add missing optional columns
+            for col in missing_optional:
+                row[col] = None
+                
             new_row = {
                 "source_file": source_file,
                 "row_number": idx,
@@ -60,7 +124,6 @@ def read_records_csv_with_metadata(args):
                 "run_id": run_id,
             }
 
-            # add the original row data to the new row
             new_row.update(row)
 
             rows.append(new_row)

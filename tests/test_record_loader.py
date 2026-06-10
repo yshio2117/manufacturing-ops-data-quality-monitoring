@@ -1,7 +1,92 @@
 import pytest
 import os
+from types import SimpleNamespace
 from unittest.mock import patch, MagicMock
-from src.manufacturing_ops.ingestion.record_loader import raw_records_to_bq
+from src.manufacturing_ops.ingestion.record_loader import read_records_csv_with_metadata, raw_records_to_bq
+
+
+def test_read_csv_success(tmp_path):
+    """Test reading a valid CSV file successfully and verifying metadata insertion."""
+
+    csv_file = tmp_path / "sample.csv"
+
+    csv_file.write_text(
+        (
+            "date,shift,line,planned_output,actual_output,"
+            "defect_qty,downtime_min,downtime_reason,operator,source_system\n"
+            "2025-01-01,A,Line1,100,95,2,10,Cleaning,John,Google Form\n"
+        ),
+        encoding="utf-8",
+    )
+
+    args = SimpleNamespace(
+        input_file=str(csv_file),
+        run_id="test_run",
+    )
+
+    rows = read_records_csv_with_metadata(args)
+
+    assert len(rows) == 1
+
+    row = rows[0]
+
+    assert row["date"] == "2025-01-01"
+    assert row["shift"] == "A"
+    assert row["run_id"] == "test_run"
+
+    assert "row_id" in row
+    assert "ingested_at" in row
+    assert "source_file" in row
+
+
+def test_missing_required_column_raises_error(tmp_path):
+    """Test that a ValueError is raised when required columns are missing from the CSV."""
+
+    csv_file = tmp_path / "sample.csv"
+
+    csv_file.write_text(
+        (
+            "date,shift,line,planned_output,actual_output,defect_qty\n"
+            "2025-01-01,A,Line1,100,95,2\n"
+        ),
+        encoding="utf-8",
+    )
+
+    args = SimpleNamespace(
+        input_file=str(csv_file),
+        run_id="test_run",
+    )
+
+    with pytest.raises(ValueError, match="missing required columns"):
+        read_records_csv_with_metadata(args)
+
+
+def test_missing_optional_columns_are_filled_with_none(tmp_path):
+    """Test that missing optional columns are automatically filled with None."""
+    
+    csv_file = tmp_path / "sample.csv"
+
+    csv_file.write_text(
+        (
+            "date,shift,line,planned_output,actual_output,"
+            "defect_qty,downtime_min\n"
+            "2025-01-01,A,Line1,100,95,2,10\n"
+        ),
+        encoding="utf-8",
+    )
+
+    args = SimpleNamespace(
+        input_file=str(csv_file),
+        run_id="test_run",
+    )
+
+    rows = read_records_csv_with_metadata(args)
+
+    row = rows[0]
+
+    assert row["downtime_reason"] is None
+    assert row["operator"] is None
+    assert row["source_system"] is None
 
 
 def test_raw_records_to_bq():
