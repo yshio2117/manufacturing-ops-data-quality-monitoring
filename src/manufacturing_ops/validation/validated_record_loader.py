@@ -8,10 +8,34 @@ from config.settings import BASE_DIR,WRITE_DISPOSITION,SHIFT_LOG_VALIDATED_TABLE
 def export_validated_records_to_csv(records, filename):
     """ Output validated records data to CSV """ 
 
-    fieldnames = ['date', 'date_iso','shift','line','planned_output','actual_output','defect_qty',
-                  'downtime_min','downtime_reason','operator','source_system',
-                  'source_file','row_number','row_id','ingested_at','run_id',
-                  'is_valid','invalid_reason','is_duplicate','date_iso','shift_log_id']
+    fieldnames = [
+        "date",
+        "production_date",
+        "shift",
+        "shift_normalized",
+        "line",
+        "line_normalized",
+        "planned_output",
+        "planned_output_int",
+        "actual_output",
+        "actual_output_int",
+        "defect_qty",
+        "defect_qty_int",
+        "downtime_min",
+        "downtime_min_int",
+        "downtime_reason",
+        "operator",
+        "source_system",
+        "source_file",
+        "row_number",
+        "row_id",
+        "ingested_at",
+        "run_id",
+        "is_valid",
+        "invalid_reason",
+        "is_duplicate",
+        "shift_log_id",
+    ]
 
     with open(BASE_DIR / "data/output/{0}.csv".format(filename), "w", encoding="utf_8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -29,13 +53,23 @@ def load_validated_records_to_bq(records):
     schema = [
         bigquery.SchemaField(
             "date",
-            "DATE",
+            "STRING",
             description="Production date"
         ),
+        bigquery.SchemaField(
+            "production_date", 
+            "DATE",     # new field for validated_records
+            description="date in 'YYYY-MM-DD' format"
+            ),
         bigquery.SchemaField(
             "shift",
             "STRING",
             description="Production shift (A, B, C)"
+        ),
+        bigquery.SchemaField(
+            "shift_normalized", # new field for validated_records
+            "STRING",
+            description="Normalzed production shift"
         ),
         bigquery.SchemaField(
             "line",
@@ -43,24 +77,49 @@ def load_validated_records_to_bq(records):
             description="Production line"
         ),
         bigquery.SchemaField(
+            "line_normalized", # new field for validated_records
+            "STRING",
+            description="Normalized production line"
+        ),
+        bigquery.SchemaField(
             "planned_output",
-            "INT64",
+            "STRING",
             description="Planned production quantity"
         ),
         bigquery.SchemaField(
-            "actual_output",
+            "planned_output_int",
             "INT64",
+            description="Planned production quantity (Typed)"
+        ),
+        bigquery.SchemaField(
+            "actual_output",
+            "STRING",
             description="Actual production quantity"
         ),
         bigquery.SchemaField(
-            "defect_qty",
+            "actual_output_int",
             "INT64",
+            description="Actual production quantity (Typed)"
+        ),
+        bigquery.SchemaField(
+            "defect_qty",
+            "STRING",
             description="Defective quantity"
         ),
         bigquery.SchemaField(
-            "downtime_min",
+            "defect_qty_int",
             "INT64",
+            description="Defective quantity (Typed)"
+        ),
+        bigquery.SchemaField(
+            "downtime_min",
+            "STRING",
             description="Downtime in minutes"
+        ),
+        bigquery.SchemaField(
+            "downtime_min_int",
+            "INT64",
+            description="Downtime in minutes (Typed)"
         ),
         bigquery.SchemaField(
             "downtime_reason",
@@ -108,31 +167,27 @@ def load_validated_records_to_bq(records):
             description="Pipeline execution ID"
         ),
         bigquery.SchemaField(
-            "is_valid", # new field for validated_records
+            "is_valid",
             "BOOL",
             mode="REQUIRED",
             description="Whether the record is valid or not"
             ),
         bigquery.SchemaField(
-            "invalid_reason", # new field for validated_records
+            "invalid_reason",
             "STRING",
             mode="REPEATED",  # list
             description="Reason why the record is invalid"
             ),
         bigquery.SchemaField(
-            "is_duplicate", # new field for validated_records
+            "is_duplicate",
             "BOOL",
             mode="REQUIRED",
             description="Whether the record is duplicate or not"
             ),
         bigquery.SchemaField(
-            "date_iso", "TIMESTAMP", # new field for validated_records
-            description="date in ISO format in UTC timezone"
-            ),
-        bigquery.SchemaField(
-            "shift_log_id", # new field for validated_records
+            "shift_log_id",
             "STRING",
-            description="Unique ID of the record (generated UUID v5 based on date, shift, and line. If either of them is missing, set shift_log_id to None)"
+            description="Deterministic ID"
         ),
 
     ]

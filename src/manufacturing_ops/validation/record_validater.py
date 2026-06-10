@@ -3,56 +3,42 @@ from datetime import datetime, date, timezone, timedelta
 
 def validate_record_date(record):
     """
-    Validate date and date_iso.
+    Validate raw date and normalized production_date.
 
-    Validation rules:
-    1. if date is empty/None → invalid (MISSING)
-    2. if date exists but date_iso is None → invalid (PARSE_FAILED)
-    3. if date_iso exists but not in UTC nor parseable → invalid (NOT_UTC or PARSE_FAILED)
-
-    If date cannot be converted into an ISO format, 
-    set 'shift_log_id' to None, to prevent the same record from being assigned different ids due to inconsistent date formats.
+    Rules:
+    1. If raw date is missing -> invalid
+    2. If raw date exists but production_date is None -> invalid
+    3. If production_date exists but is not YYYY-MM-DD -> invalid
     """
 
-    reasons = list(record.get("invalid_reason", []))
+    reasons = record.get("invalid_reason", [])
 
-    raw = record.get("date")
-    iso = record.get("date_iso")
+    raw_date = record.get("date")
+    production_date = record.get("production_date")
 
-    raw_is_missing = (raw is None) or (isinstance(raw, str) and not raw.strip()) or (not isinstance(raw, str))
+    # Check if date is missing
+    raw_is_missing = (
+        raw_date is None 
+        or not isinstance(raw_date, str) # not a string type
+        or not raw_date.strip() # contains only whitespace
+    )
 
-    # 1) Missing raw date
     if raw_is_missing:
         reasons.append("date is missing")
 
-    # 2) Raw exists but normalization filed
-    raw_has_value = isinstance(raw, str) and bool(raw.strip())
-    if raw_has_value and iso is None:
+    if not raw_is_missing and production_date is None:
         reasons.append("date parse failed")
 
-    # 3) If iso exists, validate it is parseable and UTC
-    if iso is not None:
+    if production_date is not None:
         try:
-            dt = datetime.fromisoformat(iso)
+            datetime.strptime(production_date, "%Y-%m-%d").date()
+        except (TypeError, ValueError):
+            reasons.append("production_date is invalid")
 
-            # Must be timezone-aware and in UTC
-            if dt.tzinfo is None:
-                reasons.append("date is not UTC")
-            else:
-                dt_utc = dt.astimezone(timezone.utc)
-                if dt_utc.utcoffset() != timezone.utc.utcoffset(dt_utc):
-                    reasons.append("date is not UTC")
+    record["invalid_reason"] = reasons
 
-
-        except ValueError:
-            # iso string itself is invalid
-            reasons.append("date parse failed")
-
-    record["invalid_reason"].extend(reasons)
-    if len(reasons) > 0:
+    if reasons:
         record["is_valid"] = False
-        # Set shift_log_id to None to avoid duplicate IDs caused by variations in date formatting
-        record["shift_log_id"] = None 
 
     return record
 
@@ -81,35 +67,22 @@ def check_duplicate(record, seen_records):
     return record, seen_records
 
 
-def parse_int(value, field_name, record):
-    if value is None or value == "":
-        record["is_valid"] = False
-        record["invalid_reason"].append(f"{field_name} is missing")
-        return None
-
-    try:
-        return int(value)
-    except (TypeError, ValueError):
-        record["is_valid"] = False
-        record["invalid_reason"].append(f"{field_name} is not a valid integer")
-        return None
-
 
 def validate_records(records):
     """
     Validate manufacturing shift log records.
     
     validation rules:
-    date is not null and can be converted into an ISO format
+    date is not null and can be converted into YYYY-MM-DD format
     duplicate key = date + shift + line
-    planned_output > 0
-    actual_output >= 0
-    defect_qty >= 0
-    defect_qty <= actual_output
-    downtime_min >= 0
-    downtime_min <= 480
-    shift in A/B/C
-    line is not null
+    planned_output_int > 0
+    actual_output_int >= 0
+    defect_qty_int >= 0
+    defect_qty_int <= actual_output_int
+    downtime_min_int >= 0
+    downtime_min_int <= 480
+    shift_normalized in A/B/C
+    line_normalized is not null
     
     """
 
@@ -125,22 +98,14 @@ def validate_records(records):
         # Check duplicate by date, shift, and line
         record, seen_records = check_duplicate(record, seen_records)
 
-        # Check if the string columns can be converted to numbers
-        planned_output = parse_int(record.get("planned_output"), "planned_output", record)
-        actual_output = parse_int(record.get("actual_output"), "actual_output", record)
-        defect_qty = parse_int(record.get("defect_qty"), "defect_qty", record)
-        downtime_min = parse_int(record.get("downtime_min"), "downtime_min", record)
+        # Validate normalized/parsed fields
+        planned_output = record.get("planned_output_int")
+        actual_output = record.get("actual_output_int")
+        defect_qty = record.get("defect_qty_int")
+        downtime_min = record.get("downtime_int")
+        shift = record.get("shift_normalized")
+        line = record.get("line_normalized")
 
-        # Update as numeric
-        record["planned_output"] = planned_output
-        record["actual_output"] = actual_output
-        record["defect_qty"] = defect_qty
-        record["downtime_min"] = downtime_min
-
-        shift = record.get("shift")
-        line = record.get("line")
-
-        # Validate business rules
         if planned_output is None or planned_output <= 0:
             record["is_valid"] = False
             record["invalid_reason"].append("planned_output is missing or 0 or less")

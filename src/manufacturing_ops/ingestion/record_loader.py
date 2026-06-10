@@ -162,8 +162,8 @@ def raw_records_to_csv(records, filename):
    
 def raw_records_to_bq(records):
     """
-    Load raw records to BigQuery 
-
+    Load raw records into BigQuery with all columns (except meta data) as STRING to prevent loading errors.
+    
     ----------
     records : list of dict
              [{'date','shift,line','planned_output','actual_output','defect_qty',
@@ -179,7 +179,7 @@ def raw_records_to_bq(records):
     schema = [
         bigquery.SchemaField(
             "date",
-            "DATE",
+            "STRING", 
             description="Production date"
         ),
         bigquery.SchemaField(
@@ -194,22 +194,22 @@ def raw_records_to_bq(records):
         ),
         bigquery.SchemaField(
             "planned_output",
-            "INT64",
+            "STRING",
             description="Planned production quantity"
         ),
         bigquery.SchemaField(
             "actual_output",
-            "INT64",
+            "STRING",
             description="Actual production quantity"
         ),
         bigquery.SchemaField(
             "defect_qty",
-            "INT64",
+            "STRING",
             description="Defective quantity"
         ),
         bigquery.SchemaField(
             "downtime_min",
-            "INT64",
+            "STRING",
             description="Downtime in minutes"
         ),
         bigquery.SchemaField(
