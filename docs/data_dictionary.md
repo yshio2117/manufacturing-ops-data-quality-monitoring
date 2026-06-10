@@ -24,7 +24,7 @@ This layer applies schema validation and data quality checks while preserving in
 
 **Keys:**
 row_id: UUIDv4 (technical key per ingestion row)
-shift_log_id: Deterministic UUIDv5 generated from (date, line, shift), deterministic business key; stable across runs
+shift_log_id: Deterministic UUIDv5 generated from (production_date, line_normalized, shift_normalized), deterministic business key; stable across runs
 
 **Clustering:**  
 - Cluster: `shift_log_id`, `ingested_at`, `row_id`

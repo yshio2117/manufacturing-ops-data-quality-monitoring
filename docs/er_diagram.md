@@ -8,13 +8,13 @@ erDiagram
 
     SHIFT_LOG_RAW {
         STRING row_id PK
-        DATE date
+        STRING date
         STRING shift
         STRING line
-        INT64 planned_output
-        INT64 actual_output
-        INT64 defect_qty
-        INT64 downtime_min
+        STRING planned_output
+        STRING actual_output
+        STRING defect_qty
+        STRING downtime_min
         STRING downtime_reason
         STRING operator
         STRING source_system
@@ -25,6 +25,13 @@ erDiagram
     }
 
     SHIFT_LOG_VALIDATED {
+        DATE production_date
+        STRING shift_normalized
+        STRING line_normalized
+        INT64 planned_output_int
+        INT64 actual_output_int
+        INT64 defect_qty_int
+        INT64 downtime_min_int
         STRING row_id PK
         STRING shift_log_id
         BOOL is_valid
