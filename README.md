@@ -11,7 +11,9 @@ Operational Excellence case study demonstrating how raw operational records can 
 - [Data Source & Schema](#data-source--schema)
   - [Expected CSV schema](#expected-csv-schema)
 - [Data Model](#data-model)
-- [Data Quality & Validation](#data-quality--validation)
+- [Data Quality Controls](#data-quality-controls)
+  - [File-Level Schema Validation](#file-level-schema-validation)
+  - [Record-Level Data Validation](#record-level-data-validation)
   - [dbt migration & Testing](#dbt-migration--testing)
 - [Dashboard (Looker Studio)](#dashboard-looker-studio)
 - [CI (GitHub Actions)](#ci-github-actions)
@@ -149,35 +151,92 @@ and can be modified via `config/settings.py`.
 [ER Diagram](docs/er_diagram.md)
 
 
+## Data Quality Controls
 
-## Data Quality & Validation
+### File-Level Schema Validation
 
-The validation layer applies schema checks and business rules before records are promoted from the raw ingestion layer to downstream curated data.
+Before processing any records, the pipeline validates the input CSV schema.
 
-Each record is enriched with validation metadata:
+Required columns:
 
-- `is_valid`: indicates whether the record passed all validation checks
-- `invalid_reason`: stores one or more validation failure reasons
-- `is_duplicate`: flags duplicate records based on the business key
+- date
+- shift
+- line
+- planned_output
+- actual_output
+- defect_qty
+- downtime_min
 
-Validation rules include:
+Validation behavior:
+
+- Missing required columns: pipeline fails immediately with a schema validation error.
+- Missing optional columns: columns are automatically added with null values.
+- Unexpected columns: accepted but logged as warnings.
+
+This fail-fast validation prevents malformed input files from entering downstream processing and BigQuery storage.
+
+### Record-Level Data Validation
+
+After schema validation, records are normalized, validated, and enriched with data quality metadata.
+
+#### Field Normalization
+
+To improve resilience against common source data inconsistencies, key business fields are normalized before validation:
+
+| Source Field | Normalized Field | Description |
+|---|---|---|
+| `date` | `production_date` | Parsed and normalized to `YYYY-MM-DD`. Multiple common input formats (e.g., `2026-01-01`, `2026/01/01`, `01.01.2026`) are supported. |
+| `shift` | `shift_normalized` | Leading/trailing whitespace removed and values converted to uppercase. |
+| `line` | `line_normalized` | Leading/trailing whitespace removed. |
+
+Raw source values are preserved for auditability.
+
+#### Numeric Parsing
+
+Numeric source fields are parsed into typed columns while preserving the original source values.
+
+| Source Field | Parsed Field |
+|---|---|
+| `planned_output` | `planned_output_int` |
+| `actual_output` | `actual_output_int` |
+| `defect_qty` | `defect_qty_int` |
+| `downtime_min` | `downtime_min_int` |
+
+If parsing fails, the parsed field is set to `NULL` and the validation process records the corresponding failure reason.
+
+#### Validation Rules
 
 | Category | Rule |
 |---|---|
-| Date validation | `date` must exist and be parseable into `date_iso` |
-| Timezone validation | `date_iso` must be timezone-aware and normalized to UTC |
-| Duplicate detection | Duplicate key is defined as `date + shift + line` |
-| Shift validation | `shift` must be one of `A`, `B`, or `C` |
-| Line validation | `line` must not be empty |
-| Numeric parsing | `planned_output`, `actual_output`, `defect_qty`, and `downtime_min` must be valid integers |
-| Planned output | `planned_output` must be greater than 0 |
-| Actual output | `actual_output` must be 0 or greater |
-| Defect quantity | `defect_qty` must be 0 or greater and cannot exceed `actual_output` |
-| Downtime | `downtime_min` must be between 0 and 480 minutes |
+| Date validation | `production_date` must be successfully generated |
+| Shift validation | `shift_normalized` must be one of `A`, `B`, or `C` |
+| Line validation | `line_normalized` must not be empty |
+| Numeric parsing | Parsed numeric fields must be successfully generated |
+| Planned output | `planned_output_int` must be greater than 0 |
+| Actual output | `actual_output_int` must be 0 or greater |
+| Defect quantity | `defect_qty_int` must be 0 or greater and cannot exceed `actual_output_int` |
+| Downtime | `downtime_min_int` must be between 0 and 480 minutes |
+| Duplicate detection | Duplicate key is defined as `production_date + shift_normalized + line_normalized` |
 
-If a record fails date validation, `shift_log_id` is set to `None`. This prevents inconsistent date formats from generating unstable business keys.
+#### Business Key Generation
 
-Duplicate records are not dropped at the validation stage. Instead, they are retained with `is_valid = False`, `is_duplicate = True`, and an explanatory reason in `invalid_reason`. This preserves full ingestion traceability while allowing downstream views to select canonical records.
+`shift_log_id` is generated using a deterministic UUID v5 based on the normalized business key:
+
+```text
+production_date + shift_normalized + line_normalized
+```
+
+The ID is generated only when all business key fields are valid. Records with invalid business key fields retain a NULL shift_log_id.
+
+#### Validation Metadata
+
+Each record is enriched with validation metadata:
+
+- `is_valid`
+- `invalid_reason`
+- `is_duplicate`
+
+Duplicate records are retained rather than removed. This preserves ingestion traceability and supports downstream auditability while allowing governed views to select canonical records.
 
 Invalid reasons are deduplicated and sorted to keep validation output deterministic and easier to audit.
 
