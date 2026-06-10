@@ -2,13 +2,13 @@
 CREATE OR REPLACE VIEW `{SHIFT_LOG_KPI_VIEW_ID}` AS
 SELECT
   shift_log_id,
-  date,
-  shift,
-  line,
-  planned_output,
-  actual_output,
-  defect_qty,
-  downtime_min,
+  production_date as date,
+  shift_normalized as shift,
+  line_normalized as line,
+  planned_output_int as planned_output,
+  actual_output_int as actual_output,
+  defect_qty_int as defect_qty,
+  downtime_min_int as downtime_min,
   downtime_reason,
   operator,
   source_system,
@@ -18,9 +18,9 @@ SELECT
   run_id,
   ingested_at,
 
-  SAFE_DIVIDE(actual_output, planned_output) AS production_achievement,
-  SAFE_DIVIDE(defect_qty, actual_output) AS defect_rate,
-  SAFE_DIVIDE(downtime_min, 480) AS downtime_rate
+  SAFE_DIVIDE(actual_output_int, planned_output_int) AS production_achievement,
+  SAFE_DIVIDE(defect_qty_int, actual_output_int) AS defect_rate,
+  SAFE_DIVIDE(downtime_min_int, 480) AS downtime_rate
 FROM `{SHIFT_LOG_VALIDATED_DEDUP_VIEW_ID}`
 WHERE is_valid IS TRUE;
 
