@@ -1,24 +1,26 @@
-with source as (
+{{ config(materialized='view') }}
 
-    select *
-    from {{ source('pipeline', 'shift_log_validated') }}
+WITH source AS (
+
+    SELECT *
+    FROM {{ source('pipeline', 'validated') }}
 
 ),
 
-renamed as (
+renamed AS (
 
-    select
+    SELECT
         row_id,
         shift_log_id,
 
         date,
-        shift_normalized as shift,
-        line_normalized as line,
+        shift_normalized AS shift,
+        line_normalized AS line,
 
-        planned_output_int as planned_output,
-        actual_output_int as actual_output,
-        defect_qty_int as defect_qty,
-        downtime_min_int as downtime_min,
+        planned_output_int AS planned_output,
+        actual_output_int AS actual_output,
+        defect_qty_int AS defect_qty,
+        downtime_min_int AS downtime_min,
 
         downtime_reason,
         operator,
@@ -29,12 +31,13 @@ renamed as (
         is_duplicate,
 
         ingested_at,
-        source_file_name,
-        pipeline_run_id
+        source_file,
+        row_number,
+        run_id
 
-    from source
+    FROM source
 
 )
 
-select *
-from renamed
+SELECT *
+FROM renamed
