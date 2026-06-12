@@ -1,0 +1,394 @@
+version: 2
+
+models:
+  - name: shift_log_kpi
+    description: >
+      Curated operational KPI model generated from valid, deduplicated shift log records.
+      This model adds production achievement, defect rate, and downtime rate metrics
+      and serves as the base model for manufacturing KPI and continuous improvement views.
+    columns:
+      - name: shift_log_id
+        description: Deterministic business key for a production date, shift, and line.
+        tests:
+          - not_null
+          - unique
+
+      - name: date
+        description: Production date.
+        tests:
+          - not_null
+
+      - name: shift
+        description: Production shift.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['A', 'B', 'C']
+
+      - name: line
+        description: Production line identifier.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Planned production quantity for the shift.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Actual production quantity for the shift.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Number of defective units produced during the shift.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime in minutes during the shift.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Actual output divided by planned output.
+        tests:
+          - not_null
+
+      - name: defect_rate
+        description: Defect quantity divided by actual output.
+
+      - name: downtime_rate
+        description: Downtime minutes divided by total shift minutes.
+
+      - name: run_id
+        description: Pipeline run identifier.
+
+      - name: ingested_at
+        description: Timestamp when the source record was ingested.
+
+  - name: v_manufacturing_kpi_summary
+    description: >
+      Dashboard-level manufacturing KPI summary for total planned output,
+      actual output, defects, downtime, production achievement, defect rate,
+      and downtime rate.
+    columns:
+      - name: kpi_records
+        description: Number of valid deduplicated shift log records included in KPI calculations.
+        tests:
+          - not_null
+
+      - name: total_planned_output
+        description: Total planned output across all KPI records.
+        tests:
+          - not_null
+
+      - name: total_actual_output
+        description: Total actual output across all KPI records.
+        tests:
+          - not_null
+
+      - name: total_defects
+        description: Total defect quantity across all KPI records.
+        tests:
+          - not_null
+
+      - name: total_downtime_min
+        description: Total downtime minutes across all KPI records.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Total actual output divided by total planned output.
+
+      - name: defect_rate
+        description: Total defects divided by total actual output.
+
+      - name: downtime_rate
+        description: Total downtime divided by available shift time.
+
+  - name: v_manufacturing_kpi_daily_trend
+    description: >
+      Daily manufacturing KPI trend used for production, quality, and downtime monitoring.
+    columns:
+      - name: date
+        description: Production date.
+        tests:
+          - not_null
+          - unique
+
+      - name: shift_count
+        description: Number of shift records for the production date.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Total planned output for the production date.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Total actual output for the production date.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Total defects for the production date.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime minutes for the production date.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Actual output divided by planned output for the production date.
+
+      - name: defect_rate
+        description: Defects divided by actual output for the production date.
+
+      - name: downtime_rate
+        description: Downtime divided by available shift time for the production date.
+
+  - name: v_manufacturing_kpi_by_line
+    description: >
+      Manufacturing KPI comparison by production line.
+    columns:
+      - name: line
+        description: Production line identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: shift_count
+        description: Number of shift records for the production line.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Total planned output for the production line.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Total actual output for the production line.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Total defects for the production line.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime minutes for the production line.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Actual output divided by planned output for the production line.
+
+      - name: defect_rate
+        description: Defects divided by actual output for the production line.
+
+      - name: downtime_rate
+        description: Downtime divided by available shift time for the production line.
+
+  - name: v_manufacturing_kpi_by_shift
+    description: >
+      Manufacturing KPI comparison by production shift.
+    columns:
+      - name: shift
+        description: Production shift.
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['A', 'B', 'C']
+
+      - name: shift_count
+        description: Number of shift records for the shift.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Total planned output for the shift.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Total actual output for the shift.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Total defects for the shift.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime minutes for the shift.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Actual output divided by planned output for the shift.
+
+      - name: defect_rate
+        description: Defects divided by actual output for the shift.
+
+      - name: downtime_rate
+        description: Downtime divided by available shift time for the shift.
+
+  - name: v_downtime_reason_pareto
+    description: >
+      Downtime reason Pareto view used to identify the main downtime drivers
+      and their cumulative contribution to total downtime.
+    columns:
+      - name: downtime_reason
+        description: Primary reason for downtime.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_downtime_min
+        description: Total downtime minutes for the downtime reason.
+        tests:
+          - not_null
+
+      - name: downtime_share
+        description: Share of total downtime attributable to the downtime reason.
+
+      - name: cumulative_downtime_share
+        description: Cumulative downtime share ordered by descending downtime contribution.
+
+  - name: v_line_shift_performance
+    description: >
+      Line-by-shift performance matrix used for continuous improvement analysis.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - line
+            - shift
+    columns:
+      - name: line
+        description: Production line identifier.
+        tests:
+          - not_null
+
+      - name: shift
+        description: Production shift.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['A', 'B', 'C']
+
+      - name: shift_count
+        description: Number of shift records for the line and shift combination.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Total planned output for the line and shift combination.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Total actual output for the line and shift combination.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Total defects for the line and shift combination.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime minutes for the line and shift combination.
+        tests:
+          - not_null
+
+      - name: production_achievement
+        description: Actual output divided by planned output for the line and shift combination.
+
+      - name: defect_rate
+        description: Defects divided by actual output for the line and shift combination.
+
+      - name: downtime_rate
+        description: Downtime divided by available shift time for the line and shift combination.
+
+  - name: v_shift_log_kpi_drilldown
+    description: >
+      Record-level KPI drilldown view for investigating individual shift logs,
+      source metadata, downtime reasons, and calculated KPI values.
+    columns:
+      - name: date
+        description: Production date.
+        tests:
+          - not_null
+
+      - name: shift
+        description: Production shift.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['A', 'B', 'C']
+
+      - name: line
+        description: Production line identifier.
+        tests:
+          - not_null
+
+      - name: planned_output
+        description: Planned production quantity for the shift.
+        tests:
+          - not_null
+
+      - name: actual_output
+        description: Actual production quantity for the shift.
+        tests:
+          - not_null
+
+      - name: defect_qty
+        description: Number of defective units produced during the shift.
+        tests:
+          - not_null
+
+      - name: downtime_min
+        description: Total downtime minutes during the shift.
+        tests:
+          - not_null
+
+      - name: downtime_reason
+        description: Primary reason for downtime.
+
+      - name: production_achievement
+        description: Actual output divided by planned output.
+
+      - name: defect_rate
+        description: Defect quantity divided by actual output.
+
+      - name: downtime_rate
+        description: Downtime minutes divided by total shift minutes.
+
+      - name: operator
+        description: Operator or shift owner.
+
+      - name: source_system
+        description: Source system from which the shift log record originated.
+
+      - name: source_file
+        description: Source file processed by the pipeline.
+
+      - name: row_number
+        description: Original row number in the source file.
+
+      - name: row_id
+        description: Internal row identifier generated during ingestion.
+
+      - name: run_id
+        description: Pipeline run identifier.
+
+      - name: ingested_at
+        description: Timestamp when the source record was ingested.

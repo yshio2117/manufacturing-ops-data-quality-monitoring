@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: v_dq_metrics_by_run
+    description: >
+      Data quality summary metrics by pipeline run and source file.
+      This model is based on non-deduplicated validated records and is used
+      for pipeline health monitoring in Looker Studio.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - run_id
+            - source_file
+    columns:
+      - name: run_id
+        description: Pipeline run identifier.
+        tests:
+          - not_null
+
+      - name: source_file
+        description: Source file name processed in the pipeline run.
+        tests:
+          - not_null
+
+      - name: total_rows
+        description: Total number of rows processed in the run.
+        tests:
+          - not_null
+
+      - name: rows_valid
+        description: Number of valid rows.
+        tests:
+          - not_null
+
+      - name: rows_invalid
+        description: Number of invalid rows.
+        tests:
+          - not_null
+
+      - name: valid_rate
+        description: Share of valid rows among all processed rows.
+        tests:
+          - not_null
+
+      - name: duplicate_rows
+        description: Number of duplicate rows detected in the run.
+        tests:
+          - not_null
+
+      - name: duplicate_rate
+        description: Share of duplicate rows among all processed rows.
+        tests:
+          - not_null
+
+      - name: numeric_parse_error_rate
+        description: Share of rows with numeric parsing errors.
+        tests:
+          - not_null
+
+  - name: v_dq_invalid_reasons_by_run
+    description: >
+      Breakdown of invalid reasons by pipeline run and source file.
+      This model unnests the invalid_reason array from non-deduplicated
+      validated records.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - run_id
+            - source_file
+            - invalid_reason
+
+    columns:
+      - name: run_id
+        description: Pipeline run identifier.
+        tests:
+          - not_null
+
+      - name: source_file
+        description: Source file name processed in the pipeline run.
+        tests:
+          - not_null
+
+      - name: invalid_reason
+        description: Individual invalid reason extracted from the invalid_reason array.
+        tests:
+          - not_null
+
+      - name: rows_count
+        description: Number of rows associated with the invalid reason.
+        tests:
+          - not_null
