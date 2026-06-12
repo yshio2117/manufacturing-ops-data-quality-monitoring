@@ -3,16 +3,12 @@ version: 2
 models:
   - name: shift_log_validated_dedup
     description: "Deduplicated view of shift_log_validated table."
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - date
-            - shift
-            - line
-          config:
-            where: "shift_log_id IS NOT NULL"
-            
+
     columns:
+      - name: shift_log_id
+        tests:
+          - unique
+
       - name: date
         tests:
           - not_null
@@ -23,5 +19,6 @@ models:
 
       - name: shift
         tests:
+          - not_null
           - accepted_values:
               values: ['A', 'B', 'C']
