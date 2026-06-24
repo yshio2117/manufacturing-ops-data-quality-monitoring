@@ -10,6 +10,4 @@ sources:
 
       - name: validated
         identifier: "{{ env_var('TABLE_PREFIX', 'shift_log') ~ '_validated' }}"
-
-      - name: kpi
-        identifier: "{{ env_var('TABLE_PREFIX', 'shift_log') ~ '_kpi' }}"
+        
