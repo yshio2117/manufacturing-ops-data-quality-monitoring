@@ -3,7 +3,7 @@
 WITH source AS (
 
     SELECT *
-    FROM {{ source('pipeline', 'validated') }}
+    FROM {{ source('shift_log', 'validated') }}
 
 ),
 

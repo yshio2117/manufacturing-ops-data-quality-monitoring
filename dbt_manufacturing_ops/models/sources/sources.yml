@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: pipeline
+  - name: shift_log
     database: "{{ env_var('PROJECT_ID') }}"
     schema: "{{ env_var('DATASET_ID') }}"
     tables:
