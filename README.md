@@ -29,7 +29,7 @@ Operational Excellence case study demonstrating how raw operational records can 
   - [Install Python dependencies](#install-python-dependencies)
   - [Environment Variables](#environment-variables)
   - [Run](#run)
-  - [How to create BigQuery Views](#how-to-create-bigquery-views)
+  - [How to Build the dbt Models](#how-to-build-the-dbt-models)
 
 
 ## Overview
@@ -438,37 +438,67 @@ Note: For production, prefer Workload Identity Federation (OIDC) instead of long
 ## Repo Structure
 ```text
 .
+├── Dockerfile          # Container configuration for the pipeline environment
+├── Makefile            # Automation script for local Docker execution and cleanup
 ├── README.md
-├── config
+├── config/
 │   ├── __init__.py
-│   └── settings.py    # Non-sensitive application settings and constants
-├── credentials
-├── dashboards         # sample dashboard files
-│   ├── looker_studio
-│   |   ├── screenshots
+│   └── settings.py     # Non-sensitive application settings and constants
+├── dashboards/         # Dashboard artifacts
+│   ├── looker_studio/
+│   |   ├── screenshots/
 │   │   |   |── continuous_improvement_view.png
 |   |   |   └── data_quality_view.png
 |   |   └── production_performance_tracking.pdf
-│   └── power_bi
-│       ├── screenshots
+│   └── power_bi/
+│       ├── screenshots/
 │       |   └── manufacturing_kpi_overview.png
 |       ├── manufacturing_operations_dashboard.pbix
 |       └── manufacturing_operations_dashboard.pdf
-├── data
-│   ├── input          # place the input file here
+├── data/
+│   ├── input/          # Place the input file here
 │   │   └── sample_manufacturing_shift_logs.csv
-│   └── output         # Used for debugging and local development.  
-|                      # Outputs CSV files when the run parameter is set to "--output local".
-├── docs
+│   └── output/         # Used for debugging and local development  
+|                       # Outputs CSV files when the run parameter is set to "--output local"
+├── dbt_manufacturing_ops/
+|   ├── dbt_project.yml
+|   ├── profiles.yml
+|   ├── packages.yml
+|   ├── package-lock.yml
+|   ├── macros/
+|   ├── models/
+|   │   ├── sources/            # Defines the Python-generated BigQuery source tables used by dbt
+|   │   │   └── sources.yml
+|   │   ├── staging/            # Standardizes source column names and provides the common entry point for downstream dbt models
+|   │   │   ├── stg_shift_log_validated.sql
+|   │   │   └── stg_shift_log_validated.yml
+|   │   └── marts/
+|   │       ├── data_quality/   # Contains dashboard-ready models for pipeline health and invalid-reason analysis
+|   │       │   ├── v_dq_metrics_by_run.sql
+|   │       │   ├── v_dq_invalid_reasons_by_run.sql
+|   │       │   └── data_quality.yml
+|   │       └── operations/     # Contains the deduplicated model, manufacturing KPI models, and continuous improvement models
+|   │           ├── shift_log_kpi.sql
+|   │           ├── shift_log_validated_dedup.sql
+|   │           ├── v_manufacturing_kpi_summary.sql
+|   │           ├── v_manufacturing_kpi_daily_trend.sql
+|   │           ├── v_manufacturing_kpi_by_line.sql
+|   │           ├── v_manufacturing_kpi_by_shift.sql
+|   │           ├── v_downtime_reason_pareto.sql
+|   │           ├── v_line_shift_performance.sql
+|   │           ├── v_shift_log_kpi_drilldown.sql
+|   │           └── operations.yml
+|   ├── seeds/
+|   ├── snapshots/
+|   ├── tests/
+|   └── analyses/
+├── docs/
 │   ├── data_dictionary.md
 │   └── er_diagram.md
 ├── requirements.txt
-├── sql
-│   ├── 10_views_dq_kpi.sql      # sql for creating DQ views
-│   └── 11_views_ops_kpi.sql  # sql for creating manufacturing KPI views
-├── src
+├── src/
 │   ├── __init__.py
-│   └── manufacturing_ops    # Pipeline modules for ingestion, validation, transformation, and output
+│   └── manufacturing_ops/   # Pipeline modules for ingestion, validation, transformation, and output
 │       ├── __init__.py
 │       ├── main.py          # Entry point for the pipeline
 │       ├── pipeline         # Pipeline orchestration
@@ -476,9 +506,10 @@ Note: For production, prefer Workload Identity Federation (OIDC) instead of long
 │       ├── output           # BigQuery loading module
 │       ├── transformation   # Data transformation
 │       ├── validation       # Data quality validation
-│       ├── apply_sql.py     # Creates BigQuery views for Looker Studio
 │       └── generate_sample_manufacturing_shift_logs.py     # Creates sample input file
-├── tests
+└── tests/
+    ├── __init__.py
+    └── test_record_loader.py # Unit tests for CSV ingestion and BigQuery loading
 ```
 
 <br/>
@@ -561,32 +592,58 @@ python -m src.manufacturing_ops.main \
 
 (For the required file schema, see [here](#expected-csv-schema)).
 
-### How to create BigQuery Views
-#### 1. Create the 'shift_log_validated_dedup' view with dbt
-Before running dbt, load the environment variables and install the required packages:
+### How to Build the dbt Models
+
+Before running dbt, make sure the Python pipeline has already loaded the source tables into BigQuery:
+- shift_log_raw
+- shift_log_validated
+
+The dbt project reads from `shift_log_validated` and builds the staging, deduplication, data quality, and operations models in the configured dbt dataset.
+
+#### 1. Load Environment Variables and Install dbt Packages
 
 ```bash
 export $(grep -v '^#' .env | xargs)
-dbt deps --project-dir dbt_manufacturing_ops
+
+dbt deps --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
 ```
-Then run the following command to create the `shift_log_validated_dedup` view in BigQuery:
+
+#### 2. Build and Test All dbt Models
+
+Run the following command to build all dbt-managed views and execute their associated tests:
+
+```bash
+dbt build --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
+```
+
+This command builds:
+- the `stg_shift_log_validated` staging view
+- the canonical `shift_log_validated_dedup` view
+- the data quality marts
+- the manufacturing KPI marts
+- the continuous improvement marts
+
+It also runs the configured dbt tests, including basic not_null, unique, and accepted_values checks.
+
+#### 3. Run Models or Tests Separately
+
+To build the dbt models without running tests:
 
 ```bash
 dbt run --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
 ```
 
-#### 2. Create the remaining views
-After creating the `shift_log_validated_dedup` view, run the command below to create the remaining views:
-
-```bash
-python -m src.manufacturing_ops.apply_sql
-```
-
-
-#### 3. (Optional) Run dbt Tests
-
-The deduplicated view can also be validated with dbt tests:
+To run only the dbt tests:
 
 ```bash
 dbt test --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
+```
+
+#### 4. Build a Specific Model and Its Dependencies
+
+For example, to build the operations marts together with their upstream dependencies:
+
+```bash
+dbt build --select models/marts/operations \
+  --project-dir dbt_manufacturing_ops --profiles-dir dbt_manufacturing_ops
 ```
