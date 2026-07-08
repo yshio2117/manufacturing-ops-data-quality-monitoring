@@ -14,6 +14,7 @@ Operational Excellence case study demonstrating how raw operational records can 
 - [Data Quality Controls](#data-quality-controls)
   - [File-Level Schema Validation](#file-level-schema-validation)
   - [Record-Level Data Validation](#record-level-data-validation)
+  - [Python Unit Testing with pytest](#python-unit-testing-with-pytest)
   - [dbt Transformation & Testing](#dbt-transformation--testing)
 - [Dashboards](#dashboards)
   - [Looker Studio](#looker-studio)
@@ -191,10 +192,12 @@ and can be modified via `config/settings.py`.
 
 ## Data Quality Controls
 
-Data quality is enforced at two levels:
+Data quality is implemented across both the ingestion and warehouse layers, with automated tests validating critical behavior at each stage.
 
-- **Python validation** handles file-level schema validation, record-level parsing, normalization, business-rule validation, duplicate flagging, and metadata enrichment before loading records into BigQuery.
-- **dbt tests** validate the structure and expected grain of warehouse models, including not-null checks, uniqueness checks, and accepted-value checks for dashboard-facing datasets.
+- **Python validation** performs file-level schema validation, record-level parsing, normalization, business-rule validation, duplicate flagging, and metadata enrichment before records are loaded into BigQuery.
+- **dbt validation** verifies the structure, constraints, and expected grain of warehouse models, including not-null checks, uniqueness checks, and accepted-value checks for dashboard-facing datasets.
+- Automated testing uses `pytest` to verify Python ingestion behavior and dbt test to validate warehouse-side data models.
+
 
 ### File-Level Schema Validation
 
@@ -284,19 +287,57 @@ Duplicate records are retained rather than removed. This preserves ingestion tra
 Invalid reasons are deduplicated and sorted to keep validation output deterministic and easier to audit.
 
 
-<br/>
+### Python Unit Testing with pytest
+
+The Python ingestion layer includes automated unit tests implemented with `pytest`.
+
+The tests verify critical behavior across CSV ingestion, schema validation, metadata enrichment, and BigQuery loading:
+
+- Successful CSV ingestion and ingestion metadata generation
+- Fail-fast validation when required columns are missing
+- Automatic completion of missing optional columns with null values
+- Verification of the BigQuery load interface using mocks
+- Verification that the pipeline waits for the BigQuery load job to complete
+
+BigQuery dependencies are mocked during unit testing. Therefore, the test suite can be executed locally or in CI without requiring GCP credentials or creating cloud resources.
+
+Run the tests from the project root:
+```bash
+pytest
+```
+
+
+Test scenarios currently include:
+
+| Test area | Verified behavior |
+| :--- | :--- |
+| CSV ingestion | Valid records are read successfully |
+| Metadata enrichment | `run_id`, `row_id`, `ingested_at`, and `source_file` are added |
+| Required schema | Missing required columns raise a validation error |
+| Optional schema | Missing optional columns are filled with `None` |
+| BigQuery loading | The correct records and destination table are passed to the BigQuery client |
+| Load completion | The pipeline waits for the load job by calling `result()` |
+
+
+These tests complement the dbt schema tests:
+
+- `pytest` verifies Python ingestion logic and mocked external-service interactions.
+- `dbt test` verifies warehouse model constraints, uniqueness, nullability, accepted values, and expected model grain.
+
+Together, they provide automated validation across both the ingestion and analytical transformation layers.
+
 
 ### dbt Transformation & Testing
 
 This project uses dbt to manage warehouse-side transformations, analytical marts, documentation, and basic data quality tests.
 
-**dbt run**
+`dbt run`
 - Builds the staging model over the Python-generated validated table
 - Builds the canonical deduplicated view
 - Builds data quality marts for pipeline health monitoring
 - Builds operations marts for manufacturing KPI and continuous improvement dashboards
 
-**dbt test**
+`dbt test`
 - Verifies key columns are not null
 - Verifies uniqueness at the correct model grain, such as `shift_log_id` in the deduplicated model
 - Verifies accepted values for shift codes
